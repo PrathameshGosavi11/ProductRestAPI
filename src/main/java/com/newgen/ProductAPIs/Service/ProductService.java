@@ -4,6 +4,7 @@ import com.newgen.ProductAPIs.model.Category;
 import com.newgen.ProductAPIs.model.Product;
 import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -27,21 +28,23 @@ public class ProductService
 
     private void initilizeProducts() {
 
-        add(new Product(1, "Laptop", Category.ELECTRONICS, 22000.60));
-        add(new Product(2, "t-Shirt", Category.CLOTHES, 200.60));
-        add(new Product(3, "bed", Category.FURNITURE, 7200.60));
-        add(new Product(4, "MOB", Category.ELECTRONICS, 11000.60));
-        add(new Product(5, "tv", Category.ELECTRONICS, 22000.60));
+        add(new Product( "Laptop", Category.ELECTRONICS, 22000.60));
+        add(new Product( "t-Shirt", Category.CLOTHES, 200.60));
+        add(new Product( "bed", Category.FURNITURE, 7200.60));
+        add(new Product( "MOB", Category.ELECTRONICS, 11000.60));
+        add(new Product( "tv", Category.ELECTRONICS, 22000.60));
     }
 
     public void add(Product product)
     {
+        product.setId(id);
         products.put(id,product);
         id++;
     }
 
-    public  Product getProductById(Long id)
+    public   Product getProductById(Long id)
     {
+        System.out.println("get service method called ");
         return products.get(id);
     }
 
@@ -53,6 +56,7 @@ public class ProductService
 
     public  boolean deleteProduct(Long id)
     {
+        System.out.println("call the deletet method on service call");
         return  products.remove(id) !=null ;
     }
 
@@ -69,4 +73,17 @@ public class ProductService
         }
         return  matchProduct;
     }
+
+    public  boolean updateProduct(Product newProduct) {
+
+       Product exitstanceProduct= products.get(newProduct.getId());
+       if(exitstanceProduct!=null) //if product found then only go entered update
+        {
+            exitstanceProduct.setName(newProduct.getName());
+            exitstanceProduct.setPrice(newProduct.getPrice());
+            return true;
+        }
+       return false; //if product is null then not entered if and return false.
+    }
+
 }
