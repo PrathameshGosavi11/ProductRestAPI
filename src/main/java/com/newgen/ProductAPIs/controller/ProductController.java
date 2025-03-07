@@ -59,9 +59,10 @@ public class ProductController {
 
     }
 
-    @PutMapping("/updateProduct")
-    public @ResponseBody String  updateProduct(@RequestBody Product product) {
+    @PutMapping("/updateProduct/{id}")
+    public @ResponseBody String  updateProduct(@RequestBody Product product, @PathVariable(name="id") Long productId) {
         System.out.println("Product Controller update method called ");
+        product.setId(productId);
         boolean status = productService.updateProduct(product);
         if (status) {
             return "Product update successfully ";
