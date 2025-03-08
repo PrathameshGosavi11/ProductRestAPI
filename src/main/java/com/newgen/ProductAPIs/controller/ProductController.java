@@ -1,6 +1,7 @@
 package com.newgen.ProductAPIs.controller;
 
 import com.newgen.ProductAPIs.Service.ProductService;
+import com.newgen.ProductAPIs.model.Category;
 import com.newgen.ProductAPIs.model.Product;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -9,7 +10,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @Controller
-@RequestMapping("api/v1")
+@RequestMapping()
 
 public class ProductController {
 
@@ -24,7 +25,7 @@ public class ProductController {
         this.productService = productService;
     }
 
-    @GetMapping("/products")
+    @GetMapping("/api/v1/products")
     // @RequestMapping(method = RequestMethod.GET)
     public @ResponseBody List<Product> getALlProduct() {
         System.out.println("product API controller called ");
@@ -33,13 +34,13 @@ public class ProductController {
     }
 
 
-    @GetMapping("/products/{id}")
+    @GetMapping("api/v1/products/{id}")
     public @ResponseBody Product getProductDetailById(@PathVariable(name = "id") Long productId) {
         System.out.println("here request is coming =>" + productId);
         return productService.getProductById(productId);
     }
 
-    @DeleteMapping("/deleteProduct/{id}")
+    @DeleteMapping("/api/v1/products/{id}")
     public @ResponseBody String deleteProduct(@PathVariable long id) {
         System.out.println("deletet request on controller");
         boolean status = productService.deleteProduct(id);
@@ -50,7 +51,7 @@ public class ProductController {
 
     }
 
-    @PostMapping("/addProduct")
+    @PostMapping("/api/v1/products")
     public @ResponseBody String addProduct(@RequestBody Product product) //here all data get @Requestbody
     {
         System.out.println("Product Controller add method called ");
@@ -59,7 +60,7 @@ public class ProductController {
 
     }
 
-    @PutMapping("/updateProduct/{id}")
+    @PutMapping("/api/v1/products/{id}")
     public @ResponseBody String  updateProduct(@RequestBody Product product, @PathVariable(name="id") Long productId) {
         System.out.println("Product Controller update method called ");
         product.setId(productId);
@@ -68,10 +69,15 @@ public class ProductController {
             return "Product update successfully ";
         }
          else {
-            return "Product not uupdated   here ";
+            return "Product not found so update failed  here ";
         }
+    }
 
 
+    @GetMapping("api/v1/products/search/{category}")
+    public @ResponseBody List<Product> searchProductByCategory(@PathVariable Category category) {
+        System.out.println("product API controller called ");
+        return productService.searchByCategory(category);
 
     }
 }
