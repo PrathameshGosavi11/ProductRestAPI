@@ -27,9 +27,16 @@ public class ProductController {
 
     @GetMapping("/api/v1/products")
     // @RequestMapping(method = RequestMethod.GET)
-    public @ResponseBody List<Product> getALlProduct() {
-        System.out.println("product API controller called ");
-        return productService.getAllProduct();
+    public @ResponseBody List<Product> getALlProduct(@RequestParam(name="category",required = false) String category) {
+
+        System.out.println("product API controller called =>"+category);
+        if(category !=null) { //if value present then enter only if  block
+            Category catSearch =Category.valueOf(category);
+            return productService.searchByCategory(catSearch);
+
+        }
+        return productService.getAllProduct(); //if not found category then return all product
+
 
     }
 
@@ -74,11 +81,11 @@ public class ProductController {
     }
 
 
-    @GetMapping("api/v1/products/search/{category}")
-    public @ResponseBody List<Product> searchProductByCategory(@PathVariable Category category) {
-        System.out.println("product API controller called ");
-        return productService.searchByCategory(category);
-
-    }
+//    @GetMapping("api/v1/products/search/{category}")
+//    public @ResponseBody List<Product> searchProductByCategory(@PathVariable Category category) {
+//        System.out.println("product API controller called ");
+//        return productService.searchByCategory(category);
+//
+//    }
 }
 

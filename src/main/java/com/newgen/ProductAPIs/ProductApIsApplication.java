@@ -15,6 +15,7 @@ public class ProductApIsApplication {
 	{
 		ApplicationContext applicationContext= SpringApplication.run(ProductApIsApplication.class, args);
 
+
 //		ProductService service= applicationContext.getBean(ProductService.class);
 //
 //		service.getAllProduct().forEach(System.out::println);
