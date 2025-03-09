@@ -10,6 +10,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.stream.Collectors;
 
 @Component
 @Service
@@ -72,6 +73,27 @@ public class ProductService
             }
         }
         return  matchProduct;
+    }
+
+//    public List<Product> searchByName(String name)
+//    {
+//        List<Product> matchProduct=new ArrayList<>();
+//
+//        for(Product product:products.values())
+//        {
+//            if(product.getName().equals(name))
+//            {
+//                matchProduct.add(product);
+//            }
+//        }
+//        return  matchProduct;
+//    }
+    public  List<Product> searchByName(String name)
+    {
+       return products.values().stream()
+                .filter(product -> product.getName().equals(name))
+                .collect(Collectors.toList());
+
     }
 
     public  boolean updateProduct(Product newProduct) {

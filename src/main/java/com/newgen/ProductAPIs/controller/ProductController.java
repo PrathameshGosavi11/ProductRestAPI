@@ -27,13 +27,18 @@ public class ProductController {
 
     @GetMapping("/api/v1/products")
     // @RequestMapping(method = RequestMethod.GET)
-    public @ResponseBody List<Product> getALlProduct(@RequestParam(name="category",required = false) String category) {
+    public @ResponseBody List<Product> getALlProduct(@RequestParam(name="category",required = false) String category,
+                                                     @RequestParam(name="name",required = false) String name) {
 
         System.out.println("product API controller called =>"+category);
-        if(category !=null) { //if value present then enter only if  block
+        if(category !=null ) { //if value present then enter only if  block
             Category catSearch =Category.valueOf(category);
             return productService.searchByCategory(catSearch);
 
+        }
+        if(name!=null)
+        {
+            return  productService.searchByName(name);
         }
         return productService.getAllProduct(); //if not found category then return all product
 
