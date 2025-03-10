@@ -9,8 +9,8 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-@Controller
-@RequestMapping()
+@RestController
+
 
 public class ProductController {
 
@@ -27,14 +27,23 @@ public class ProductController {
 
     @GetMapping("/api/v1/products")
     // @RequestMapping(method = RequestMethod.GET)
-    public @ResponseBody List<Product> getALlProduct(@RequestParam(name="category",required = false) String category,
-                                                     @RequestParam(name="name",required = false) String name) {
+    public  List<Product> getALlProduct(@RequestParam(name="category",required = false) String category,
+                                                     @RequestParam(name="name",required = false) String name,
+                                                     @RequestParam(name="lower-price",required = false) Double lowerPrice,
+                                                     @RequestParam(name="higher-price",required = false) Double higherPrice
+                                                     ) {
 
         System.out.println("product API controller called =>"+category);
+        System.out.println("Lower price is :"+lowerPrice);
+        System.out.println("Higher price is :"+higherPrice);
         if(category !=null ) { //if value present then enter only if  block
             Category catSearch =Category.valueOf(category);
             return productService.searchByCategory(catSearch);
 
+        }
+        if(lowerPrice != null && higherPrice !=null)
+        {
+            return  productService.searchProdcutByRange(lowerPrice,higherPrice);
         }
         if(name!=null)
         {
@@ -47,13 +56,13 @@ public class ProductController {
 
 
     @GetMapping("api/v1/products/{id}")
-    public @ResponseBody Product getProductDetailById(@PathVariable(name = "id") Long productId) {
+    public  Product getProductDetailById(@PathVariable(name = "id") Long productId) {
         System.out.println("here request is coming =>" + productId);
         return productService.getProductById(productId);
     }
 
     @DeleteMapping("/api/v1/products/{id}")
-    public @ResponseBody String deleteProduct(@PathVariable long id) {
+    public  String deleteProduct(@PathVariable long id) {
         System.out.println("deletet request on controller");
         boolean status = productService.deleteProduct(id);
         if (status)
@@ -64,7 +73,7 @@ public class ProductController {
     }
 
     @PostMapping("/api/v1/products")
-    public @ResponseBody String addProduct(@RequestBody Product product) //here all data get @Requestbody
+    public  String addProduct(@RequestBody Product product) //here all data get @Requestbody
     {
         System.out.println("Product Controller add method called ");
         productService.add(product);
@@ -73,7 +82,7 @@ public class ProductController {
     }
 
     @PutMapping("/api/v1/products/{id}")
-    public @ResponseBody String  updateProduct(@RequestBody Product product, @PathVariable(name="id") Long productId) {
+    public  String  updateProduct(@RequestBody Product product, @PathVariable(name="id") Long productId) {
         System.out.println("Product Controller update method called ");
         product.setId(productId);
         boolean status = productService.updateProduct(product);
