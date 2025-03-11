@@ -10,8 +10,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-
-
+@RequestMapping("/api/v1/products")
 public class ProductController {
 
     // object of ProductService //but not good Approch in a spring.//its hardcoded.
@@ -25,7 +24,7 @@ public class ProductController {
         this.productService = productService;
     }
 
-    @GetMapping("/api/v1/products")
+    @GetMapping()
     // @RequestMapping(method = RequestMethod.GET)
     public  List<Product> getALlProduct(@RequestParam(name="category",required = false) String category,
                                                      @RequestParam(name="name",required = false) String name,
@@ -55,13 +54,13 @@ public class ProductController {
     }
 
 
-    @GetMapping("api/v1/products/{id}")
+    @GetMapping("/{id}")
     public  Product getProductDetailById(@PathVariable(name = "id") Long productId) {
         System.out.println("here request is coming =>" + productId);
         return productService.getProductById(productId);
     }
 
-    @DeleteMapping("/api/v1/products/{id}")
+    @DeleteMapping("/{id}")
     public  String deleteProduct(@PathVariable long id) {
         System.out.println("deletet request on controller");
         boolean status = productService.deleteProduct(id);
@@ -72,7 +71,7 @@ public class ProductController {
 
     }
 
-    @PostMapping("/api/v1/products")
+    @PostMapping()
     public  String addProduct(@RequestBody Product product) //here all data get @Requestbody
     {
         System.out.println("Product Controller add method called ");
@@ -81,7 +80,7 @@ public class ProductController {
 
     }
 
-    @PutMapping("/api/v1/products/{id}")
+    @PutMapping("/{id}")
     public  String  updateProduct(@RequestBody Product product, @PathVariable(name="id") Long productId) {
         System.out.println("Product Controller update method called ");
         product.setId(productId);
