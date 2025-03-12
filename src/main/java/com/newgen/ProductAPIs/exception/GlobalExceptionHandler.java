@@ -9,30 +9,34 @@ import org.springframework.web.bind.annotation.RestControllerAdvice;
 public class GlobalExceptionHandler {
 
     @ExceptionHandler(ProductNotFound.class)
-    public ResponseEntity<String>  handleProductNotFoundException(ProductNotFound e)
+    public ResponseEntity<ErrorDetails>  handleProductNotFoundException(ProductNotFound e)
     {
         System.err.println(e);
-        return  new ResponseEntity<>(e.getMessage(), HttpStatus.NOT_FOUND);
+        ErrorDetails errorDetails=new ErrorDetails(HttpStatus.NOT_FOUND.value(), e.getMessage(),"Resources not found");
+        return  new ResponseEntity<>(errorDetails, HttpStatus.NOT_FOUND);
     }
 
     @ExceptionHandler(InvalidProductCategoryException.class)
-    public  ResponseEntity<String> handleInvalidProductCategoryException(InvalidProductCategoryException e)
+    public  ResponseEntity<ErrorDetails> handleInvalidProductCategoryException(InvalidProductCategoryException e)
     {
         System.err.println(e);
-        return  new ResponseEntity<>(e.getMessage(), HttpStatus.BAD_REQUEST);
+        ErrorDetails errorDetails=new ErrorDetails(HttpStatus.BAD_REQUEST.value(), e.getMessage(),"Invalid input");
+        return  new ResponseEntity<>(errorDetails, HttpStatus.BAD_REQUEST);
 
     }
     @ExceptionHandler(InvalidArgumentException.class)
-    public  ResponseEntity<String> handleInvalidArgumentException(InvalidArgumentException e)
+    public  ResponseEntity<ErrorDetails> handleInvalidArgumentException(InvalidArgumentException e)
     {
         System.err.println(e);
-        return  new ResponseEntity<>(e.getMessage(),HttpStatus.BAD_REQUEST);
+        ErrorDetails errorDetails=new ErrorDetails(HttpStatus.BAD_REQUEST.value(),e.getMessage(),"you pass Invalid Name");
+        return  new ResponseEntity<>(errorDetails,HttpStatus.BAD_REQUEST);
     }
 
     @ExceptionHandler
-    public  ResponseEntity<String> handleGenericException(Exception e)
+    public  ResponseEntity<ErrorDetails> handleGenericException(Exception e)
     {
         System.err.println(e);
-        return  new ResponseEntity<>("Something went wrong please check afte some time ",HttpStatus.INTERNAL_SERVER_ERROR);
+        ErrorDetails errorDetails=new ErrorDetails(HttpStatus.INTERNAL_SERVER_ERROR.value(), "Something went wrong please check afte some time","server side Processing error");
+        return  new ResponseEntity<>(errorDetails,HttpStatus.INTERNAL_SERVER_ERROR);
     }
 }
