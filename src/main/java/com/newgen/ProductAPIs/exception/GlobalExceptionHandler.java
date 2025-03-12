@@ -33,6 +33,6 @@ public class GlobalExceptionHandler {
     public  ResponseEntity<String> handleGenericException(Exception e)
     {
         System.err.println(e);
-        return  new ResponseEntity<>("Something went wrong",HttpStatus.INTERNAL_SERVER_ERROR);
+        return  new ResponseEntity<>("Something went wrong please check afte some time ",HttpStatus.INTERNAL_SERVER_ERROR);
     }
 }
