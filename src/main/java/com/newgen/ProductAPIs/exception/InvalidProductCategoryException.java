@@ -1,6 +1,6 @@
 package com.newgen.ProductAPIs.exception;
 
-public class InvalidProductCategoryException extends Exception {
+public class InvalidProductCategoryException extends RuntimeException {
 
 
     public InvalidProductCategoryException(String message) {

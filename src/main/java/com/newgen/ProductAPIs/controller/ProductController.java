@@ -58,60 +58,35 @@ public class ProductController {
     public ResponseEntity<?> getProductById(@PathVariable(name = "id") Long productId) {
 
         System.out.println("here request is coming =>" + productId);
-        try {
+
             Product product = productService.getProductById(productId);
             return new ResponseEntity(product, HttpStatus.OK);
-        }
-        catch (ProductNotFound e)
-        {
-            e.printStackTrace();
-            return new ResponseEntity(e.getMessage(),HttpStatus.NOT_FOUND);
-        }
     }
 
     @DeleteMapping("/{id}")
     public ResponseEntity<String> deleteProduct(@PathVariable(name = "id") long productId) {
         System.out.println("deletet request on controller-->" + productId);
-        try {
+
             productService.deleteProduct(productId);
             return new ResponseEntity<>("product deleted successfully", HttpStatus.OK);
-        } catch (ProductNotFound e) {
-            e.printStackTrace();
-            return new ResponseEntity<>("product not found   & deletion operation failed ", HttpStatus.NOT_FOUND);
-
-        }
     }
 
     @PostMapping()
     public ResponseEntity<String> addProduct(@RequestBody Product product) //here all data get @Requestbody
     {
         System.out.println("Product Controller add method called ");
-        try {
-            productService.add(product);
 
-        } catch (InvalidProductCategoryException e) {
-            System.err.println(e);
-            e.printStackTrace();
-            return new ResponseEntity<>(e.getMessage(), HttpStatus.BAD_REQUEST);
-        }
-        return new ResponseEntity<>("Product added successfully", HttpStatus.CREATED);
-
+                productService.add(product);
+            return new ResponseEntity<>("Product added successfully", HttpStatus.CREATED);
     }
 
     @PutMapping("/{id}")
     public ResponseEntity<String> updateProduct(@RequestBody Product product, @PathVariable(name = "id") Long productId) {
         System.out.println("Product Controller update method called ");
         product.setId(productId);
-        try {
-            productService.updateProduct(product);
-            return new ResponseEntity<>("Product update successfully ", HttpStatus.OK);
 
-        } catch (ProductNotFound e) {
-            e.printStackTrace();
-            return new ResponseEntity<>(e.getMessage(), HttpStatus.NOT_FOUND);
-        }
-
-
+        productService.updateProduct(product);
+        return new ResponseEntity<>("Product update successfully ", HttpStatus.OK);
     }
     //    @GetMapping("api/v1/products/search/{category}")
 //    public @ResponseBody List<Product> searchProductByCategory(@PathVariable Category category) {

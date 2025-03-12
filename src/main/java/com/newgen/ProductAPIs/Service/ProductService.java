@@ -1,5 +1,6 @@
 package com.newgen.ProductAPIs.Service;
 
+import com.newgen.ProductAPIs.exception.InvalidArgumentException;
 import com.newgen.ProductAPIs.exception.InvalidProductCategoryException;
 import com.newgen.ProductAPIs.exception.ProductNotFound;
 import com.newgen.ProductAPIs.model.Category;
@@ -17,7 +18,9 @@ public class ProductService {
     private Long id; //declare the ID automartic increment we we add the product
 
     final String  INVALID_PRODUCT_IDENTIFIER_ERROR_MESSAGE ="Invalid product Identifire is provided , so product not found.";
- 
+
+    final  String INVALID_PRODUCT_CATEGORY="invalid product category";
+
     // we initnlize the object
     public ProductService() {
         this.products = new HashMap<>();
@@ -45,8 +48,7 @@ public class ProductService {
 
     }
 
-    public void add(Product product) throws InvalidProductCategoryException {
-        final  String INVALID_PRODUCT_CATEGORY="invalid product category";
+    public void add(Product product)  {
         if (product.getCategory() == null) {
             throw new InvalidProductCategoryException(INVALID_PRODUCT_CATEGORY);
         }
@@ -55,7 +57,7 @@ public class ProductService {
         id++;
     }
 
-    public Product getProductById(Long id) throws  ProductNotFound {
+    public Product getProductById(Long id) {
         System.out.println("get service method called ");
         Product product= products.get(id);
         if (product==null)
@@ -70,7 +72,7 @@ public class ProductService {
         return new ArrayList<>(products.values());
     }
 
-    public void  deleteProduct(Long id) throws  ProductNotFound {
+    public void  deleteProduct(Long id)  {
         System.out.println("call the deletet method on service call");
         Product product= products.remove(id);
         if (product==null)
@@ -104,6 +106,11 @@ public class ProductService {
 //        return  matchProduct;
 //    }
     public List<Product> searchByName(String name) {
+
+        if(name.isEmpty())
+        {
+            throw  new InvalidArgumentException("Product name can not be empty");
+        }
         return products.values().stream()
                 .filter(product -> isNameMatching(name, product))
                 .toList();
@@ -114,7 +121,7 @@ public class ProductService {
         return product.getName().toLowerCase().contains(name.toLowerCase());
     }
 
-    public void updateProduct(Product newProduct) throws ProductNotFound {
+    public void updateProduct(Product newProduct)  {
 
         Product exitstanceProduct = products.get(newProduct.getId());
         if (exitstanceProduct == null) {
@@ -124,6 +131,9 @@ public class ProductService {
         {
             exitstanceProduct.setName(newProduct.getName());
             exitstanceProduct.setPrice(newProduct.getPrice());
+        }
+        if (newProduct.getCategory() == null) {
+            throw new InvalidProductCategoryException(INVALID_PRODUCT_CATEGORY);
         }
     }
 
