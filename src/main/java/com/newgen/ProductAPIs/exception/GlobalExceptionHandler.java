@@ -1,11 +1,13 @@
 package com.newgen.ProductAPIs.exception;
 
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
 
 @RestControllerAdvice
+
 public class GlobalExceptionHandler {
 
     @ExceptionHandler(ProductNotFound.class)
@@ -20,6 +22,7 @@ public class GlobalExceptionHandler {
     public  ResponseEntity<ErrorDetails> handleInvalidProductCategoryException(InvalidProductCategoryException e)
     {
         System.err.println(e);
+        //log.error("invalid product category",e);
         ErrorDetails errorDetails=new ErrorDetails(HttpStatus.BAD_REQUEST.value(), e.getMessage(),"Invalid input");
         return  new ResponseEntity<>(errorDetails, HttpStatus.BAD_REQUEST);
 
@@ -36,7 +39,8 @@ public class GlobalExceptionHandler {
     public  ResponseEntity<ErrorDetails> handleGenericException(Exception e)
     {
         System.err.println(e);
-        ErrorDetails errorDetails=new ErrorDetails(HttpStatus.INTERNAL_SERVER_ERROR.value(), "Something went wrong please check afte some time","server side Processing error");
+        ErrorDetails errorDetails=new ErrorDetails(HttpStatus.INTERNAL_SERVER_ERROR.value(),
+                "Something went wrong please check afte some time","server side Processing error");
         return  new ResponseEntity<>(errorDetails,HttpStatus.INTERNAL_SERVER_ERROR);
     }
 }
