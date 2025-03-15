@@ -29,50 +29,50 @@ public class ProductController {
         this.productService = productService;
     }
 
-    @PostMapping()
-    public  List<Product> getAllProduct(@RequestBody  ProductSearchCriteria productSearchCriteria)
-    {
-        System.out.println("product API controller called =>" + productSearchCriteria.getCategory());
-        System.out.println("Lower price is :" +productSearchCriteria.getLowerPrice());
-        System.out.println("Higher price is :" + productSearchCriteria.getHigherPrice());
-        if (productSearchCriteria.getCategory() != null) { //if value present then enter only if  block
-            Category catSearch = Category.valueOf(String.valueOf(productSearchCriteria.getCategory()));
-            return productService.searchByCategory(catSearch);
-
-        }
-        if (productSearchCriteria.getLowerPrice() !=null && productSearchCriteria.getHigherPrice() != null)
-            return productService.searchProdcutByRange(productSearchCriteria.getLowerPrice(), productSearchCriteria.getHigherPrice());
-
-        if (productSearchCriteria.getName() != null) {
-            return productService.searchByName(productSearchCriteria.getName());
-        }
-        return productService.getAllProduct(); //if not found category then return all product
-    }
-
-//    @GetMapping()
-//    // @RequestMapping(method = RequestMethod.GET)
-//    public List<Product> getALlProduct(@RequestParam(name = "category", required = false) String category,
-//                                       @RequestParam(name = "name", required = false) String name,
-//                                       @RequestParam(name = "lower-price", required = false) Double lowerPrice,
-//                                       @RequestParam(name = "higher-price", required = false) Double higherPrice
-//    ) {
-//
-//        System.out.println("product API controller called =>" + category);
-//        System.out.println("Lower price is :" + lowerPrice);
-//        System.out.println("Higher price is :" + higherPrice);
-//        if (category != null) { //if value present then enter only if  block
-//            Category catSearch = Category.valueOf(category);
+//    @PostMapping()
+//    public  List<Product> getAllProduct(@RequestBody  ProductSearchCriteria productSearchCriteria)
+//    {
+//        System.out.println("product API controller called =>" + productSearchCriteria.getCategory());
+//        System.out.println("Lower price is :" +productSearchCriteria.getLowerPrice());
+//        System.out.println("Higher price is :" + productSearchCriteria.getHigherPrice());
+//        if (productSearchCriteria.getCategory() != null) { //if value present then enter only if  block
+//            Category catSearch = Category.valueOf(String.valueOf(productSearchCriteria.getCategory()));
 //            return productService.searchByCategory(catSearch);
 //
 //        }
-//        if (lowerPrice != null && higherPrice != null) {
-//            return productService.searchProdcutByRange(lowerPrice, higherPrice);
-//        }
-//        if (name != null) {
-//            return productService.searchByName(name);
+//        if (productSearchCriteria.getLowerPrice() !=null && productSearchCriteria.getHigherPrice() != null)
+//            return productService.searchProdcutByRange(productSearchCriteria.getLowerPrice(), productSearchCriteria.getHigherPrice());
+//
+//        if (productSearchCriteria.getName() != null) {
+//            return productService.searchByName(productSearchCriteria.getName());
 //        }
 //        return productService.getAllProduct(); //if not found category then return all product
 //    }
+
+    @GetMapping()
+    // @RequestMapping(method = RequestMethod.GET)
+    public List<Product> getALlProduct(@RequestParam(name = "category", required = false) String category,
+                                       @RequestParam(name = "name", required = false) String name,
+                                       @RequestParam(name = "lower-price", required = false) Double lowerPrice,
+                                       @RequestParam(name = "higher-price", required = false) Double higherPrice
+    ) {
+
+        System.out.println("product API controller called =>" + category);
+        System.out.println("Lower price is :" + lowerPrice);
+        System.out.println("Higher price is :" + higherPrice);
+        if (category != null) { //if value present then enter only if  block
+            Category catSearch = Category.valueOf(category);
+            return productService.searchByCategory(catSearch);
+
+        }
+        if (lowerPrice != null && higherPrice != null) {
+            return productService.searchProdcutByRange(lowerPrice, higherPrice);
+        }
+        if (name != null) {
+            return productService.searchByName(name);
+        }
+        return productService.getAllProduct(); //if not found category then return all product
+    }
 
 
     @GetMapping("/{id}")
