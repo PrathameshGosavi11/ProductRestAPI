@@ -48,7 +48,7 @@ public class ProductService {
 
     }
 
-    public void add(Product product)  {
+    public void add(Product product) {
         if (product.getCategory() == null) {
             throw new InvalidProductCategoryException(INVALID_PRODUCT_CATEGORY);
         }
