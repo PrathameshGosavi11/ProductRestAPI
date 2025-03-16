@@ -2,11 +2,13 @@ package com.newgen.ProductAPIs.Service;
 
 import com.newgen.ProductAPIs.model.Category;
 import com.newgen.ProductAPIs.model.Product;
+import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 
 @Service
+@Primary
 public class DatabaseProductService implements IProductService
 {
 
