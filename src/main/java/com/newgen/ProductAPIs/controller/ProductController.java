@@ -4,7 +4,6 @@ import com.newgen.ProductAPIs.Service.IProductService;
 import com.newgen.ProductAPIs.model.Category;
 import com.newgen.ProductAPIs.model.Product;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -22,8 +21,7 @@ public class ProductController {
 
     private  IProductService productService;
 
-    @Autowired()
-    @Qualifier("productService")
+    @Autowired
     public ProductController(IProductService productService) {
         System.out.println("Product Controller construtor is called with the service :"+productService);
         this.productService = productService;

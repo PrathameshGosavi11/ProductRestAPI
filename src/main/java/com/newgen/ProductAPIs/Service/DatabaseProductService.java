@@ -10,7 +10,7 @@ import java.util.List;
 public class DatabaseProductService implements IProductService
 {
 
-    DatabaseProductService()
+    public  DatabaseProductService()
     {
         System.out.println("Product service database servicec call here ");
     }

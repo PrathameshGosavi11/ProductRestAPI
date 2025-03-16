@@ -15,11 +15,11 @@ public class ProductApIsApplication {
         ApplicationContext applicationContext = SpringApplication.run(ProductApIsApplication.class, args);
 
 
-        ProductRepository productRepository=applicationContext.getBean(ProductRepository.class);
-
-        productRepository.save(new Product("Kurti", Category.CLOTHES,540.90));
-
-        System.out.println("product add successfully");
+//        ProductRepository productRepository=applicationContext.getBean(ProductRepository.class);
+//
+//        productRepository.save(new Product("Kurti", Category.CLOTHES,540.90));
+//
+//        System.out.println("product add successfully");
 
     }
 
