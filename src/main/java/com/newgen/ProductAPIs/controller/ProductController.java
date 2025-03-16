@@ -14,11 +14,8 @@ import java.util.List;
 @RequestMapping("api/v1/products")
 public class ProductController {
 
-
     // object of ProductService //but not good Approch in a spring.//its hardcoded.
     //  private  ProductService productService=new ProductService();
-
-
     private  IProductService productService;
 
     @Autowired
@@ -26,8 +23,6 @@ public class ProductController {
         System.out.println("Product Controller construtor is called with the service :"+productService);
         this.productService = productService;
     }
-
-
 
     @GetMapping()
     // @RequestMapping(method = RequestMethod.GET)
