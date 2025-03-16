@@ -10,6 +10,11 @@ import java.util.List;
 public class DatabaseProductService implements IProductService
 {
 
+    DatabaseProductService()
+    {
+        System.out.println("Product service database servicec call here ");
+    }
+
     @Override
     public void add(Product product) {
         
