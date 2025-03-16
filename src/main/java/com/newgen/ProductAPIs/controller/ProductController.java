@@ -23,6 +23,7 @@ public class ProductController {
 
     @Autowired
     public ProductController(IProductService productService) {
+        System.out.println("Product Controller construtor is called with the service :"+productService);
         this.productService = productService;
     }
 
