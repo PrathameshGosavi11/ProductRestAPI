@@ -1,15 +1,11 @@
 package com.newgen.ProductAPIs;
 
-import com.newgen.ProductAPIs.Service.ProductService;
 import com.newgen.ProductAPIs.model.Category;
 import com.newgen.ProductAPIs.model.Product;
 import com.newgen.ProductAPIs.repository.ProductRepository;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
-import org.w3c.dom.ls.LSOutput;
-
-import java.sql.SQLOutput;
 
 @SpringBootApplication
 public class ProductApIsApplication {

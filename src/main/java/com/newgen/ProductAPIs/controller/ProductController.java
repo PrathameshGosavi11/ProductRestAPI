@@ -1,12 +1,8 @@
 package com.newgen.ProductAPIs.controller;
 
 import com.newgen.ProductAPIs.Service.IProductService;
-import com.newgen.ProductAPIs.Service.ProductService;
-import com.newgen.ProductAPIs.exception.InvalidProductCategoryException;
-import com.newgen.ProductAPIs.exception.ProductNotFound;
 import com.newgen.ProductAPIs.model.Category;
 import com.newgen.ProductAPIs.model.Product;
-import com.newgen.ProductAPIs.model.ProductSearchCriteria;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

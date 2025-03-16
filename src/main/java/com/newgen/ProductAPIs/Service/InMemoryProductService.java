@@ -5,14 +5,15 @@ import com.newgen.ProductAPIs.exception.InvalidProductCategoryException;
 import com.newgen.ProductAPIs.exception.ProductNotFound;
 import com.newgen.ProductAPIs.model.Category;
 import com.newgen.ProductAPIs.model.Product;
+import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 
 import java.util.*;
 
-@Component
+
 @Service
-public class ProductService {
+public class InMemoryProductService implements  IProductService {
 
     private final Map<Long, Product> products;
     private Long id; //declare the ID automartic increment we we add the product
@@ -22,7 +23,7 @@ public class ProductService {
     final  String INVALID_PRODUCT_CATEGORY="invalid product category";
 
     // we initnlize the object
-    public ProductService() {
+    public InMemoryProductService() {
         this.products = new HashMap<>();
         this.id = 1L; //here initlize refer the current object
         initilizeProducts();
