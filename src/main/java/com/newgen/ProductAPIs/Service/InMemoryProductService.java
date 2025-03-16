@@ -13,6 +13,7 @@ import java.util.*;
 
 
 @Service
+@Primary
 public class InMemoryProductService implements  IProductService {
 
     private final Map<Long, Product> products;
@@ -24,6 +25,8 @@ public class InMemoryProductService implements  IProductService {
 
     // we initnlize the object
     public InMemoryProductService() {
+
+        System.out.println("In Memory product services called here");
         this.products = new HashMap<>();
         this.id = 1L; //here initlize refer the current object
         initilizeProducts();
