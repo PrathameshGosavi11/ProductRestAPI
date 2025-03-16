@@ -1,5 +1,6 @@
 package com.newgen.ProductAPIs.controller;
 
+import com.newgen.ProductAPIs.Service.IProductService;
 import com.newgen.ProductAPIs.Service.ProductService;
 import com.newgen.ProductAPIs.exception.InvalidProductCategoryException;
 import com.newgen.ProductAPIs.exception.ProductNotFound;
@@ -22,32 +23,14 @@ public class ProductController {
     //  private  ProductService productService=new ProductService();
 
 
-    private final ProductService productService;
+    private  IProductService productService;
 
     @Autowired
-    public ProductController(ProductService productService) {
+    public ProductController(IProductService productService) {
         this.productService = productService;
     }
 
-//    @PostMapping()
-//    public  List<Product> getAllProduct(@RequestBody  ProductSearchCriteria productSearchCriteria)
-//    {
-//        System.out.println("product API controller called =>" + productSearchCriteria.getCategory());
-//        System.out.println("Lower price is :" +productSearchCriteria.getLowerPrice());
-//        System.out.println("Higher price is :" + productSearchCriteria.getHigherPrice());
-//        if (productSearchCriteria.getCategory() != null) { //if value present then enter only if  block
-//            Category catSearch = Category.valueOf(String.valueOf(productSearchCriteria.getCategory()));
-//            return productService.searchByCategory(catSearch);
-//
-//        }
-//        if (productSearchCriteria.getLowerPrice() !=null && productSearchCriteria.getHigherPrice() != null)
-//            return productService.searchProdcutByRange(productSearchCriteria.getLowerPrice(), productSearchCriteria.getHigherPrice());
-//
-//        if (productSearchCriteria.getName() != null) {
-//            return productService.searchByName(productSearchCriteria.getName());
-//        }
-//        return productService.getAllProduct(); //if not found category then return all product
-//    }
+
 
     @GetMapping()
     // @RequestMapping(method = RequestMethod.GET)
