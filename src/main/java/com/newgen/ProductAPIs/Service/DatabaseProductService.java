@@ -26,7 +26,7 @@ public class DatabaseProductService implements IProductService
     public void add(Product product) {
         //add the product
         // how call the save method here
-        //productRepository.save(product);
+        productRepository.save(product);
     }
 
     @Override
