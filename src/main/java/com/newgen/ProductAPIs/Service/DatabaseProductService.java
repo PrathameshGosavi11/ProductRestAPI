@@ -69,8 +69,13 @@ public class DatabaseProductService implements IProductService
 
     @Override
     public void updateProduct(Product newProduct) {
-
-        productRepository.save(newProduct);
+        try
+        {
+            productRepository.save(newProduct);
+        } catch (Exception e) {
+            System.err.println(e);
+            throw new ProductNotFound(Constant.INVALID_PRODUCT_IDENTIFIER_ERROR_MESSAGE);
+        }
     }
 
     @Override
