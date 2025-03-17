@@ -13,7 +13,6 @@ import java.util.*;
 
 
 @Service
-@Primary
 public class InMemoryProductService implements  IProductService {
 
     private final Map<Long, Product> products;
