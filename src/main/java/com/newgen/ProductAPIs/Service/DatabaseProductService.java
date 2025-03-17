@@ -34,7 +34,6 @@ public class DatabaseProductService implements IProductService
 
     @Override
     public Product getProductById(Long id) {
-
         Optional<Product> product= productRepository.findById(id);
         if(product.isPresent())
         {
@@ -55,6 +54,15 @@ public class DatabaseProductService implements IProductService
     @Override
     public void deleteProduct(Long id) {
 
+       Optional<Product> product= productRepository.findById(id);
+       if(product.isPresent())
+       {
+           productRepository.deleteById(id);
+       }
+       else
+       {
+           throw  new ProductNotFound(Constant.INVALID_PRODUCT_IDENTIFIER_ERROR_MESSAGE);
+       }
     }
 
     @Override
