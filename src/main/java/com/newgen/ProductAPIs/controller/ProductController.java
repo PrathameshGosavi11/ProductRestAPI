@@ -77,15 +77,15 @@ public class ProductController {
     }
 
     @PutMapping("/{id}")
-    public ResponseEntity<String> updateProduct(@RequestBody Product product, @PathVariable(name = "id") Long productId) {
+    public ResponseEntity<String> updateProduct(@RequestBody Product product, @PathVariable(name = "id")
+    Long productId) {
         System.out.println("Product Controller update method called ");
         product.setId(productId);
 
         productService.updateProduct(product);
         return new ResponseEntity<>("Product update successfully ", HttpStatus.OK);
     }
-    //    @GetMapping("api/v1/products/search/{category}")
-//    public @ResponseBody List<Product> searchProductByCategory(@PathVariable Category category) {
+    //    @GetMapping("api/v1/products/search/{category}")//    public @ResponseBody List<Product> searchProductByCategory(@PathVariable Category category) {
 //        System.out.println("product API controller called ");
 //        return productService.searchByCategory(category);
 //
