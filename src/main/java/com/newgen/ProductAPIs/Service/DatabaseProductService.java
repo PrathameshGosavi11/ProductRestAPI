@@ -1,5 +1,6 @@
 package com.newgen.ProductAPIs.Service;
 
+import com.newgen.ProductAPIs.exception.ProductNotFound;
 import com.newgen.ProductAPIs.model.Category;
 import com.newgen.ProductAPIs.model.Product;
 import com.newgen.ProductAPIs.repository.ProductRepository;
@@ -8,6 +9,7 @@ import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
 
 @Service
 @Primary
@@ -31,7 +33,16 @@ public class DatabaseProductService implements IProductService
 
     @Override
     public Product getProductById(Long id) {
-        return null;
+
+        Optional<Product> product= productRepository.findById(id);
+        if(product.isPresent())
+        {
+            return product.get();
+        }
+        else
+        {
+            throw new ProductNotFound(INVALID_PRODUCT_IDENTIFIER_ERROR_MESSAGE);
+        }
     }
 
     @Override
