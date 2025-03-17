@@ -10,7 +10,7 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 
 @Service
-//@Primary
+@Primary
 public class DatabaseProductService implements IProductService
 {
     private  ProductRepository productRepository;
@@ -36,7 +36,8 @@ public class DatabaseProductService implements IProductService
 
     @Override
     public List<Product> getAllProduct() {
-        return List.of();
+       return productRepository.findAll();
+
     }
 
     @Override
