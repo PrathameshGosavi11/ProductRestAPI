@@ -96,19 +96,7 @@ public class InMemoryProductService implements  IProductService {
         return matchProduct;
     }
 
-    //    public List<Product> searchByName(String name)
-//    {
-//        List<Product> matchProduct=new ArrayList<>();
-//
-//        for(Product product:products.values())
-//        {
-//            if(product.getName().equals(name))
-//            {
-//                matchProduct.add(product);
-//            }
-//        }
-//        return  matchProduct;
-//    }
+
     public List<Product> searchByName(String name) {
 
         if(name.isEmpty())

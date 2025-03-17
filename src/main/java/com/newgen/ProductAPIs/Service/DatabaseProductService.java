@@ -67,6 +67,8 @@ public class DatabaseProductService implements IProductService
 
     @Override
     public List<Product> searchByCategory(Category category) {
+
+        productRepository.findByCategory(category);
         return List.of();
     }
 
