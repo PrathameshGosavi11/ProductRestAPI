@@ -5,6 +5,7 @@ import com.newgen.ProductAPIs.exception.InvalidProductCategoryException;
 import com.newgen.ProductAPIs.exception.ProductNotFound;
 import com.newgen.ProductAPIs.model.Category;
 import com.newgen.ProductAPIs.model.Product;
+import com.newgen.ProductAPIs.util.Constant;
 import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
@@ -18,7 +19,7 @@ public class InMemoryProductService implements  IProductService {
     private final Map<Long, Product> products;
     private Long id; //declare the ID automartic increment we we add the product
 
-    final String  INVALID_PRODUCT_IDENTIFIER_ERROR_MESSAGE ="Invalid product Identifire is provided , so product not found.";
+   // final String  INVALID_PRODUCT_IDENTIFIER_ERROR_MESSAGE ="Invalid product Identifire is provided , so product not found.";
 
     final  String INVALID_PRODUCT_CATEGORY="invalid product category";
 
@@ -65,7 +66,7 @@ public class InMemoryProductService implements  IProductService {
         Product product= products.get(id);
         if (product==null)
         {
-            throw  new ProductNotFound(INVALID_PRODUCT_IDENTIFIER_ERROR_MESSAGE);
+            throw  new ProductNotFound(Constant.INVALID_PRODUCT_IDENTIFIER_ERROR_MESSAGE);
         }
         return product;
     }
@@ -80,7 +81,7 @@ public class InMemoryProductService implements  IProductService {
         Product product= products.remove(id);
         if (product==null)
         {
-            throw  new ProductNotFound(INVALID_PRODUCT_IDENTIFIER_ERROR_MESSAGE);
+            throw  new ProductNotFound(Constant.INVALID_PRODUCT_IDENTIFIER_ERROR_MESSAGE);
         }
     }
 
@@ -128,7 +129,7 @@ public class InMemoryProductService implements  IProductService {
 
         Product exitstanceProduct = products.get(newProduct.getId());
         if (exitstanceProduct == null) {
-            throw  new ProductNotFound(INVALID_PRODUCT_IDENTIFIER_ERROR_MESSAGE);
+            throw  new ProductNotFound(Constant.INVALID_PRODUCT_IDENTIFIER_ERROR_MESSAGE);
         }
         if (exitstanceProduct != null) //if product found then only go entered update
         {

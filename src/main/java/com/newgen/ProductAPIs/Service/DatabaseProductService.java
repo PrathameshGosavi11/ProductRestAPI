@@ -4,6 +4,7 @@ import com.newgen.ProductAPIs.exception.ProductNotFound;
 import com.newgen.ProductAPIs.model.Category;
 import com.newgen.ProductAPIs.model.Product;
 import com.newgen.ProductAPIs.repository.ProductRepository;
+import com.newgen.ProductAPIs.util.Constant;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Service;
@@ -41,7 +42,7 @@ public class DatabaseProductService implements IProductService
         }
         else
         {
-            throw new ProductNotFound(INVALID_PRODUCT_IDENTIFIER_ERROR_MESSAGE);
+            throw new ProductNotFound(Constant.INVALID_PRODUCT_IDENTIFIER_ERROR_MESSAGE);
         }
     }
 
