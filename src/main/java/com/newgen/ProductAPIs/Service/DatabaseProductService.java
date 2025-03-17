@@ -14,10 +14,12 @@ import java.util.List;
 public class DatabaseProductService implements IProductService
 {
     private  ProductRepository productRepository;
-    
-    public  DatabaseProductService()
+
+    @Autowired
+    public  DatabaseProductService(ProductRepository productRepository)
     {
-        System.out.println("Product service database servicec call here ");
+        System.out.println("Product service database servicec call here =>"+productRepository);
+        this.productRepository=productRepository;
     }
 
     @Override
