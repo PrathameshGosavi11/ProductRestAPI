@@ -21,7 +21,6 @@ public class InMemoryProductService implements  IProductService {
 
    // final String  INVALID_PRODUCT_IDENTIFIER_ERROR_MESSAGE ="Invalid product Identifire is provided , so product not found.";
 
-    final  String INVALID_PRODUCT_CATEGORY="invalid product category";
 
     // we initnlize the object
     public InMemoryProductService() {
@@ -54,7 +53,7 @@ public class InMemoryProductService implements  IProductService {
 
     public void add(Product product) {
         if (product.getCategory() == null) {
-            throw new InvalidProductCategoryException(INVALID_PRODUCT_CATEGORY);
+            throw new InvalidProductCategoryException(Constant.INVALID_PRODUCT_CATEGORY_MESSAGE);
         }
         product.setId(id);
         products.put(id, product);
@@ -125,7 +124,7 @@ public class InMemoryProductService implements  IProductService {
             exitstanceProduct.setPrice(newProduct.getPrice());
         }
         if (newProduct.getCategory() == null) {
-            throw new InvalidProductCategoryException(INVALID_PRODUCT_CATEGORY);
+            throw new InvalidProductCategoryException(Constant.INVALID_PRODUCT_CATEGORY_MESSAGE);
         }
     }
 

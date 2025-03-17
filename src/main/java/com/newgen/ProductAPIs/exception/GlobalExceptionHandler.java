@@ -35,6 +35,14 @@ public class GlobalExceptionHandler {
         return  new ResponseEntity<>(errorDetails,HttpStatus.BAD_REQUEST);
     }
 
+    @ExceptionHandler(IllegalArgumentException.class)
+    public ResponseEntity<ErrorDetails> handleInvalidArgumentException(IllegalArgumentException e)
+    {
+        System.err.println(e);
+        ErrorDetails errorDetails=new ErrorDetails(HttpStatus.BAD_REQUEST.value(), e.getMessage(),"you pass invalid enum category");
+        return  new ResponseEntity<>(errorDetails,HttpStatus.BAD_REQUEST);
+    }
+
     @ExceptionHandler
     public  ResponseEntity<ErrorDetails> handleGenericException(Exception e)
     {

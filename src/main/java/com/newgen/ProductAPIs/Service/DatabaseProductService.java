@@ -1,5 +1,6 @@
 package com.newgen.ProductAPIs.Service;
 
+import com.newgen.ProductAPIs.exception.InvalidProductCategoryException;
 import com.newgen.ProductAPIs.exception.ProductNotFound;
 import com.newgen.ProductAPIs.model.Category;
 import com.newgen.ProductAPIs.model.Product;
@@ -68,8 +69,12 @@ public class DatabaseProductService implements IProductService
     @Override
     public List<Product> searchByCategory(Category category) {
 
+        if(category==null)
+        {
+            throw new InvalidProductCategoryException(Constant.INVALID_PRODUCT_CATEGORY_MESSAGE);
+        }
        return productRepository.findByCategory(category);
-    
+
     }
 
     @Override
@@ -79,6 +84,10 @@ public class DatabaseProductService implements IProductService
 
     @Override
     public void updateProduct(Product newProduct) {
+
+        if (newProduct.getCategory() == null) {
+            throw new InvalidProductCategoryException(Constant.INVALID_PRODUCT_CATEGORY_MESSAGE);
+        }
         try
         {
             productRepository.save(newProduct);
