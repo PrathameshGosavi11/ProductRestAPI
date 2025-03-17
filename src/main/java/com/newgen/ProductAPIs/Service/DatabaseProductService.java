@@ -70,6 +70,7 @@ public class DatabaseProductService implements IProductService
     @Override
     public void updateProduct(Product newProduct) {
 
+        productRepository.save(newProduct);
     }
 
     @Override
