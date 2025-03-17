@@ -13,17 +13,8 @@ import java.util.List;
 @Primary
 public class DatabaseProductService implements IProductService
 {
-
-
-    private ProductRepository productRepository;
-
-    @Autowired
-    public  DatabaseProductService(ProductRepository productRepository)
-    {
-        System.out.println("database service callaed ");
-        this.productRepository=productRepository;
-    }
-
+    private  ProductRepository productRepository;
+    
     public  DatabaseProductService()
     {
         System.out.println("Product service database servicec call here ");
@@ -33,7 +24,7 @@ public class DatabaseProductService implements IProductService
     public void add(Product product) {
         //add the product
         // how call the save method here
-        productRepository.save(product);
+        //productRepository.save(product);
     }
 
     @Override
