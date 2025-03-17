@@ -82,7 +82,7 @@ public class DatabaseProductService implements IProductService
 
     @Override
     public List<Product> searchByName(String name) {
-        return List.of();
+        return productRepository.findByName(name);
     }
 
     @Override
