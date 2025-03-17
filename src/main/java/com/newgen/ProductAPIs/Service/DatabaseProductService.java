@@ -30,6 +30,9 @@ public class DatabaseProductService implements IProductService
     public void add(Product product) {
         //add the product
         // how call the save method here
+        if (product.getCategory() == null) {
+            throw new InvalidProductCategoryException(Constant.INVALID_PRODUCT_CATEGORY_MESSAGE);
+        }
         productRepository.save(product);
     }
 
