@@ -102,6 +102,6 @@ public class DatabaseProductService implements IProductService
 
     @Override
     public List<Product> searchProdcutByRange(Double lowerPrice, Double higherPrice) {
-        return List.of();
+        return  productRepository.findByPriceBetween(lowerPrice,higherPrice);
     }
 }
