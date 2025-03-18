@@ -47,7 +47,7 @@ public class ProductController {
 
     @GetMapping()
     // @RequestMapping(method = RequestMethod.GET)
-    public List<Product> getALlProduct(@RequestParam(name = "category", required = false) String category,
+    public List<Product> getAllProduct(@RequestParam(name = "category", required = false) String category,
                                        @RequestParam(name = "name", required = false) String name,
                                        @RequestParam(name = "lower-price", required = false) Double lowerPrice,
                                        @RequestParam(name = "higher-price", required = false) Double higherPrice

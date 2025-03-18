@@ -28,11 +28,11 @@ public class InMemoryProductService implements  IProductService {
         System.out.println("In Memory product services called here");
         this.products = new HashMap<>();
         this.id = 1L; //here initlize refer the current object
-        initilizeProducts();
+       // initilizeProducts();
     }
 
     private void initilizeProducts() {
-
+        System.out.println("in-memory also initlize ");
         try {
 
 
