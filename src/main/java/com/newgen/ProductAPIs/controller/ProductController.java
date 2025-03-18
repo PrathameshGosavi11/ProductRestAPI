@@ -23,27 +23,10 @@ public class ProductController {
     public ProductController(IProductService productService) {
         System.out.println("Product Controller construtor is called with the service :"+productService);
         this.productService = productService;
-        initilizeProducts();
-    }
-
-    private  void initilizeProducts()
-    {
-        try {
-
-
-            addProduct(new Product("Laptop", Category.ELECTRONICS, 22000.60));
-            addProduct(new Product("Mobile", Category.ELECTRONICS, 10000.60));
-            addProduct(new Product("t-Shirt", Category.CLOTHES, 200.60));
-            addProduct(new Product("bed", Category.FURNITURE, 7200.60));
-            addProduct(new Product("MOB", Category.ELECTRONICS, 11000.60));
-            addProduct(new Product("tv", Category.ELECTRONICS, 22000.60));
-            addProduct(new Product("Sunglasses", Category.CLOTHES, 500.60));
-            addProduct(new Product("glasses", Category.CLOTHES, 300.60));
-        } catch (InvalidProductCategoryException e) {
-            System.err.println(e.getMessage());
-        }
 
     }
+
+
 
     @GetMapping()
     // @RequestMapping(method = RequestMethod.GET)
