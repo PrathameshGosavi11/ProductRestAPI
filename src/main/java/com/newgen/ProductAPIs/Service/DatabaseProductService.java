@@ -82,7 +82,7 @@ public class DatabaseProductService implements IProductService
 
     @Override
     public List<Product> searchByName(String name) {
-        return productRepository.findByName(name);
+        return productRepository.findByNameContainingIgnoreCase(name);
     }
 
     @Override
