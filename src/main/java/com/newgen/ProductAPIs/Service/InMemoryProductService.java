@@ -12,9 +12,12 @@ import org.springframework.stereotype.Service;
 
 import java.util.*;
 
+import static com.newgen.ProductAPIs.util.Constant.INVALID_PRODUCT_CATEGORY_MESSAGE;
+import static com.newgen.ProductAPIs.util.Constant.INVALID_PRODUCT_IDENTIFIER_ERROR_MESSAGE;
+
 
 @Service
-@Primary
+
 public class InMemoryProductService implements  IProductService {
 
     private final Map<Long, Product> products;
@@ -29,11 +32,11 @@ public class InMemoryProductService implements  IProductService {
         System.out.println("In Memory product services called here");
         this.products = new HashMap<>();
         this.id = 1L; //here initlize refer the current object
-       // initilizeProducts();
+        initilizeProducts();
     }
 
     private void initilizeProducts() {
-        System.out.println("in-memory also initlize ");
+
         try {
 
 
@@ -54,7 +57,7 @@ public class InMemoryProductService implements  IProductService {
 
     public void add(Product product) {
         if (product.getCategory() == null) {
-            throw new InvalidProductCategoryException(Constant.INVALID_PRODUCT_CATEGORY_MESSAGE);
+            throw new InvalidProductCategoryException(INVALID_PRODUCT_CATEGORY_MESSAGE);
         }
         product.setId(id);
         products.put(id, product);
@@ -66,7 +69,7 @@ public class InMemoryProductService implements  IProductService {
         Product product= products.get(id);
         if (product==null)
         {
-            throw  new ProductNotFound(Constant.INVALID_PRODUCT_IDENTIFIER_ERROR_MESSAGE);
+            throw  new ProductNotFound(INVALID_PRODUCT_IDENTIFIER_ERROR_MESSAGE);
         }
         return product;
     }
@@ -81,7 +84,7 @@ public class InMemoryProductService implements  IProductService {
         Product product= products.remove(id);
         if (product==null)
         {
-            throw  new ProductNotFound(Constant.INVALID_PRODUCT_IDENTIFIER_ERROR_MESSAGE);
+            throw  new ProductNotFound(INVALID_PRODUCT_IDENTIFIER_ERROR_MESSAGE);
         }
     }
 
@@ -117,7 +120,7 @@ public class InMemoryProductService implements  IProductService {
 
         Product exitstanceProduct = products.get(newProduct.getId());
         if (exitstanceProduct == null) {
-            throw  new ProductNotFound(Constant.INVALID_PRODUCT_IDENTIFIER_ERROR_MESSAGE);
+            throw  new ProductNotFound(INVALID_PRODUCT_IDENTIFIER_ERROR_MESSAGE);
         }
         if (exitstanceProduct != null) //if product found then only go entered update
         {
@@ -125,7 +128,7 @@ public class InMemoryProductService implements  IProductService {
             exitstanceProduct.setPrice(newProduct.getPrice());
         }
         if (newProduct.getCategory() == null) {
-            throw new InvalidProductCategoryException(Constant.INVALID_PRODUCT_CATEGORY_MESSAGE);
+            throw new InvalidProductCategoryException(INVALID_PRODUCT_CATEGORY_MESSAGE);
         }
     }
 
