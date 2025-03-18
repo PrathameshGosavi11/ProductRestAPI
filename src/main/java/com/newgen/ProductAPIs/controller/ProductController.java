@@ -1,6 +1,7 @@
 package com.newgen.ProductAPIs.controller;
 
 import com.newgen.ProductAPIs.Service.IProductService;
+import com.newgen.ProductAPIs.exception.InvalidProductCategoryException;
 import com.newgen.ProductAPIs.model.Category;
 import com.newgen.ProductAPIs.model.Product;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -22,6 +23,26 @@ public class ProductController {
     public ProductController(IProductService productService) {
         System.out.println("Product Controller construtor is called with the service :"+productService);
         this.productService = productService;
+        initilizeProducts();
+    }
+
+    private  void initilizeProducts()
+    {
+        try {
+
+
+            addProduct(new Product("Laptop", Category.ELECTRONICS, 22000.60));
+            addProduct(new Product("Mobile", Category.ELECTRONICS, 10000.60));
+            addProduct(new Product("t-Shirt", Category.CLOTHES, 200.60));
+            addProduct(new Product("bed", Category.FURNITURE, 7200.60));
+            addProduct(new Product("MOB", Category.ELECTRONICS, 11000.60));
+            addProduct(new Product("tv", Category.ELECTRONICS, 22000.60));
+            addProduct(new Product("Sunglasses", Category.CLOTHES, 500.60));
+            addProduct(new Product("glasses", Category.CLOTHES, 300.60));
+        } catch (InvalidProductCategoryException e) {
+            System.err.println(e.getMessage());
+        }
+
     }
 
     @GetMapping()
@@ -70,7 +91,7 @@ public class ProductController {
     @PostMapping()
     public ResponseEntity<String> addProduct(@RequestBody Product product) //here all data get @Requestbody
     {
-        System.out.println("Product Controller add method called ");
+        System.out.println("Product Controller addProduct method called ");
 
                 productService.add(product);
             return new ResponseEntity<>("Product added successfully", HttpStatus.CREATED);
