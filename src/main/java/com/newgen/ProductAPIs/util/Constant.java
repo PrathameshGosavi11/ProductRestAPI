@@ -1,9 +1,9 @@
 package com.newgen.ProductAPIs.util;
 
-public class Constant
+public interface Constant
 {
-   public static final String  INVALID_PRODUCT_IDENTIFIER_ERROR_MESSAGE ="Invalid product Identifire is provided , so product not found.";
+    String  INVALID_PRODUCT_IDENTIFIER_ERROR_MESSAGE ="Invalid product Identifire is provided , so product not found.";
 
-   public static final String INVALID_PRODUCT_CATEGORY_MESSAGE="Invalid Product Category";
+    String INVALID_PRODUCT_CATEGORY_MESSAGE="Invalid Product Category";
 
 }
