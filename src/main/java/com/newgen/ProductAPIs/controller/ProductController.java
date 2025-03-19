@@ -88,9 +88,13 @@ public class ProductController {
             operationId = "deleteProductById",
             parameters = {
                     @Parameter(name = "id", description = "Product ID", required = true)
+            },
+            responses = {
+                    @ApiResponse(responseCode = "200",description = "Product delete successfully"),
+                    @ApiResponse(responseCode = "404",description = "Product Not Found"),
+                    @ApiResponse(responseCode = "500",description = "Internal server error"),
             }
     )
-
     @DeleteMapping("/{id}")
     public ResponseEntity<String> deleteProduct(@PathVariable(name = "id") long productId) {
         System.out.println("delete request on controller-->" + productId);
