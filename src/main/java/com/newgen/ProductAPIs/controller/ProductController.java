@@ -4,6 +4,8 @@ import com.newgen.ProductAPIs.Service.IProductService;
 import com.newgen.ProductAPIs.exception.InvalidProductCategoryException;
 import com.newgen.ProductAPIs.model.Category;
 import com.newgen.ProductAPIs.model.Product;
+import io.swagger.v3.oas.annotations.media.Content;
+import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.http.HttpStatus;
@@ -56,6 +58,7 @@ public class ProductController {
     }
 
 
+    @ApiResponse(description = "get Product by given Product Identifier ",responseCode = "200", content = @Content(mediaType = "application/json"))
     @GetMapping("/{id}")
     public ResponseEntity<?> getProductById(@PathVariable(name = "id") Long productId) {
 
