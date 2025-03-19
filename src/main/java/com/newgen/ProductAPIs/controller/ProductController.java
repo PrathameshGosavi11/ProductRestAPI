@@ -1,11 +1,13 @@
 package com.newgen.ProductAPIs.controller;
 
 import com.newgen.ProductAPIs.Service.IProductService;
+import com.newgen.ProductAPIs.exception.ErrorDetails;
 import com.newgen.ProductAPIs.exception.InvalidProductCategoryException;
 import com.newgen.ProductAPIs.model.Category;
 import com.newgen.ProductAPIs.model.Product;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.media.Content;
+import io.swagger.v3.oas.annotations.media.Schema;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
@@ -59,8 +61,8 @@ public class ProductController {
     }
 
 
-    @ApiResponse(description = "get Product by given Product Identifier ",responseCode = "200", content = @Content(mediaType = "application/JSON"))
-    @ApiResponse(description = "product not Found",responseCode = "404")
+    @ApiResponse(description = "get Product by given Product Identifier ",responseCode = "200", content = @Content(mediaType = "application/JSON",schema = @Schema(implementation = Product.class)))
+    @ApiResponse(description = "Product not Found",responseCode = "404",content = @Content(schema = @Schema(implementation=ErrorDetails.class)))
     @GetMapping("/{id}")
     @Operation(
             summary = "Retrive the Product by Id",
