@@ -6,6 +6,8 @@ import com.newgen.ProductAPIs.exception.InvalidProductCategoryException;
 import com.newgen.ProductAPIs.model.Category;
 import com.newgen.ProductAPIs.model.Product;
 import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.Parameter;
+import io.swagger.v3.oas.annotations.Parameters;
 import io.swagger.v3.oas.annotations.media.Content;
 import io.swagger.v3.oas.annotations.media.Schema;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
@@ -36,7 +38,7 @@ public class ProductController {
     }
 
 
-
+    @Operation(summary = "Retrive all Product",description = "Return all Product here",operationId = "Get All Product")
     @GetMapping()
     // @RequestMapping(method = RequestMethod.GET)
     public List<Product> getAllProduct(@RequestParam(name = "category",required = false) String category,
@@ -80,9 +82,18 @@ public class ProductController {
             return new ResponseEntity(product, HttpStatus.OK);
     }
 
+    @Operation(
+            summary = "Delete Product by ID",
+            description = "Deletes a product using its ID",
+            operationId = "deleteProductById",
+            parameters = {
+                    @Parameter(name = "id", description = "Product ID", required = true)
+            }
+    )
+
     @DeleteMapping("/{id}")
     public ResponseEntity<String> deleteProduct(@PathVariable(name = "id") long productId) {
-        System.out.println("deletet request on controller-->" + productId);
+        System.out.println("delete request on controller-->" + productId);
 
             productService.deleteProduct(productId);
             return new ResponseEntity<>("product deleted successfully", HttpStatus.OK);
