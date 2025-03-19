@@ -59,7 +59,7 @@ public class ProductController {
     }
 
 
-    @ApiResponse(description = "get Product by given Product Identifier ",responseCode = "200", content = @Content(mediaType = "application/xml"))
+    @ApiResponse(description = "get Product by given Product Identifier ",responseCode = "200", content = @Content(mediaType = "application/JSON"))
     @ApiResponse(description = "product not Found",responseCode = "404")
     @GetMapping("/{id}")
     @Operation(
