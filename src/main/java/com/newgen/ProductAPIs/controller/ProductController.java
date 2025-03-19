@@ -94,7 +94,6 @@ public class ProductController {
                     )
             }
     )
-
     @Operation(
             summary = "Retrive the Product by Id",
             description = "Get Product Object Specifying it's Product Identifier",
