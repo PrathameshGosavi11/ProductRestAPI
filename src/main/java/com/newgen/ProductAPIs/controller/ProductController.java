@@ -40,7 +40,23 @@ public class ProductController {
 
 
 
-    @Operation(summary = "Retrive all Product",description = "Return all Product here",operationId = "Get All Product")
+    @ApiResponses(
+            value = {
+                    @ApiResponse (
+                            description = "Return all Product here:",
+                            responseCode = "200",
+                            content = @Content(
+                                    mediaType = "application/json",
+                                    schema = @Schema(implementation = Product.class)
+                            )
+                    )
+            }
+    )
+    @Operation(
+            summary = "Retrive all Product",
+            description = "Return all Product here",
+            operationId = "Get All Product"
+    )
     @GetMapping()
     // @RequestMapping(method = RequestMethod.GET)
     public List<Product> getAllProduct(@RequestParam(name = "category",required = false) String category,
@@ -97,7 +113,8 @@ public class ProductController {
     @Operation(
             summary = "Retrive the Product by Id",
             description = "Get Product Object Specifying it's Product Identifier",
-            tags = {"Products"}
+            tags = {"Products"},
+            operationId = "get Product By Id"
     )
     @GetMapping("/{id}")
     public ResponseEntity<?> getProductById(@PathVariable(name = "id") Long productId) {
@@ -147,11 +164,7 @@ public class ProductController {
         productService.updateProduct(product);
         return new ResponseEntity<>("Product update successfully ", HttpStatus.OK);
     }
-    //    @GetMapping("api/v1/products/search/{category}")//    public @ResponseBody List<Product> searchProductByCategory(@PathVariable Category category) {
-//        System.out.println("product API controller called ");
-//        return productService.searchByCategory(category);
-//
-//    }
+
 
 }
 
