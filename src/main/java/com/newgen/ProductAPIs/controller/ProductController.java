@@ -63,6 +63,7 @@ public class ProductController {
 
     @ApiResponse(description = "get Product by given Product Identifier ",responseCode = "200", content = @Content(mediaType = "application/JSON",schema = @Schema(implementation = Product.class)))
     @ApiResponse(description = "Product not Found",responseCode = "404",content = @Content(schema = @Schema(implementation=ErrorDetails.class)))
+    @ApiResponse(description = "Internal server errorr",responseCode = "500",content = @Content(schema = @Schema(implementation = ErrorDetails.class)))
     @GetMapping("/{id}")
     @Operation(
             summary = "Retrive the Product by Id",
