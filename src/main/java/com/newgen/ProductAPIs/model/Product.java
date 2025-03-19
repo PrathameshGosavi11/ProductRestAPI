@@ -1,5 +1,6 @@
 package com.newgen.ProductAPIs.model;
 
+import io.swagger.v3.oas.annotations.media.Schema;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -14,15 +15,19 @@ public class Product {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Schema(description = "Product ID")
     private Long id;
 
     @Column(name = "Product_Name",updatable = false,nullable = false)
+    @Schema(description = "Product Name")
     private String name;
 
     @Column(name="Product_Category")
+    @Schema(description = "Product Category")
     private Category category;
 
     @Column(name="Product_Price")
+    @Schema(description = "Product Price")
     private double price;
 
     public Product(String name, Category category, double price) {

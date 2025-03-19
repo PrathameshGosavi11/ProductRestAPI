@@ -11,6 +11,7 @@ import io.swagger.v3.oas.annotations.Parameters;
 import io.swagger.v3.oas.annotations.media.Content;
 import io.swagger.v3.oas.annotations.media.Schema;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
+import io.swagger.v3.oas.annotations.responses.ApiResponses;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
@@ -36,6 +37,7 @@ public class ProductController {
         this.productService = productService;
 
     }
+
 
 
     @Operation(summary = "Retrive all Product",description = "Return all Product here",operationId = "Get All Product")
@@ -65,15 +67,19 @@ public class ProductController {
     }
 
 
-    @ApiResponse(description = "get Product by given Product Identifier ",responseCode = "200", content = @Content(mediaType = "application/JSON",schema = @Schema(implementation = Product.class)))
-    @ApiResponse(description = "Product not Found",responseCode = "404",content = @Content(schema = @Schema(implementation=ErrorDetails.class)))
-    @ApiResponse(description = "Internal server errorr",responseCode = "500",content = @Content(schema = @Schema(implementation = ErrorDetails.class)))
-    @GetMapping("/{id}")
+    @ApiResponses(
+            value = {
+                    @ApiResponse(description = "get Product by given Product Identifier ",responseCode = "200", content = @Content(mediaType = "application/JSON",schema = @Schema(implementation = Product.class))),
+                    @ApiResponse(description = "Product not Found",responseCode = "404",content = @Content(schema = @Schema(implementation=ErrorDetails.class))),
+                    @ApiResponse(description = "Internal server errorr",responseCode = "500",content = @Content(schema = @Schema(implementation = ErrorDetails.class)))
+            }
+    )
     @Operation(
             summary = "Retrive the Product by Id",
             description = "Get Product Object Specifying it's Product Identifier",
             tags = {"Products"}
     )
+    @GetMapping("/{id}")
     public ResponseEntity<?> getProductById(@PathVariable(name = "id") Long productId) {
 
         System.out.println("here request is coming =>" + productId);
