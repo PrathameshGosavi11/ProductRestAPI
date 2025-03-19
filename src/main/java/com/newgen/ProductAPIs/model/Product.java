@@ -15,11 +15,11 @@ public class Product {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Schema(description = "Product ID")
+    @Schema(description = "Product ID",example = "1")
     private Long id;
 
     @Column(name = "Product_Name",updatable = false,nullable = false)
-    @Schema(description = "Product Name")
+    @Schema(description = "Product Name",maxLength = 20)
     private String name;
 
     @Column(name="Product_Category")
