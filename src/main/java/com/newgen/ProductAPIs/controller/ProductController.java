@@ -67,13 +67,34 @@ public class ProductController {
     }
 
 
+
     @ApiResponses(
             value = {
-                    @ApiResponse(description = "get Product by given Product Identifier ",responseCode = "200", content = @Content(mediaType = "application/JSON",schema = @Schema(implementation = Product.class))),
-                    @ApiResponse(description = "Product not Found",responseCode = "404",content = @Content(schema = @Schema(implementation=ErrorDetails.class))),
-                    @ApiResponse(description = "Internal server errorr",responseCode = "500",content = @Content(schema = @Schema(implementation = ErrorDetails.class)))
+                    @ApiResponse(
+                            description = "Get Product by given Product Identifier",
+                            responseCode = "200",
+                            content = @Content(
+                                    mediaType = "application/json",  // Corrected "application/JSON" to "application/json"
+                                    schema = @Schema(implementation = Product.class)
+                            )
+                    ),
+                    @ApiResponse(
+                            description = "Product not Found",
+                            responseCode = "404",
+                            content = @Content(
+                                    schema = @Schema(implementation = ErrorDetails.class)
+                            )
+                    ),
+                    @ApiResponse(
+                            description = "Internal Server Error",
+                            responseCode = "500",
+                            content = @Content(
+                                    schema = @Schema(implementation = ErrorDetails.class)
+                            )
+                    )
             }
     )
+
     @Operation(
             summary = "Retrive the Product by Id",
             description = "Get Product Object Specifying it's Product Identifier",
