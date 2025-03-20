@@ -192,7 +192,7 @@ public class ProductController {
             operationId = "addProduct"
     )
     @PostMapping()
-    public ResponseEntity<String> addProduct(@RequestBody @Valid Product product) //here all data get @Requestbody
+    public ResponseEntity<String> addProduct(@RequestBody  Product product) //here all data get @Requestbody
     {
         System.out.println("Product Controller addProduct method called ");
 

@@ -23,8 +23,8 @@ public class Product {
     @Schema(description = "Product Name",maxLength = 20) // only for documentation
   //  @Max(value = 2,message = "Name should be at most 20 character")
 //    @Min(value = 5,message = "name should be at least 5 character")
-    @NotNull
-    @Size(max = 20,min = 5)
+   // @NotNull
+    // @Size(max = 20,min = 5)
     private String name;
 
 
@@ -36,12 +36,12 @@ public class Product {
     @Schema(description = "Product Price")
     private double price;
 
-    @Email
-    private String email;
+//    @Email
+//    private String email;
 
-    @Size(max = 10,min=10)
-    @NotBlank(message = "Mobile number is requried")
-    private String mobileNumber;
+//    @Size(max = 10,min=10)
+//    @NotBlank(message = "Mobile number is requried")
+//    private String mobileNumber;
 
     public Product(String name, Category category, double price) {
         this.name = name;
