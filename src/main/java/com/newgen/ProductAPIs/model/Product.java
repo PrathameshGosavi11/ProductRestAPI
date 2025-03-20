@@ -4,6 +4,7 @@ import io.swagger.v3.oas.annotations.media.Schema;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.Max;
 import jakarta.validation.constraints.Min;
+import jakarta.validation.constraints.NotNull;
 import lombok.*;
 
 
@@ -24,6 +25,7 @@ public class Product {
     @Schema(description = "Product Name",maxLength = 20) // only for documentation
   //  @Max(value = 2,message = "Name should be at most 20 character")
 //    @Min(value = 5,message = "name should be at least 5 character")
+    @NotNull
     private String name;
 
     @Column(name="Product_Category")
