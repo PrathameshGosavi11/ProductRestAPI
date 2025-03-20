@@ -15,7 +15,7 @@ public class Product {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Schema(description = "Product ID",example = "1")
+    @Schema(description = "Product ID",example = "1",requiredMode = Schema.RequiredMode.NOT_REQUIRED)
     private Long id;
 
     @Column(name = "Product_Name",updatable = false,nullable = false)
