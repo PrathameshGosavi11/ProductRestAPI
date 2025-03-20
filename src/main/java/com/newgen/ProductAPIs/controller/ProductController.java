@@ -145,9 +145,33 @@ public class ProductController {
             return new ResponseEntity<>("product deleted successfully", HttpStatus.OK);
     }
 
+
+    @ApiResponses(
+            value = {
+                    @ApiResponse(
+                            description = "Add new Product",
+                            responseCode = "201"
+                    ),
+                    @ApiResponse(
+                            description = "Internal Server Error",
+                            responseCode = "500",
+                            content = @Content(
+                                    schema = @Schema(implementation = ErrorDetails.class)
+                            )
+                    ),
+                    @ApiResponse(
+                            description = "Invalid category passed",
+                            responseCode = "400",
+                            content = @Content(
+                                    schema = @Schema(implementation = ErrorDetails.class)
+                            )
+                    )
+
+            }
+    )
     @Operation(
-            summary = "Create new Resource.",
-            description = "Add New Product here",
+            summary = "Add Product ",
+            description = "This Method Add New Product",
             operationId = "addProduct"
     )
     @PostMapping()
