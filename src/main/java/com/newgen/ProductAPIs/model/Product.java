@@ -19,7 +19,7 @@ public class Product {
     private Long id;
 
     @Column(name = "Product_Name",updatable = false,nullable = false)
-    @Schema(description = "Product Name",maxLength = 20)
+    @Schema(description = "Product Name",maxLength = 20) // only for documentation
     private String name;
 
     @Column(name="Product_Category")

@@ -15,7 +15,7 @@ import java.util.List;
 import java.util.Optional;
 
 @Service("databaseSerice")
-@Primary
+
 public class DatabaseProductService implements IProductService
 {
     private  ProductRepository productRepository;
@@ -33,6 +33,10 @@ public class DatabaseProductService implements IProductService
         // how call the save method here
         if (product.getCategory() == null) {
             throw new InvalidProductCategoryException(Constant.INVALID_PRODUCT_CATEGORY_MESSAGE);
+        }
+        if(product.getName().length() >=20)
+        {
+            throw new InvalidArgumentException("you pass name more than 20 character");
         }
         productRepository.save(product);
     }
@@ -83,7 +87,7 @@ public class DatabaseProductService implements IProductService
 
     @Override
     public List<Product> searchByName(String name) {
-       
+
         return productRepository.findByNameContainingIgnoreCase(name);
     }
 
