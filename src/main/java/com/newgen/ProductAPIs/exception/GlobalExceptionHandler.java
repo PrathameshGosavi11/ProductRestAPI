@@ -3,8 +3,12 @@ package com.newgen.ProductAPIs.exception;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.validation.FieldError;
+import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
+
+import java.util.List;
 
 @RestControllerAdvice
 @Slf4j
@@ -45,7 +49,16 @@ public class GlobalExceptionHandler {
         ErrorDetails errorDetails=new ErrorDetails(HttpStatus.BAD_REQUEST.value(), e.getMessage(),"you pass invalid enum category");
         return  new ResponseEntity<>(errorDetails,HttpStatus.BAD_REQUEST);
     }
+    @ExceptionHandler(MethodArgumentNotValidException.class)
+    public ResponseEntity<ErrorDetails> handleMethodArgumentNotValidException(MethodArgumentNotValidException e)
+    {
+        final List<FieldError> fieldErrors= e.getBindingResult().getFieldErrors();
+        System.out.println(fieldErrors);
+        log.error("Illegle argument :"+e.getBindingResult().getFieldErrors());
+        ErrorDetails errorDetails=new ErrorDetails(HttpStatus.BAD_REQUEST.value(), e.getMessage(),"you pass invalid enum category");
+        return  new ResponseEntity<>(errorDetails,HttpStatus.BAD_REQUEST);
 
+    }
     @ExceptionHandler
     public  ResponseEntity<ErrorDetails> handleGenericException(Exception e)
     {
