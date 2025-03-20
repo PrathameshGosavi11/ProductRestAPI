@@ -6,4 +6,6 @@ public interface Constant
 
     String INVALID_PRODUCT_CATEGORY_MESSAGE="Invalid Product Category";
 
+    String INVALID_PRODCUT_NAME="Invalid Product name pass";
+
 }

@@ -49,7 +49,22 @@ public class ProductController {
                                     mediaType = "application/json",
                                     schema = @Schema(implementation = Product.class)
                             )
+                    ),
+                    @ApiResponse(
+                            description = "Something wrong on server side",
+                            responseCode = "500",
+                            content = @Content(
+                                    schema = @Schema(implementation = ErrorDetails.class)
+                            )
+                    ),
+                    @ApiResponse(
+                            description = "Invalid Product Category",
+                            responseCode = "400",
+                            content = @Content(
+                                    schema = @Schema(implementation = ErrorDetails.class)
+                            )
                     )
+
             }
     )
     @Operation(

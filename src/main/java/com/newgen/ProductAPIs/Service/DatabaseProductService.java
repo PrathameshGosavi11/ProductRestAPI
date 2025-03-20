@@ -1,5 +1,6 @@
 package com.newgen.ProductAPIs.Service;
 
+import com.newgen.ProductAPIs.exception.InvalidArgumentException;
 import com.newgen.ProductAPIs.exception.InvalidProductCategoryException;
 import com.newgen.ProductAPIs.exception.ProductNotFound;
 import com.newgen.ProductAPIs.model.Category;
@@ -82,6 +83,10 @@ public class DatabaseProductService implements IProductService
 
     @Override
     public List<Product> searchByName(String name) {
+        if(name==null)
+        {
+            throw new InvalidArgumentException(Constant.INVALID_PRODCUT_NAME);
+        }
         return productRepository.findByNameContainingIgnoreCase(name);
     }
 
