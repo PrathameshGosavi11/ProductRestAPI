@@ -145,6 +145,11 @@ public class ProductController {
             return new ResponseEntity<>("product deleted successfully", HttpStatus.OK);
     }
 
+    @Operation(
+            summary = "Create new Resource.",
+            description = "Add New Product here",
+            operationId = "addProduct"
+    )
     @PostMapping()
     public ResponseEntity<String> addProduct(@RequestBody Product product) //here all data get @Requestbody
     {
