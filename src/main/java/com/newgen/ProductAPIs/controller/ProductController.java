@@ -13,10 +13,12 @@ import io.swagger.v3.oas.annotations.media.Schema;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import io.swagger.v3.oas.annotations.responses.ApiResponses;
 import io.swagger.v3.oas.annotations.tags.Tag;
+import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -190,7 +192,7 @@ public class ProductController {
             operationId = "addProduct"
     )
     @PostMapping()
-    public ResponseEntity<String> addProduct(@RequestBody Product product) //here all data get @Requestbody
+    public ResponseEntity<String> addProduct(@RequestBody @Valid Product product) //here all data get @Requestbody
     {
         System.out.println("Product Controller addProduct method called ");
 
