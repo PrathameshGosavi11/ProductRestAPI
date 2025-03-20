@@ -83,10 +83,7 @@ public class DatabaseProductService implements IProductService
 
     @Override
     public List<Product> searchByName(String name) {
-        if(name==null)
-        {
-            throw new InvalidArgumentException(Constant.INVALID_PRODCUT_NAME);
-        }
+       
         return productRepository.findByNameContainingIgnoreCase(name);
     }
 
