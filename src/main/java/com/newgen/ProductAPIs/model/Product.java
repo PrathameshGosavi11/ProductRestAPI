@@ -2,10 +2,7 @@ package com.newgen.ProductAPIs.model;
 
 import io.swagger.v3.oas.annotations.media.Schema;
 import jakarta.persistence.*;
-import jakarta.validation.constraints.Max;
-import jakarta.validation.constraints.Min;
-import jakarta.validation.constraints.NotEmpty;
-import jakarta.validation.constraints.NotNull;
+import jakarta.validation.constraints.*;
 import lombok.*;
 
 
@@ -27,9 +24,10 @@ public class Product {
   //  @Max(value = 2,message = "Name should be at most 20 character")
 //    @Min(value = 5,message = "name should be at least 5 character")
     @NotNull
+    @Size(max = 20,min = 5)
     private String name;
 
-    @NotEmpty
+
     @Column(name="Product_Category")
     @Schema(description = "Product Category")
     private Category category;
@@ -37,6 +35,13 @@ public class Product {
     @Column(name="Product_Price")
     @Schema(description = "Product Price")
     private double price;
+
+    @Email
+    private String email;
+
+    @Size(max = 10,min=10)
+    @NotBlank(message = "Mobile number is requried")
+    private String mobileNumber;
 
     public Product(String name, Category category, double price) {
         this.name = name;
