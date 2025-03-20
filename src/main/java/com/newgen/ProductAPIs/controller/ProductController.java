@@ -198,6 +198,41 @@ public class ProductController {
             return new ResponseEntity<>("Product added successfully", HttpStatus.CREATED);
     }
 
+    @ApiResponses(
+           value = {
+
+                   @ApiResponse(
+                           description = "Update the Product successfully",
+                           responseCode = "200"
+                   )
+                   ,@ApiResponse(
+                   description = "please provide correct category here ",
+                           responseCode ="400",
+                           content = @Content(
+                                   schema = @Schema(implementation = ErrorDetails.class)
+                           )
+                   ),
+                   @ApiResponse(
+                           description = "Product not Found",
+                           responseCode = "404",
+                           content = @Content(
+                                   schema = @Schema(implementation = ErrorDetails.class)
+                           )
+                   ),
+                   @ApiResponse(
+                           description = "Internal server error",
+                           responseCode = "500",
+                           content = @Content(
+                                   schema = @Schema(implementation = ErrorDetails.class)
+                           )
+                   )
+           }
+    )
+    @Operation(
+            summary = "update the  Product ",
+            description = "This Method modify Existing Product",
+            operationId = "updateProduct"
+    )
     @PutMapping("/{id}")
     public ResponseEntity<String> updateProduct(@RequestBody Product product, @PathVariable(name = "id")
     Long productId) {
