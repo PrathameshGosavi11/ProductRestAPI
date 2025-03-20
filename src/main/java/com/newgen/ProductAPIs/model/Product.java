@@ -22,8 +22,8 @@ public class Product {
 
     @Column(name = "Product_Name",updatable = false,nullable = false)
     @Schema(description = "Product Name",maxLength = 20) // only for documentation
-    @Max(value = 20,message = "Name should be at most 20 character")
-    @Min(value = 5,message = "name should be at least 5 character")
+  //  @Max(value = 2,message = "Name should be at most 20 character")
+//    @Min(value = 5,message = "name should be at least 5 character")
     private String name;
 
     @Column(name="Product_Category")

@@ -53,8 +53,10 @@ public class GlobalExceptionHandler {
     public ResponseEntity<ErrorDetails> handleMethodArgumentNotValidException(MethodArgumentNotValidException e)
     {
         final List<FieldError> fieldErrors= e.getBindingResult().getFieldErrors();
-        System.out.println(fieldErrors);
-        log.error("Illegle argument :"+e.getBindingResult().getFieldErrors());
+        for(FieldError fieldError: fieldErrors)
+        {
+            log.error("Invalid Argument {} : for {}",fieldError.getField(),fieldError.getDefaultMessage());
+        }
         ErrorDetails errorDetails=new ErrorDetails(HttpStatus.BAD_REQUEST.value(), e.getMessage(),"you pass invalid enum category");
         return  new ResponseEntity<>(errorDetails,HttpStatus.BAD_REQUEST);
 
