@@ -59,10 +59,10 @@ public class InMemoryProductService implements  IProductService {
         if (product.getCategory() == null) {
             throw new InvalidProductCategoryException(INVALID_PRODUCT_CATEGORY_MESSAGE);
         }
-        if(product.getName().length()>=20)
-        {
-            throw new InvalidArgumentException("You pass product name more than 20 character");
-        }
+//        if(product.getName().length()>=20)
+//        {
+//            throw new InvalidArgumentException("You pass product name more than 20 character");
+//        }
         product.setId(id);
         products.put(id, product);
         id++;

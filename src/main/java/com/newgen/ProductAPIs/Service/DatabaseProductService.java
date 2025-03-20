@@ -34,10 +34,10 @@ public class DatabaseProductService implements IProductService
         if (product.getCategory() == null) {
             throw new InvalidProductCategoryException(Constant.INVALID_PRODUCT_CATEGORY_MESSAGE);
         }
-        if(product.getName().length() >=20)
-        {
-            throw new InvalidArgumentException("you pass name more than 20 character");
-        }
+//        if(product.getName().length() >=20)
+//        {
+//            throw new InvalidArgumentException("you pass name more than 20 character");
+//        }
         productRepository.save(product);
     }
 

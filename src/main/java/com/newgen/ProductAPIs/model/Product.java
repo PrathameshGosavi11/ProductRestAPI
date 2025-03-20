@@ -2,6 +2,7 @@ package com.newgen.ProductAPIs.model;
 
 import io.swagger.v3.oas.annotations.media.Schema;
 import jakarta.persistence.*;
+import jakarta.validation.constraints.Max;
 import lombok.*;
 
 
@@ -20,6 +21,7 @@ public class Product {
 
     @Column(name = "Product_Name",updatable = false,nullable = false)
     @Schema(description = "Product Name",maxLength = 20) // only for documentation
+    @Max(20)
     private String name;
 
     @Column(name="Product_Category")
