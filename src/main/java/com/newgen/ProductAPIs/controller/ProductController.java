@@ -88,9 +88,9 @@ public class ProductController {
                                        @RequestParam(name = "higher-price", required = false) Double higherPrice
     ) {
 
-        System.out.println("product API controller called =>" + category);
-        System.out.println("Lower price is :" + lowerPrice);
-        System.out.println("Higher price is :" + higherPrice);
+        logger.info("product API controller called =>" + category);
+        logger.info("Lower price is :" + lowerPrice);
+        logger.info("Higher price is :" + higherPrice);
         if (category != null) { //if value present then enter only if  block
             Category catSearch = Category.valueOf(category);
             return productService.searchByCategory(catSearch);
@@ -105,7 +105,9 @@ public class ProductController {
         return productService.getAllProduct(); //if not found category then return all product
     }
 
-
+/*2025-03-21T16:40:26.508+05:30  INFO 14068 --- [ProductAPIs] [nio-8081-exec-4] c.n.P.controller.ProductController       : product API controller called =>null
+            2025-03-21T16:40:26.508+05:30  INFO 14068 --- [ProductAPIs] [nio-8081-exec-4] c.n.P.controller.ProductController       : Lower price is :null
+            2025-03-21T16:40:26.508+05:30  INFO 14068 --- [ProductAPIs] [nio-8081-exec-4] c.n.P.controller.ProductController       : Higher price is :null*/
 
     @ApiResponses(
             value = {
@@ -141,7 +143,7 @@ public class ProductController {
     @GetMapping("/{id}")
     public ResponseEntity<?> getProductById(@PathVariable(name = "id") Long productId) {
 
-        System.out.println("here request is coming =>" + productId);
+        logger.info("here request is coming =>" + productId);
 
             Product product = productService.getProductById(productId);
             return new ResponseEntity(product, HttpStatus.OK);
@@ -162,7 +164,7 @@ public class ProductController {
     )
     @DeleteMapping("/{id}")
     public ResponseEntity<String> deleteProduct(@PathVariable(name = "id") long productId) {
-        System.out.println("delete request on controller-->" + productId);
+        logger.info("delete request on controller-->" + productId);
 
             productService.deleteProduct(productId);
             return new ResponseEntity<>("product deleted successfully", HttpStatus.OK);
@@ -200,7 +202,7 @@ public class ProductController {
     @PostMapping()
     public ResponseEntity<String> addProduct(@RequestBody  Product product) //here all data get @Requestbody
     {
-        System.out.println("Product Controller addProduct method called ");
+        logger.info("Product Controller addProduct method called ");
 
                 productService.add(product);
             return new ResponseEntity<>("Product added successfully", HttpStatus.CREATED);
@@ -244,7 +246,8 @@ public class ProductController {
     @PutMapping("/{id}")
     public ResponseEntity<String> updateProduct(@RequestBody Product product, @PathVariable(name = "id")
     Long productId) {
-        System.out.println("Product Controller update method called ");
+
+       logger.info("Product Controller update method called ");
         product.setId(productId);
 
         productService.updateProduct(product);
