@@ -85,7 +85,7 @@ public class InMemoryProductService implements  IProductService {
     }
 
     public List<Product> getAllProduct() {
-        System.out.println("get all products Method  called ");
+       log.info("get all products Method  called ");
         return new ArrayList<>(products.values());
     }
 

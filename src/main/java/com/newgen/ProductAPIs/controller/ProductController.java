@@ -89,7 +89,7 @@ public class ProductController {
                                        @RequestParam(name = "lower-price", required = false) Double lowerPrice,
                                        @RequestParam(name = "higher-price", required = false) Double higherPrice
     ) {
-
+        log.info("Get All Prodcut controller called");
         log.info("product API controller called =>" + category);
         log.info("Lower price is :" + lowerPrice);
         log.info("Higher price is :" + higherPrice);
