@@ -22,20 +22,23 @@ import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.logging.Logger;
 
 @RestController
 @RequestMapping("api/v1/products")
 @Tag(name = "Product API",description = "Product related Operation")
 public class ProductController {
 
-    // object of ProductService //but not good Approch in a spring.//its hardcoded.
-    //  private  ProductService productService=new ProductService();
+
+    //lloger
+    private static final Logger logger =Logger.getLogger(ProductController.class.getName());
+
     private  IProductService productService;
 
     @Autowired
 
     public ProductController(IProductService productService) {
-        System.out.println("Product Controller construtor is called with the service :"+productService);
+        logger.info("Product Controller construtor is called with the service :"+productService);
         this.productService = productService;
 
     }
