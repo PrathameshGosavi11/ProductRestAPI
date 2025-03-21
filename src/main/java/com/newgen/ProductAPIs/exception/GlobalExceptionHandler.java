@@ -39,7 +39,7 @@ public class GlobalExceptionHandler {
     public  ResponseEntity<ErrorDetails> handleInvalidArgumentException(InvalidArgumentException e)
     {
        // System.err.println(e);
-        log.error("Invalid Argument: {}", e.getMessage(), e);
+        log.error("Invalid Argument: {}", e);
         ErrorDetails errorDetails=new ErrorDetails(HttpStatus.BAD_REQUEST.value(),e.getMessage(),"you pass Invalid Name");
         return  new ResponseEntity<>(errorDetails,HttpStatus.BAD_REQUEST);
     }
