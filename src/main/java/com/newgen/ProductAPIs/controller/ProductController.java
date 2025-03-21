@@ -42,6 +42,9 @@ public class ProductController {
         this.productService = productService;
 
     }
+    //2025-03-21T16:14:35.607+05:30  INFO 15340 ---
+    // [ProductAPIs] [           main] c.n.P.controller.ProductController
+    // : Product Controller construtor is called with the service :com.newgen.ProductAPIs.Service.InMemoryProductService@3314f179
 
 
 
