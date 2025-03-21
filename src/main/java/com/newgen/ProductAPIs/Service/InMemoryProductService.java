@@ -6,6 +6,7 @@ import com.newgen.ProductAPIs.exception.ProductNotFound;
 import com.newgen.ProductAPIs.model.Category;
 import com.newgen.ProductAPIs.model.Product;
 import com.newgen.ProductAPIs.util.Constant;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
@@ -19,10 +20,11 @@ import static com.newgen.ProductAPIs.util.Constant.INVALID_PRODUCT_IDENTIFIER_ER
 
 @Service
 @Primary
+@Slf4j
 public class InMemoryProductService implements  IProductService {
     
     //logger
-    private static final Logger logger=Logger.getLogger(InMemoryProductService.class.getName());
+  //  private static final Logger logger=Logger.getLogger(InMemoryProductService.class.getName());
 
     private final Map<Long, Product> products;
     private Long id; //declare the ID automartic increment we we add the product
@@ -33,7 +35,7 @@ public class InMemoryProductService implements  IProductService {
     // we initnlize the object
     public InMemoryProductService() {
 
-       logger.info("In Memory product services called here");
+       log.info("In Memory product services called here");
         this.products = new HashMap<>();
         this.id = 1L; //here initlize refer the current object
         initilizeProducts();
