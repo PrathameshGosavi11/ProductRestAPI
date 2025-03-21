@@ -91,7 +91,7 @@ public class ProductController {
                                        @RequestParam(name = "higher-price", required = false) Double higherPrice
     ) {
         log.info("Get All Prodcut controller called");
-        log.info("product API controller called -> {} and name {}" , category,name);
+        log.debug("product API controller called -> {} and name {}" , category,name);
         log.info("Lower price is :" + lowerPrice);
         log.info("Higher price is :" + higherPrice);
         if (category != null) { //if value present then enter only if  block

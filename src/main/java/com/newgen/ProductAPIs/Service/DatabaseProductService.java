@@ -8,6 +8,7 @@ import com.newgen.ProductAPIs.model.Category;
 import com.newgen.ProductAPIs.model.Product;
 import com.newgen.ProductAPIs.repository.ProductRepository;
 import com.newgen.ProductAPIs.util.Constant;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Service;
@@ -17,18 +18,19 @@ import java.util.Optional;
 import java.util.logging.Logger;
 
 @Service("databaseSerice")
-
+@Slf4j
 public class DatabaseProductService implements IProductService
 {
     //logger object
-    private static final Logger logger =Logger.getLogger(DatabaseProductService.class.getName());
+    //private static final Logger logger =Logger.getLogger(DatabaseProductService.class.getName());
 
     private  ProductRepository productRepository;
 
     @Autowired
     public  DatabaseProductService(ProductRepository productRepository)
     {
-        System.out.println("Product service database servicec call here =>"+productRepository);
+//        System.out.println("Product service database servicec call here =>"+productRepository);
+        log.info("DataBase Product service=> {}",productRepository);
         this.productRepository=productRepository;
     }
 
@@ -106,7 +108,7 @@ public class DatabaseProductService implements IProductService
         {
             productRepository.save(newProduct);
         } catch (Exception e) {
-            System.err.println(e);
+            log.error(" Invalid Product id => {}",e);
             throw new ProductNotFound(Constant.INVALID_PRODUCT_IDENTIFIER_ERROR_MESSAGE);
         }
     }
