@@ -9,10 +9,13 @@ import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
 
 import java.util.List;
+import java.util.logging.Logger;
 
 @RestControllerAdvice
 @Slf4j
 public class GlobalExceptionHandler {
+
+    private static final Logger logger=Logger.getLogger(GlobalExceptionHandler.class.getName());
 
     @ExceptionHandler(ProductNotFound.class)
     public ResponseEntity<ErrorDetails>  handleProductNotFoundException(ProductNotFound e)
