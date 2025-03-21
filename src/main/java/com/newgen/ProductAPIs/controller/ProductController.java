@@ -14,6 +14,7 @@ import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import io.swagger.v3.oas.annotations.responses.ApiResponses;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.validation.Valid;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.http.HttpStatus;
@@ -27,18 +28,19 @@ import java.util.logging.Logger;
 @RestController
 @RequestMapping("api/v1/products")
 @Tag(name = "Product API",description = "Product related Operation")
+@Slf4j
 public class ProductController {
 
 
     //lloger
-    private static final Logger logger =Logger.getLogger(ProductController.class.getName());
+   // private static final Logger log =Logger.getLogger(ProductController.class.getName());
 
     private  IProductService productService;
 
     @Autowired
 
     public ProductController(IProductService productService) {
-        logger.info("Product Controller construtor is called with the service :"+productService);
+        log.info("Product Controller construtor is called with the service :"+productService);
         this.productService = productService;
 
     }
@@ -88,9 +90,9 @@ public class ProductController {
                                        @RequestParam(name = "higher-price", required = false) Double higherPrice
     ) {
 
-        logger.info("product API controller called =>" + category);
-        logger.info("Lower price is :" + lowerPrice);
-        logger.info("Higher price is :" + higherPrice);
+        log.info("product API controller called =>" + category);
+        log.info("Lower price is :" + lowerPrice);
+        log.info("Higher price is :" + higherPrice);
         if (category != null) { //if value present then enter only if  block
             Category catSearch = Category.valueOf(category);
             return productService.searchByCategory(catSearch);
@@ -143,7 +145,7 @@ public class ProductController {
     @GetMapping("/{id}")
     public ResponseEntity<?> getProductById(@PathVariable(name = "id") Long productId) {
 
-        logger.info("here request is coming =>" + productId);
+        log.info("here request is coming =>" + productId);
 
             Product product = productService.getProductById(productId);
             return new ResponseEntity(product, HttpStatus.OK);
@@ -164,7 +166,7 @@ public class ProductController {
     )
     @DeleteMapping("/{id}")
     public ResponseEntity<String> deleteProduct(@PathVariable(name = "id") long productId) {
-        logger.info("delete request on controller-->" + productId);
+        log.info("delete request on controller-->" + productId);
 
             productService.deleteProduct(productId);
             return new ResponseEntity<>("product deleted successfully", HttpStatus.OK);
@@ -202,7 +204,7 @@ public class ProductController {
     @PostMapping()
     public ResponseEntity<String> addProduct(@RequestBody  Product product) //here all data get @Requestbody
     {
-        logger.info("Product Controller addProduct method called ");
+        log.info("Product Controller addProduct method called ");
 
                 productService.add(product);
             return new ResponseEntity<>("Product added successfully", HttpStatus.CREATED);
@@ -247,7 +249,7 @@ public class ProductController {
     public ResponseEntity<String> updateProduct(@RequestBody Product product, @PathVariable(name = "id")
     Long productId) {
 
-       logger.info("Product Controller update method called ");
+       log.info("Product Controller update method called ");
         product.setId(productId);
 
         productService.updateProduct(product);
