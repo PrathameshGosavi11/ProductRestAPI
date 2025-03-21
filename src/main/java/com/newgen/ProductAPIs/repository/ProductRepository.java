@@ -17,4 +17,8 @@ public interface ProductRepository extends  JpaRepository<Product ,Long>
 
     List<Product> findByPriceBetweenOrderByPriceDesc(Double lowerPrice, Double higherPrice);
 
+   // @Query("SELECT p FROM product WHERE p.price >?1") //hql
+    @Query(value = "SELECT * FROM products where product_price >?1",nativeQuery = true)
+    List<Product> findAllProductByPriceGreaterThan(double price);
+
 }
