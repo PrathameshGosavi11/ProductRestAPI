@@ -1,5 +1,6 @@
 package com.newgen.ProductAPIs.Service;
 
+import com.newgen.ProductAPIs.controller.ProductController;
 import com.newgen.ProductAPIs.exception.InvalidArgumentException;
 import com.newgen.ProductAPIs.exception.InvalidProductCategoryException;
 import com.newgen.ProductAPIs.exception.ProductNotFound;
@@ -13,11 +14,15 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Optional;
+import java.util.logging.Logger;
 
 @Service("databaseSerice")
 
 public class DatabaseProductService implements IProductService
 {
+    //logger object
+    private static final Logger logger =Logger.getLogger(DatabaseProductService.class.getName());
+
     private  ProductRepository productRepository;
 
     @Autowired
