@@ -11,6 +11,7 @@ import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 
 import java.util.*;
+import java.util.logging.Logger;
 
 import static com.newgen.ProductAPIs.util.Constant.INVALID_PRODUCT_CATEGORY_MESSAGE;
 import static com.newgen.ProductAPIs.util.Constant.INVALID_PRODUCT_IDENTIFIER_ERROR_MESSAGE;
@@ -19,6 +20,9 @@ import static com.newgen.ProductAPIs.util.Constant.INVALID_PRODUCT_IDENTIFIER_ER
 @Service
 @Primary
 public class InMemoryProductService implements  IProductService {
+    
+    //logger
+    private static final Logger logger=Logger.getLogger(InMemoryProductService.class.getName());
 
     private final Map<Long, Product> products;
     private Long id; //declare the ID automartic increment we we add the product
