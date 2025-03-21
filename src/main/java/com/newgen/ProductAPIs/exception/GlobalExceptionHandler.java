@@ -15,13 +15,13 @@ import java.util.logging.Logger;
 @Slf4j
 public class GlobalExceptionHandler {
 
-    private static final Logger logger=Logger.getLogger(GlobalExceptionHandler.class.getName());
+   // private static final Logger logger=Logger.getLogger(GlobalExceptionHandler.class.getName());
 
     @ExceptionHandler(ProductNotFound.class)
     public ResponseEntity<ErrorDetails>  handleProductNotFoundException(ProductNotFound e)
     {
         //System.err.println(e);
-        log.error("Product not found: {}", e.getMessage(), e);
+        log.error("Product Not Found -> {}",e.getMessage());
         ErrorDetails errorDetails=new ErrorDetails(HttpStatus.NOT_FOUND.value(), e.getMessage(),"Resources not found");
         return  new ResponseEntity<>(errorDetails, HttpStatus.NOT_FOUND);
     }
