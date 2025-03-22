@@ -73,3 +73,119 @@
 2025-03-22T14:49:04.676+05:30  INFO 15992 --- [ProductAPIs] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
 2025-03-22T14:49:04.680+05:30  INFO 15992 --- [ProductAPIs] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
 2025-03-22T14:49:04.704+05:30  INFO 15992 --- [ProductAPIs] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-03-22T14:49:08.078+05:30  INFO 8780 --- [ProductAPIs] [main] c.n.ProductAPIs.ProductApIsApplication   : Starting ProductApIsApplication using Java 21.0.4 with PID 8780 (C:\Users\hp\ProductRestAPI\target\classes started by hp in C:\Users\hp\ProductRestAPI)
+2025-03-22T14:49:08.084+05:30  INFO 8780 --- [ProductAPIs] [main] c.n.ProductAPIs.ProductApIsApplication   : The following 1 profile is active: "local"
+2025-03-22T14:49:10.440+05:30  INFO 8780 --- [ProductAPIs] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-03-22T14:49:10.545+05:30  INFO 8780 --- [ProductAPIs] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 83 ms. Found 1 JPA repository interface.
+2025-03-22T14:49:11.901+05:30  INFO 8780 --- [ProductAPIs] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8081 (http)
+2025-03-22T14:49:11.921+05:30  INFO 8780 --- [ProductAPIs] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-03-22T14:49:11.921+05:30  INFO 8780 --- [ProductAPIs] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.36]
+2025-03-22T14:49:12.039+05:30  INFO 8780 --- [ProductAPIs] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-03-22T14:49:12.039+05:30  INFO 8780 --- [ProductAPIs] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3846 ms
+2025-03-22T14:49:12.670+05:30  INFO 8780 --- [ProductAPIs] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-03-22T14:49:12.768+05:30  INFO 8780 --- [ProductAPIs] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.8.Final
+2025-03-22T14:49:12.833+05:30  INFO 8780 --- [ProductAPIs] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-03-22T14:49:13.350+05:30  INFO 8780 --- [ProductAPIs] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-03-22T14:49:13.408+05:30  INFO 8780 --- [ProductAPIs] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-03-22T14:49:13.805+05:30  INFO 8780 --- [ProductAPIs] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@545f0b6
+2025-03-22T14:49:13.809+05:30  INFO 8780 --- [ProductAPIs] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-03-22T14:49:13.906+05:30  INFO 8780 --- [ProductAPIs] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 17.3
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-03-22T14:49:15.206+05:30  INFO 8780 --- [ProductAPIs] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-03-22T14:49:15.271+05:30  INFO 8780 --- [ProductAPIs] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-03-22T14:49:15.311+05:30  INFO 8780 --- [ProductAPIs] [main] c.n.P.Service.InMemoryProductService     : In Memory product services called here
+2025-03-22T14:49:15.315+05:30  INFO 8780 --- [ProductAPIs] [main] c.n.P.controller.ProductController       : Product Controller construtor is called with the service :com.newgen.ProductAPIs.Service.InMemoryProductService@49c555c3
+2025-03-22T14:49:15.827+05:30  INFO 8780 --- [ProductAPIs] [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-03-22T14:49:15.998+05:30  INFO 8780 --- [ProductAPIs] [main] c.n.P.Service.DatabaseProductService     : DataBase Product service=> org.springframework.data.jpa.repository.support.SimpleJpaRepository@5620470a
+2025-03-22T14:49:16.305+05:30  WARN 8780 --- [ProductAPIs] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-03-22T14:49:16.422+05:30  INFO 8780 --- [ProductAPIs] [main] o.s.v.b.OptionalValidatorFactoryBean     : Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Bean Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
+2025-03-22T14:49:18.071+05:30  INFO 8780 --- [ProductAPIs] [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 15 endpoints beneath base path '/actuator'
+2025-03-22T14:49:18.252+05:30  INFO 8780 --- [ProductAPIs] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8081 (http) with context path '/'
+2025-03-22T14:49:18.278+05:30  INFO 8780 --- [ProductAPIs] [main] c.n.ProductAPIs.ProductApIsApplication   : Started ProductApIsApplication in 11.167 seconds (process running for 11.872)
+2025-03-22T14:52:24.430+05:30  INFO 8780 --- [ProductAPIs] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-03-22T14:52:24.470+05:30  INFO 8780 --- [ProductAPIs] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-03-22T14:52:24.487+05:30  INFO 8780 --- [ProductAPIs] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-03-22T14:52:24.493+05:30  INFO 8780 --- [ProductAPIs] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-03-22T14:52:24.512+05:30  INFO 8780 --- [ProductAPIs] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-03-22T14:52:30.232+05:30  INFO 9340 --- [ProductAPIs] [main] c.n.ProductAPIs.ProductApIsApplication   : Starting ProductApIsApplication using Java 21.0.4 with PID 9340 (C:\Users\hp\ProductRestAPI\target\classes started by hp in C:\Users\hp\ProductRestAPI)
+2025-03-22T14:52:30.239+05:30  INFO 9340 --- [ProductAPIs] [main] c.n.ProductAPIs.ProductApIsApplication   : The following 1 profile is active: "local"
+2025-03-22T14:52:32.740+05:30  INFO 9340 --- [ProductAPIs] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-03-22T14:52:32.885+05:30  INFO 9340 --- [ProductAPIs] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 118 ms. Found 1 JPA repository interface.
+2025-03-22T14:52:34.391+05:30  INFO 9340 --- [ProductAPIs] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8081 (http)
+2025-03-22T14:52:34.414+05:30  INFO 9340 --- [ProductAPIs] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-03-22T14:52:34.415+05:30  INFO 9340 --- [ProductAPIs] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.36]
+2025-03-22T14:52:34.520+05:30  INFO 9340 --- [ProductAPIs] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-03-22T14:52:34.520+05:30  INFO 9340 --- [ProductAPIs] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 4131 ms
+2025-03-22T14:52:34.889+05:30 DEBUG 9340 --- [ProductAPIs] [main] o.s.w.f.ServerHttpObservationFilter      : Filter 'webMvcObservationFilter' configured for use
+2025-03-22T14:52:35.107+05:30  INFO 9340 --- [ProductAPIs] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-03-22T14:52:35.202+05:30  INFO 9340 --- [ProductAPIs] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.8.Final
+2025-03-22T14:52:35.269+05:30  INFO 9340 --- [ProductAPIs] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-03-22T14:52:35.731+05:30  INFO 9340 --- [ProductAPIs] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-03-22T14:52:35.790+05:30  INFO 9340 --- [ProductAPIs] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-03-22T14:52:36.154+05:30  INFO 9340 --- [ProductAPIs] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@74231642
+2025-03-22T14:52:36.156+05:30  INFO 9340 --- [ProductAPIs] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-03-22T14:52:36.252+05:30  INFO 9340 --- [ProductAPIs] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 17.3
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-03-22T14:52:37.446+05:30  INFO 9340 --- [ProductAPIs] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-03-22T14:52:37.507+05:30  INFO 9340 --- [ProductAPIs] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-03-22T14:52:37.549+05:30  INFO 9340 --- [ProductAPIs] [main] c.n.P.Service.InMemoryProductService     : In Memory product services called here
+2025-03-22T14:52:37.556+05:30  INFO 9340 --- [ProductAPIs] [main] c.n.P.controller.ProductController       : Product Controller construtor is called with the service :com.newgen.ProductAPIs.Service.InMemoryProductService@3cc548f6
+2025-03-22T14:52:38.215+05:30  INFO 9340 --- [ProductAPIs] [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-03-22T14:52:38.246+05:30  INFO 9340 --- [ProductAPIs] [main] c.n.P.Service.DatabaseProductService     : DataBase Product service=> org.springframework.data.jpa.repository.support.SimpleJpaRepository@2fb555e8
+2025-03-22T14:52:38.518+05:30  WARN 9340 --- [ProductAPIs] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-03-22T14:52:38.629+05:30  INFO 9340 --- [ProductAPIs] [main] o.s.v.b.OptionalValidatorFactoryBean     : Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Bean Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
+2025-03-22T14:52:38.700+05:30 TRACE 9340 --- [ProductAPIs] [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 
+	c.n.P.c.ProductController:
+	{POST [/api/v1/products]}: addProduct(Product)
+	{GET [/api/v1/products]}: getAllProduct(String,String,Double,Double)
+	{GET [/api/v1/products/{id}]}: getProductById(Long)
+	{DELETE [/api/v1/products/{id}]}: deleteProduct(long)
+	{PUT [/api/v1/products/{id}]}: updateProduct(Product,Long)
+2025-03-22T14:52:38.721+05:30 TRACE 9340 --- [ProductAPIs] [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 
+	c.n.P.c.SampleController:
+	{GET [/ || ]}: sayHello()
+2025-03-22T14:52:38.726+05:30 TRACE 9340 --- [ProductAPIs] [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 
+	o.s.b.a.w.s.e.BasicErrorController:
+	{ [/error]}: error(HttpServletRequest)
+	{ [/error], produces [text/html]}: errorHtml(HttpServletRequest,HttpServletResponse)
+2025-03-22T14:52:38.777+05:30 TRACE 9340 --- [ProductAPIs] [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 
+	o.s.w.a.OpenApiWebMvcResource:
+	{GET [/v3/api-docs], produces [application/json]}: openapiJson(HttpServletRequest,String,Locale)
+	{GET [/v3/api-docs.yaml], produces [application/vnd.oai.openapi]}: openapiYaml(HttpServletRequest,String,Locale)
+2025-03-22T14:52:38.783+05:30 TRACE 9340 --- [ProductAPIs] [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 
+	o.s.w.u.SwaggerWelcomeWebMvc:
+	{GET [/swagger-ui.html]}: redirectToUi(HttpServletRequest)
+2025-03-22T14:52:38.788+05:30 TRACE 9340 --- [ProductAPIs] [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 
+	o.s.w.u.SwaggerConfigResource:
+	{GET [/v3/api-docs/swagger-config], produces [application/json]}: openapiJson(HttpServletRequest)
+2025-03-22T14:52:38.795+05:30 DEBUG 9340 --- [ProductAPIs] [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 12 mappings in 'requestMappingHandlerMapping'
+2025-03-22T14:52:38.844+05:30 DEBUG 9340 --- [ProductAPIs] [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Detected 0 mappings in 'beanNameHandlerMapping'
+2025-03-22T14:52:39.032+05:30 TRACE 9340 --- [ProductAPIs] [main] o.s.w.s.f.support.RouterFunctionMapping  : 0 RouterFunction(s) in 'routerFunctionMapping'
+2025-03-22T14:52:39.084+05:30 TRACE 9340 --- [ProductAPIs] [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped [/webjars/**] onto ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2025-03-22T14:52:39.084+05:30 TRACE 9340 --- [ProductAPIs] [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped [/**] onto ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2025-03-22T14:52:39.085+05:30 TRACE 9340 --- [ProductAPIs] [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped [/swagger-ui*/*swagger-initializer.js] onto ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2025-03-22T14:52:39.085+05:30 TRACE 9340 --- [ProductAPIs] [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped [/swagger-ui*/**] onto ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2025-03-22T14:52:39.087+05:30 DEBUG 9340 --- [ProductAPIs] [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**, /swagger-ui*/*swagger-initializer.js, /swagger-ui*/**] in 'resourceHandlerMapping'
+2025-03-22T14:52:39.174+05:30 DEBUG 9340 --- [ProductAPIs] [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2025-03-22T14:52:39.287+05:30 DEBUG 9340 --- [ProductAPIs] [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 2 @ExceptionHandler, 1 ResponseBodyAdvice
+2025-03-22T14:52:40.164+05:30  INFO 9340 --- [ProductAPIs] [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 15 endpoints beneath base path '/actuator'
+2025-03-22T14:52:40.343+05:30  INFO 9340 --- [ProductAPIs] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8081 (http) with context path '/'
+2025-03-22T14:52:40.361+05:30  INFO 9340 --- [ProductAPIs] [main] c.n.ProductAPIs.ProductApIsApplication   : Started ProductApIsApplication in 12.655 seconds (process running for 13.696)
+2025-03-22T15:41:53.585+05:30  WARN 9340 --- [ProductAPIs] [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m19s35ms248µs200ns).
+2025-03-22T15:51:44.159+05:30  INFO 9340 --- [ProductAPIs] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-03-22T15:51:44.181+05:30  INFO 9340 --- [ProductAPIs] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-03-22T15:51:44.212+05:30  INFO 9340 --- [ProductAPIs] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-03-22T15:51:44.230+05:30  INFO 9340 --- [ProductAPIs] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-03-22T15:51:44.242+05:30  INFO 9340 --- [ProductAPIs] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
