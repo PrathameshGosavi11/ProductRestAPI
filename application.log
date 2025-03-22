@@ -267,3 +267,8 @@ java.lang.IllegalArgumentException: No enum constant com.newgen.ProductAPIs.mode
 2025-03-22T03:09:07.697+05:30  INFO 24728 --- [ProductAPIs] [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 15 endpoints beneath base path '/actuator'
 2025-03-22T03:09:07.879+05:30  INFO 24728 --- [ProductAPIs] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8081 (http) with context path '/'
 2025-03-22T03:09:07.899+05:30  INFO 24728 --- [ProductAPIs] [main] c.n.ProductAPIs.ProductApIsApplication   : Started ProductApIsApplication in 10.833 seconds (process running for 11.468)
+2025-03-22T03:19:28.840+05:30  INFO 24728 --- [ProductAPIs] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-03-22T03:19:28.856+05:30  INFO 24728 --- [ProductAPIs] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-03-22T03:19:28.871+05:30  INFO 24728 --- [ProductAPIs] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-03-22T03:19:28.881+05:30  INFO 24728 --- [ProductAPIs] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-03-22T03:19:28.895+05:30  INFO 24728 --- [ProductAPIs] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
