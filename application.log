@@ -7445,3 +7445,1328 @@ org.springframework.web.client.HttpClientErrorException$NotFound: 404 Not Found 
 2025-03-23T20:30:43.460+05:30 DEBUG 21084 --- [ProductAPIs] [HikariPool-1 connection closer] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Closing connection org.postgresql.jdbc.PgConnection@4d28101b: (connection evicted)
 2025-03-23T20:30:43.482+05:30 DEBUG 21084 --- [ProductAPIs] [SpringApplicationShutdownHook] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - After shutdown stats (total=0, active=0, idle=0, waiting=0)
 2025-03-23T20:30:43.488+05:30  INFO 21084 --- [ProductAPIs] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-03-23T20:30:55.269+05:30  INFO 22932 --- [ProductAPIs] [main] c.n.ProductAPIs.ProductApIsApplication   : Starting ProductApIsApplication using Java 21.0.4 with PID 22932 (C:\Users\hp\ProductRestAPI\target\classes started by hp in C:\Users\hp\ProductRestAPI)
+2025-03-23T20:30:55.276+05:30  INFO 22932 --- [ProductAPIs] [main] c.n.ProductAPIs.ProductApIsApplication   : The following 1 profile is active: "local"
+2025-03-23T20:30:59.283+05:30  INFO 22932 --- [ProductAPIs] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-03-23T20:30:59.516+05:30  INFO 22932 --- [ProductAPIs] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 199 ms. Found 1 JPA repository interface.
+2025-03-23T20:30:59.950+05:30  INFO 16912 --- [ProductAPIs] [main] c.n.ProductAPIs.ProductApIsApplication   : Starting ProductApIsApplication using Java 21.0.4 with PID 16912 (C:\Users\hp\ProductRestAPI\target\classes started by hp in C:\Users\hp\ProductRestAPI)
+2025-03-23T20:30:59.956+05:30  INFO 16912 --- [ProductAPIs] [main] c.n.ProductAPIs.ProductApIsApplication   : The following 1 profile is active: "local"
+2025-03-23T20:31:03.540+05:30  INFO 22932 --- [ProductAPIs] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8081 (http)
+2025-03-23T20:31:03.586+05:30  INFO 22932 --- [ProductAPIs] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-03-23T20:31:03.587+05:30  INFO 22932 --- [ProductAPIs] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.36]
+2025-03-23T20:31:03.806+05:30  INFO 22932 --- [ProductAPIs] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-03-23T20:31:03.807+05:30  INFO 22932 --- [ProductAPIs] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 8393 ms
+2025-03-23T20:31:04.181+05:30  INFO 16912 --- [ProductAPIs] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-03-23T20:31:04.387+05:30  INFO 16912 --- [ProductAPIs] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 178 ms. Found 1 JPA repository interface.
+2025-03-23T20:31:04.646+05:30 DEBUG 22932 --- [ProductAPIs] [main] com.zaxxer.hikari.HikariConfig           : Driver class org.postgresql.Driver found in Thread context class loader jdk.internal.loader.ClassLoaders$AppClassLoader@76ed5528
+2025-03-23T20:31:05.060+05:30  INFO 22932 --- [ProductAPIs] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-03-23T20:31:05.313+05:30  INFO 22932 --- [ProductAPIs] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.8.Final
+2025-03-23T20:31:05.441+05:30  INFO 22932 --- [ProductAPIs] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-03-23T20:31:06.551+05:30  INFO 22932 --- [ProductAPIs] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-03-23T20:31:06.668+05:30 DEBUG 22932 --- [ProductAPIs] [main] com.zaxxer.hikari.HikariConfig           : HikariPool-1 - configuration:
+2025-03-23T20:31:06.681+05:30 DEBUG 22932 --- [ProductAPIs] [main] com.zaxxer.hikari.HikariConfig           : allowPoolSuspension.............false
+2025-03-23T20:31:06.682+05:30 DEBUG 22932 --- [ProductAPIs] [main] com.zaxxer.hikari.HikariConfig           : autoCommit......................true
+2025-03-23T20:31:06.683+05:30 DEBUG 22932 --- [ProductAPIs] [main] com.zaxxer.hikari.HikariConfig           : catalog.........................none
+2025-03-23T20:31:06.684+05:30 DEBUG 22932 --- [ProductAPIs] [main] com.zaxxer.hikari.HikariConfig           : connectionInitSql...............none
+2025-03-23T20:31:06.685+05:30 DEBUG 22932 --- [ProductAPIs] [main] com.zaxxer.hikari.HikariConfig           : connectionTestQuery.............none
+2025-03-23T20:31:06.690+05:30 DEBUG 22932 --- [ProductAPIs] [main] com.zaxxer.hikari.HikariConfig           : connectionTimeout...............30000
+2025-03-23T20:31:06.692+05:30 DEBUG 22932 --- [ProductAPIs] [main] com.zaxxer.hikari.HikariConfig           : dataSource......................none
+2025-03-23T20:31:06.693+05:30 DEBUG 22932 --- [ProductAPIs] [main] com.zaxxer.hikari.HikariConfig           : dataSourceClassName.............none
+2025-03-23T20:31:06.693+05:30 DEBUG 22932 --- [ProductAPIs] [main] com.zaxxer.hikari.HikariConfig           : dataSourceJNDI..................none
+2025-03-23T20:31:06.695+05:30 DEBUG 22932 --- [ProductAPIs] [main] com.zaxxer.hikari.HikariConfig           : dataSourceProperties............{password=<masked>}
+2025-03-23T20:31:06.696+05:30 DEBUG 22932 --- [ProductAPIs] [main] com.zaxxer.hikari.HikariConfig           : driverClassName................."org.postgresql.Driver"
+2025-03-23T20:31:06.697+05:30 DEBUG 22932 --- [ProductAPIs] [main] com.zaxxer.hikari.HikariConfig           : exceptionOverrideClassName......none
+2025-03-23T20:31:06.698+05:30 DEBUG 22932 --- [ProductAPIs] [main] com.zaxxer.hikari.HikariConfig           : healthCheckProperties...........{}
+2025-03-23T20:31:06.699+05:30 DEBUG 22932 --- [ProductAPIs] [main] com.zaxxer.hikari.HikariConfig           : healthCheckRegistry.............none
+2025-03-23T20:31:06.700+05:30 DEBUG 22932 --- [ProductAPIs] [main] com.zaxxer.hikari.HikariConfig           : idleTimeout.....................600000
+2025-03-23T20:31:06.702+05:30 DEBUG 22932 --- [ProductAPIs] [main] com.zaxxer.hikari.HikariConfig           : initializationFailTimeout.......1
+2025-03-23T20:31:06.703+05:30 DEBUG 22932 --- [ProductAPIs] [main] com.zaxxer.hikari.HikariConfig           : isolateInternalQueries..........false
+2025-03-23T20:31:06.704+05:30 DEBUG 22932 --- [ProductAPIs] [main] com.zaxxer.hikari.HikariConfig           : jdbcUrl.........................jdbc:postgresql://localhost:5432/ProductAPIManagement
+2025-03-23T20:31:06.705+05:30 DEBUG 22932 --- [ProductAPIs] [main] com.zaxxer.hikari.HikariConfig           : keepaliveTime...................0
+2025-03-23T20:31:06.705+05:30 DEBUG 22932 --- [ProductAPIs] [main] com.zaxxer.hikari.HikariConfig           : leakDetectionThreshold..........0
+2025-03-23T20:31:06.706+05:30 DEBUG 22932 --- [ProductAPIs] [main] com.zaxxer.hikari.HikariConfig           : maxLifetime.....................1800000
+2025-03-23T20:31:06.706+05:30 DEBUG 22932 --- [ProductAPIs] [main] com.zaxxer.hikari.HikariConfig           : maximumPoolSize.................10
+2025-03-23T20:31:06.708+05:30 DEBUG 22932 --- [ProductAPIs] [main] com.zaxxer.hikari.HikariConfig           : metricRegistry..................none
+2025-03-23T20:31:06.708+05:30 DEBUG 22932 --- [ProductAPIs] [main] com.zaxxer.hikari.HikariConfig           : metricsTrackerFactory...........none
+2025-03-23T20:31:06.709+05:30 DEBUG 22932 --- [ProductAPIs] [main] com.zaxxer.hikari.HikariConfig           : minimumIdle.....................5
+2025-03-23T20:31:06.710+05:30 DEBUG 22932 --- [ProductAPIs] [main] com.zaxxer.hikari.HikariConfig           : password........................<masked>
+2025-03-23T20:31:06.710+05:30 DEBUG 22932 --- [ProductAPIs] [main] com.zaxxer.hikari.HikariConfig           : poolName........................"HikariPool-1"
+2025-03-23T20:31:06.711+05:30 DEBUG 22932 --- [ProductAPIs] [main] com.zaxxer.hikari.HikariConfig           : readOnly........................false
+2025-03-23T20:31:06.711+05:30 DEBUG 22932 --- [ProductAPIs] [main] com.zaxxer.hikari.HikariConfig           : registerMbeans..................false
+2025-03-23T20:31:06.712+05:30 DEBUG 22932 --- [ProductAPIs] [main] com.zaxxer.hikari.HikariConfig           : scheduledExecutor...............none
+2025-03-23T20:31:06.712+05:30 DEBUG 22932 --- [ProductAPIs] [main] com.zaxxer.hikari.HikariConfig           : schema..........................none
+2025-03-23T20:31:06.713+05:30 DEBUG 22932 --- [ProductAPIs] [main] com.zaxxer.hikari.HikariConfig           : threadFactory...................internal
+2025-03-23T20:31:06.714+05:30 DEBUG 22932 --- [ProductAPIs] [main] com.zaxxer.hikari.HikariConfig           : transactionIsolation............default
+2025-03-23T20:31:06.715+05:30 DEBUG 22932 --- [ProductAPIs] [main] com.zaxxer.hikari.HikariConfig           : username........................"postgres"
+2025-03-23T20:31:06.716+05:30 DEBUG 22932 --- [ProductAPIs] [main] com.zaxxer.hikari.HikariConfig           : validationTimeout...............5000
+2025-03-23T20:31:06.716+05:30  INFO 22932 --- [ProductAPIs] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-03-23T20:31:06.797+05:30  INFO 16912 --- [ProductAPIs] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8081 (http)
+2025-03-23T20:31:06.840+05:30  INFO 16912 --- [ProductAPIs] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-03-23T20:31:06.841+05:30  INFO 16912 --- [ProductAPIs] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.36]
+2025-03-23T20:31:07.052+05:30  INFO 16912 --- [ProductAPIs] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-03-23T20:31:07.054+05:30  INFO 16912 --- [ProductAPIs] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 6938 ms
+2025-03-23T20:31:07.787+05:30 DEBUG 16912 --- [ProductAPIs] [main] com.zaxxer.hikari.HikariConfig           : Driver class org.postgresql.Driver found in Thread context class loader jdk.internal.loader.ClassLoaders$AppClassLoader@76ed5528
+2025-03-23T20:31:07.800+05:30  INFO 22932 --- [ProductAPIs] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@633a11eb
+2025-03-23T20:31:07.804+05:30  INFO 22932 --- [ProductAPIs] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-03-23T20:31:07.907+05:30 DEBUG 22932 --- [ProductAPIs] [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Before cleanup stats (total=1, active=1, idle=0, waiting=0)
+2025-03-23T20:31:07.909+05:30 DEBUG 22932 --- [ProductAPIs] [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - After cleanup  stats (total=1, active=1, idle=0, waiting=0)
+2025-03-23T20:31:08.072+05:30  INFO 22932 --- [ProductAPIs] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 17.3
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-03-23T20:31:08.161+05:30  INFO 16912 --- [ProductAPIs] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-03-23T20:31:08.237+05:30 DEBUG 22932 --- [ProductAPIs] [HikariPool-1 connection adder] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@198ef158
+2025-03-23T20:31:08.282+05:30 DEBUG 22932 --- [ProductAPIs] [HikariPool-1 connection adder] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - After adding stats (total=2, active=0, idle=2, waiting=0)
+2025-03-23T20:31:08.369+05:30  INFO 16912 --- [ProductAPIs] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.8.Final
+2025-03-23T20:31:08.524+05:30  INFO 16912 --- [ProductAPIs] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-03-23T20:31:09.046+05:30 DEBUG 22932 --- [ProductAPIs] [HikariPool-1 connection adder] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@17491c19
+2025-03-23T20:31:09.090+05:30 DEBUG 22932 --- [ProductAPIs] [HikariPool-1 connection adder] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - After adding stats (total=3, active=0, idle=3, waiting=0)
+2025-03-23T20:31:09.397+05:30 DEBUG 22932 --- [ProductAPIs] [HikariPool-1 connection adder] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@13769a28
+2025-03-23T20:31:09.433+05:30 DEBUG 22932 --- [ProductAPIs] [HikariPool-1 connection adder] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - After adding stats (total=4, active=0, idle=4, waiting=0)
+2025-03-23T20:31:09.563+05:30  INFO 16912 --- [ProductAPIs] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-03-23T20:31:09.668+05:30 DEBUG 16912 --- [ProductAPIs] [main] com.zaxxer.hikari.HikariConfig           : HikariPool-1 - configuration:
+2025-03-23T20:31:09.679+05:30 DEBUG 16912 --- [ProductAPIs] [main] com.zaxxer.hikari.HikariConfig           : allowPoolSuspension.............false
+2025-03-23T20:31:09.680+05:30 DEBUG 16912 --- [ProductAPIs] [main] com.zaxxer.hikari.HikariConfig           : autoCommit......................true
+2025-03-23T20:31:09.681+05:30 DEBUG 16912 --- [ProductAPIs] [main] com.zaxxer.hikari.HikariConfig           : catalog.........................none
+2025-03-23T20:31:09.682+05:30 DEBUG 16912 --- [ProductAPIs] [main] com.zaxxer.hikari.HikariConfig           : connectionInitSql...............none
+2025-03-23T20:31:09.682+05:30 DEBUG 16912 --- [ProductAPIs] [main] com.zaxxer.hikari.HikariConfig           : connectionTestQuery.............none
+2025-03-23T20:31:09.684+05:30 DEBUG 16912 --- [ProductAPIs] [main] com.zaxxer.hikari.HikariConfig           : connectionTimeout...............30000
+2025-03-23T20:31:09.685+05:30 DEBUG 16912 --- [ProductAPIs] [main] com.zaxxer.hikari.HikariConfig           : dataSource......................none
+2025-03-23T20:31:09.686+05:30 DEBUG 16912 --- [ProductAPIs] [main] com.zaxxer.hikari.HikariConfig           : dataSourceClassName.............none
+2025-03-23T20:31:09.687+05:30 DEBUG 16912 --- [ProductAPIs] [main] com.zaxxer.hikari.HikariConfig           : dataSourceJNDI..................none
+2025-03-23T20:31:09.689+05:30 DEBUG 16912 --- [ProductAPIs] [main] com.zaxxer.hikari.HikariConfig           : dataSourceProperties............{password=<masked>}
+2025-03-23T20:31:09.690+05:30 DEBUG 16912 --- [ProductAPIs] [main] com.zaxxer.hikari.HikariConfig           : driverClassName................."org.postgresql.Driver"
+2025-03-23T20:31:09.691+05:30 DEBUG 16912 --- [ProductAPIs] [main] com.zaxxer.hikari.HikariConfig           : exceptionOverrideClassName......none
+2025-03-23T20:31:09.692+05:30 DEBUG 16912 --- [ProductAPIs] [main] com.zaxxer.hikari.HikariConfig           : healthCheckProperties...........{}
+2025-03-23T20:31:09.693+05:30 DEBUG 16912 --- [ProductAPIs] [main] com.zaxxer.hikari.HikariConfig           : healthCheckRegistry.............none
+2025-03-23T20:31:09.694+05:30 DEBUG 16912 --- [ProductAPIs] [main] com.zaxxer.hikari.HikariConfig           : idleTimeout.....................600000
+2025-03-23T20:31:09.694+05:30 DEBUG 16912 --- [ProductAPIs] [main] com.zaxxer.hikari.HikariConfig           : initializationFailTimeout.......1
+2025-03-23T20:31:09.695+05:30 DEBUG 16912 --- [ProductAPIs] [main] com.zaxxer.hikari.HikariConfig           : isolateInternalQueries..........false
+2025-03-23T20:31:09.696+05:30 DEBUG 16912 --- [ProductAPIs] [main] com.zaxxer.hikari.HikariConfig           : jdbcUrl.........................jdbc:postgresql://localhost:5432/ProductAPIManagement
+2025-03-23T20:31:09.697+05:30 DEBUG 16912 --- [ProductAPIs] [main] com.zaxxer.hikari.HikariConfig           : keepaliveTime...................0
+2025-03-23T20:31:09.698+05:30 DEBUG 16912 --- [ProductAPIs] [main] com.zaxxer.hikari.HikariConfig           : leakDetectionThreshold..........0
+2025-03-23T20:31:09.702+05:30 DEBUG 16912 --- [ProductAPIs] [main] com.zaxxer.hikari.HikariConfig           : maxLifetime.....................1800000
+2025-03-23T20:31:09.704+05:30 DEBUG 16912 --- [ProductAPIs] [main] com.zaxxer.hikari.HikariConfig           : maximumPoolSize.................10
+2025-03-23T20:31:09.704+05:30 DEBUG 16912 --- [ProductAPIs] [main] com.zaxxer.hikari.HikariConfig           : metricRegistry..................none
+2025-03-23T20:31:09.705+05:30 DEBUG 16912 --- [ProductAPIs] [main] com.zaxxer.hikari.HikariConfig           : metricsTrackerFactory...........none
+2025-03-23T20:31:09.706+05:30 DEBUG 16912 --- [ProductAPIs] [main] com.zaxxer.hikari.HikariConfig           : minimumIdle.....................5
+2025-03-23T20:31:09.707+05:30 DEBUG 16912 --- [ProductAPIs] [main] com.zaxxer.hikari.HikariConfig           : password........................<masked>
+2025-03-23T20:31:09.708+05:30 DEBUG 16912 --- [ProductAPIs] [main] com.zaxxer.hikari.HikariConfig           : poolName........................"HikariPool-1"
+2025-03-23T20:31:09.709+05:30 DEBUG 16912 --- [ProductAPIs] [main] com.zaxxer.hikari.HikariConfig           : readOnly........................false
+2025-03-23T20:31:09.710+05:30 DEBUG 16912 --- [ProductAPIs] [main] com.zaxxer.hikari.HikariConfig           : registerMbeans..................false
+2025-03-23T20:31:09.711+05:30 DEBUG 16912 --- [ProductAPIs] [main] com.zaxxer.hikari.HikariConfig           : scheduledExecutor...............none
+2025-03-23T20:31:09.712+05:30 DEBUG 16912 --- [ProductAPIs] [main] com.zaxxer.hikari.HikariConfig           : schema..........................none
+2025-03-23T20:31:09.713+05:30 DEBUG 16912 --- [ProductAPIs] [main] com.zaxxer.hikari.HikariConfig           : threadFactory...................internal
+2025-03-23T20:31:09.714+05:30 DEBUG 16912 --- [ProductAPIs] [main] com.zaxxer.hikari.HikariConfig           : transactionIsolation............default
+2025-03-23T20:31:09.715+05:30 DEBUG 16912 --- [ProductAPIs] [main] com.zaxxer.hikari.HikariConfig           : username........................"postgres"
+2025-03-23T20:31:09.717+05:30 DEBUG 16912 --- [ProductAPIs] [main] com.zaxxer.hikari.HikariConfig           : validationTimeout...............5000
+2025-03-23T20:31:09.717+05:30  INFO 16912 --- [ProductAPIs] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-03-23T20:31:09.723+05:30 DEBUG 22932 --- [ProductAPIs] [HikariPool-1 connection adder] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@56741622
+2025-03-23T20:31:09.760+05:30 DEBUG 22932 --- [ProductAPIs] [HikariPool-1 connection adder] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - After adding stats (total=5, active=0, idle=5, waiting=0)
+2025-03-23T20:31:09.761+05:30 DEBUG 22932 --- [ProductAPIs] [HikariPool-1 connection adder] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Connection not added, stats (total=5, active=0, idle=5, waiting=0)
+2025-03-23T20:31:10.654+05:30  INFO 16912 --- [ProductAPIs] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@5ae87de0
+2025-03-23T20:31:10.660+05:30  INFO 16912 --- [ProductAPIs] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-03-23T20:31:10.772+05:30 DEBUG 16912 --- [ProductAPIs] [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Before cleanup stats (total=1, active=1, idle=0, waiting=0)
+2025-03-23T20:31:10.774+05:30 DEBUG 16912 --- [ProductAPIs] [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - After cleanup  stats (total=1, active=1, idle=0, waiting=0)
+2025-03-23T20:31:10.874+05:30  INFO 16912 --- [ProductAPIs] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 17.3
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-03-23T20:31:11.111+05:30 DEBUG 16912 --- [ProductAPIs] [HikariPool-1 connection adder] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@e3c580a
+2025-03-23T20:31:11.117+05:30  INFO 22932 --- [ProductAPIs] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-03-23T20:31:11.146+05:30 DEBUG 16912 --- [ProductAPIs] [HikariPool-1 connection adder] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - After adding stats (total=2, active=0, idle=2, waiting=0)
+2025-03-23T20:31:11.273+05:30  INFO 22932 --- [ProductAPIs] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-03-23T20:31:11.351+05:30  INFO 22932 --- [ProductAPIs] [main] c.n.P.Service.InMemoryProductService     : In Memory product services called here
+2025-03-23T20:31:11.366+05:30  INFO 22932 --- [ProductAPIs] [main] c.n.P.controller.ProductController       : Product Controller construtor is called with the service :com.newgen.ProductAPIs.Service.InMemoryProductService@89ff043
+2025-03-23T20:31:11.456+05:30 DEBUG 16912 --- [ProductAPIs] [HikariPool-1 connection adder] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@fbb7bd
+2025-03-23T20:31:11.502+05:30 DEBUG 16912 --- [ProductAPIs] [HikariPool-1 connection adder] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - After adding stats (total=3, active=0, idle=3, waiting=0)
+2025-03-23T20:31:12.230+05:30 DEBUG 16912 --- [ProductAPIs] [HikariPool-1 connection adder] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@4c4337a
+2025-03-23T20:31:12.265+05:30 DEBUG 16912 --- [ProductAPIs] [HikariPool-1 connection adder] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - After adding stats (total=4, active=0, idle=4, waiting=0)
+2025-03-23T20:31:12.827+05:30  INFO 22932 --- [ProductAPIs] [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-03-23T20:31:12.905+05:30 DEBUG 16912 --- [ProductAPIs] [HikariPool-1 connection adder] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@41c6bd86
+2025-03-23T20:31:12.949+05:30 DEBUG 16912 --- [ProductAPIs] [HikariPool-1 connection adder] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - After adding stats (total=5, active=0, idle=5, waiting=0)
+2025-03-23T20:31:12.950+05:30 DEBUG 16912 --- [ProductAPIs] [HikariPool-1 connection adder] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Connection not added, stats (total=5, active=0, idle=5, waiting=0)
+2025-03-23T20:31:12.899+05:30  INFO 22932 --- [ProductAPIs] [main] c.n.P.Service.DatabaseProductService     : DataBase Product service=> org.springframework.data.jpa.repository.support.SimpleJpaRepository@3da12ba4
+2025-03-23T20:31:13.593+05:30  INFO 16912 --- [ProductAPIs] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-03-23T20:31:13.660+05:30  WARN 22932 --- [ProductAPIs] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-03-23T20:31:13.714+05:30  INFO 16912 --- [ProductAPIs] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-03-23T20:31:13.792+05:30  INFO 16912 --- [ProductAPIs] [main] c.n.P.Service.InMemoryProductService     : In Memory product services called here
+2025-03-23T20:31:13.801+05:30  INFO 16912 --- [ProductAPIs] [main] c.n.P.controller.ProductController       : Product Controller construtor is called with the service :com.newgen.ProductAPIs.Service.InMemoryProductService@4f836d9
+2025-03-23T20:31:13.861+05:30  INFO 22932 --- [ProductAPIs] [main] o.s.v.b.OptionalValidatorFactoryBean     : Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Bean Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
+2025-03-23T20:31:14.937+05:30  INFO 16912 --- [ProductAPIs] [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-03-23T20:31:15.008+05:30  INFO 16912 --- [ProductAPIs] [main] c.n.P.Service.DatabaseProductService     : DataBase Product service=> org.springframework.data.jpa.repository.support.SimpleJpaRepository@12f933c7
+2025-03-23T20:31:15.504+05:30  WARN 16912 --- [ProductAPIs] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-03-23T20:31:15.857+05:30  INFO 16912 --- [ProductAPIs] [main] o.s.v.b.OptionalValidatorFactoryBean     : Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Bean Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
+2025-03-23T20:31:17.331+05:30  INFO 22932 --- [ProductAPIs] [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 15 endpoints beneath base path '/actuator'
+2025-03-23T20:31:18.382+05:30  INFO 22932 --- [ProductAPIs] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8081 (http) with context path '/'
+2025-03-23T20:31:18.448+05:30  INFO 22932 --- [ProductAPIs] [main] c.n.ProductAPIs.ProductApIsApplication   : Started ProductApIsApplication in 24.914 seconds (process running for 26.332)
+2025-03-23T20:31:20.147+05:30  INFO 16912 --- [ProductAPIs] [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 15 endpoints beneath base path '/actuator'
+2025-03-23T20:31:20.392+05:30  WARN 16912 --- [ProductAPIs] [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'
+2025-03-23T20:31:20.398+05:30  INFO 16912 --- [ProductAPIs] [main] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-03-23T20:31:20.404+05:30  INFO 16912 --- [ProductAPIs] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-03-23T20:31:20.404+05:30 DEBUG 16912 --- [ProductAPIs] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Before shutdown stats (total=5, active=0, idle=5, waiting=0)
+2025-03-23T20:31:20.407+05:30 DEBUG 16912 --- [ProductAPIs] [HikariPool-1 connection closer] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Closing connection org.postgresql.jdbc.PgConnection@5ae87de0: (connection evicted)
+2025-03-23T20:31:20.411+05:30 DEBUG 16912 --- [ProductAPIs] [HikariPool-1 connection closer] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Closing connection org.postgresql.jdbc.PgConnection@e3c580a: (connection evicted)
+2025-03-23T20:31:20.413+05:30 DEBUG 16912 --- [ProductAPIs] [HikariPool-1 connection closer] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Closing connection org.postgresql.jdbc.PgConnection@fbb7bd: (connection evicted)
+2025-03-23T20:31:20.414+05:30 DEBUG 16912 --- [ProductAPIs] [HikariPool-1 connection closer] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Closing connection org.postgresql.jdbc.PgConnection@4c4337a: (connection evicted)
+2025-03-23T20:31:20.415+05:30 DEBUG 16912 --- [ProductAPIs] [HikariPool-1 connection closer] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Closing connection org.postgresql.jdbc.PgConnection@41c6bd86: (connection evicted)
+2025-03-23T20:31:20.419+05:30 DEBUG 16912 --- [ProductAPIs] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - After shutdown stats (total=0, active=0, idle=0, waiting=0)
+2025-03-23T20:31:20.420+05:30  INFO 16912 --- [ProductAPIs] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-03-23T20:31:20.489+05:30  INFO 16912 --- [ProductAPIs] [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2025-03-23T20:31:20.549+05:30 ERROR 16912 --- [ProductAPIs] [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 8081 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 8081 or configure this application to listen on another port.
+
+2025-03-23T20:31:37.916+05:30 DEBUG 22932 --- [ProductAPIs] [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Before cleanup stats (total=5, active=0, idle=5, waiting=0)
+2025-03-23T20:31:37.917+05:30 DEBUG 22932 --- [ProductAPIs] [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - After cleanup  stats (total=5, active=0, idle=5, waiting=0)
+2025-03-23T20:31:37.919+05:30 DEBUG 22932 --- [ProductAPIs] [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
+2025-03-23T20:32:07.929+05:30 DEBUG 22932 --- [ProductAPIs] [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Before cleanup stats (total=5, active=0, idle=5, waiting=0)
+2025-03-23T20:32:07.930+05:30 DEBUG 22932 --- [ProductAPIs] [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - After cleanup  stats (total=5, active=0, idle=5, waiting=0)
+2025-03-23T20:32:07.930+05:30 DEBUG 22932 --- [ProductAPIs] [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
+2025-03-23T20:32:37.931+05:30 DEBUG 22932 --- [ProductAPIs] [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Before cleanup stats (total=5, active=0, idle=5, waiting=0)
+2025-03-23T20:32:37.931+05:30 DEBUG 22932 --- [ProductAPIs] [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - After cleanup  stats (total=5, active=0, idle=5, waiting=0)
+2025-03-23T20:32:37.931+05:30 DEBUG 22932 --- [ProductAPIs] [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
+2025-03-23T20:32:54.131+05:30  INFO 22932 --- [ProductAPIs] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-03-23T20:32:54.149+05:30  INFO 22932 --- [ProductAPIs] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-03-23T20:32:54.161+05:30  INFO 22932 --- [ProductAPIs] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-03-23T20:32:54.166+05:30  INFO 22932 --- [ProductAPIs] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-03-23T20:32:54.167+05:30 DEBUG 22932 --- [ProductAPIs] [SpringApplicationShutdownHook] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Before shutdown stats (total=5, active=0, idle=5, waiting=0)
+2025-03-23T20:32:54.171+05:30 DEBUG 22932 --- [ProductAPIs] [HikariPool-1 connection closer] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Closing connection org.postgresql.jdbc.PgConnection@633a11eb: (connection evicted)
+2025-03-23T20:32:54.177+05:30 DEBUG 22932 --- [ProductAPIs] [HikariPool-1 connection closer] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Closing connection org.postgresql.jdbc.PgConnection@198ef158: (connection evicted)
+2025-03-23T20:32:54.179+05:30 DEBUG 22932 --- [ProductAPIs] [HikariPool-1 connection closer] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Closing connection org.postgresql.jdbc.PgConnection@17491c19: (connection evicted)
+2025-03-23T20:32:54.180+05:30 DEBUG 22932 --- [ProductAPIs] [HikariPool-1 connection closer] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Closing connection org.postgresql.jdbc.PgConnection@13769a28: (connection evicted)
+2025-03-23T20:32:54.184+05:30 DEBUG 22932 --- [ProductAPIs] [HikariPool-1 connection closer] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Closing connection org.postgresql.jdbc.PgConnection@56741622: (connection evicted)
+2025-03-23T20:32:54.186+05:30 DEBUG 22932 --- [ProductAPIs] [SpringApplicationShutdownHook] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - After shutdown stats (total=0, active=0, idle=0, waiting=0)
+2025-03-23T20:32:54.187+05:30  INFO 22932 --- [ProductAPIs] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-03-23T20:33:06.231+05:30  INFO 19120 --- [ProductAPIs] [main] c.n.ProductAPIs.ProductApIsApplication   : Starting ProductApIsApplication using Java 21.0.4 with PID 19120 (C:\Users\hp\ProductRestAPI\target\classes started by hp in C:\Users\hp\ProductRestAPI)
+2025-03-23T20:33:06.237+05:30  INFO 19120 --- [ProductAPIs] [main] c.n.ProductAPIs.ProductApIsApplication   : The following 1 profile is active: "local"
+2025-03-23T20:33:09.809+05:30  INFO 19120 --- [ProductAPIs] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-03-23T20:33:10.021+05:30  INFO 19120 --- [ProductAPIs] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 178 ms. Found 1 JPA repository interface.
+2025-03-23T20:33:12.224+05:30  INFO 19120 --- [ProductAPIs] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8081 (http)
+2025-03-23T20:33:12.260+05:30  INFO 19120 --- [ProductAPIs] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-03-23T20:33:12.260+05:30  INFO 19120 --- [ProductAPIs] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.36]
+2025-03-23T20:33:12.435+05:30  INFO 19120 --- [ProductAPIs] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-03-23T20:33:12.435+05:30  INFO 19120 --- [ProductAPIs] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 6052 ms
+2025-03-23T20:33:13.062+05:30 DEBUG 19120 --- [ProductAPIs] [main] com.zaxxer.hikari.HikariConfig           : Driver class org.postgresql.Driver found in Thread context class loader jdk.internal.loader.ClassLoaders$AppClassLoader@76ed5528
+2025-03-23T20:33:13.363+05:30  INFO 19120 --- [ProductAPIs] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-03-23T20:33:13.564+05:30  INFO 19120 --- [ProductAPIs] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.8.Final
+2025-03-23T20:33:13.669+05:30  INFO 19120 --- [ProductAPIs] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-03-23T20:33:14.529+05:30  INFO 19120 --- [ProductAPIs] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-03-23T20:33:14.635+05:30 DEBUG 19120 --- [ProductAPIs] [main] com.zaxxer.hikari.HikariConfig           : HikariPool-1 - configuration:
+2025-03-23T20:33:14.649+05:30 DEBUG 19120 --- [ProductAPIs] [main] com.zaxxer.hikari.HikariConfig           : allowPoolSuspension.............false
+2025-03-23T20:33:14.650+05:30 DEBUG 19120 --- [ProductAPIs] [main] com.zaxxer.hikari.HikariConfig           : autoCommit......................true
+2025-03-23T20:33:14.650+05:30 DEBUG 19120 --- [ProductAPIs] [main] com.zaxxer.hikari.HikariConfig           : catalog.........................none
+2025-03-23T20:33:14.651+05:30 DEBUG 19120 --- [ProductAPIs] [main] com.zaxxer.hikari.HikariConfig           : connectionInitSql...............none
+2025-03-23T20:33:14.652+05:30 DEBUG 19120 --- [ProductAPIs] [main] com.zaxxer.hikari.HikariConfig           : connectionTestQuery.............none
+2025-03-23T20:33:14.654+05:30 DEBUG 19120 --- [ProductAPIs] [main] com.zaxxer.hikari.HikariConfig           : connectionTimeout...............30000
+2025-03-23T20:33:14.655+05:30 DEBUG 19120 --- [ProductAPIs] [main] com.zaxxer.hikari.HikariConfig           : dataSource......................none
+2025-03-23T20:33:14.656+05:30 DEBUG 19120 --- [ProductAPIs] [main] com.zaxxer.hikari.HikariConfig           : dataSourceClassName.............none
+2025-03-23T20:33:14.657+05:30 DEBUG 19120 --- [ProductAPIs] [main] com.zaxxer.hikari.HikariConfig           : dataSourceJNDI..................none
+2025-03-23T20:33:14.660+05:30 DEBUG 19120 --- [ProductAPIs] [main] com.zaxxer.hikari.HikariConfig           : dataSourceProperties............{password=<masked>}
+2025-03-23T20:33:14.661+05:30 DEBUG 19120 --- [ProductAPIs] [main] com.zaxxer.hikari.HikariConfig           : driverClassName................."org.postgresql.Driver"
+2025-03-23T20:33:14.662+05:30 DEBUG 19120 --- [ProductAPIs] [main] com.zaxxer.hikari.HikariConfig           : exceptionOverrideClassName......none
+2025-03-23T20:33:14.663+05:30 DEBUG 19120 --- [ProductAPIs] [main] com.zaxxer.hikari.HikariConfig           : healthCheckProperties...........{}
+2025-03-23T20:33:14.664+05:30 DEBUG 19120 --- [ProductAPIs] [main] com.zaxxer.hikari.HikariConfig           : healthCheckRegistry.............none
+2025-03-23T20:33:14.665+05:30 DEBUG 19120 --- [ProductAPIs] [main] com.zaxxer.hikari.HikariConfig           : idleTimeout.....................600000
+2025-03-23T20:33:14.666+05:30 DEBUG 19120 --- [ProductAPIs] [main] com.zaxxer.hikari.HikariConfig           : initializationFailTimeout.......1
+2025-03-23T20:33:14.667+05:30 DEBUG 19120 --- [ProductAPIs] [main] com.zaxxer.hikari.HikariConfig           : isolateInternalQueries..........false
+2025-03-23T20:33:14.668+05:30 DEBUG 19120 --- [ProductAPIs] [main] com.zaxxer.hikari.HikariConfig           : jdbcUrl.........................jdbc:postgresql://localhost:5432/ProductAPIManagement
+2025-03-23T20:33:14.669+05:30 DEBUG 19120 --- [ProductAPIs] [main] com.zaxxer.hikari.HikariConfig           : keepaliveTime...................0
+2025-03-23T20:33:14.670+05:30 DEBUG 19120 --- [ProductAPIs] [main] com.zaxxer.hikari.HikariConfig           : leakDetectionThreshold..........0
+2025-03-23T20:33:14.670+05:30 DEBUG 19120 --- [ProductAPIs] [main] com.zaxxer.hikari.HikariConfig           : maxLifetime.....................1800000
+2025-03-23T20:33:14.672+05:30 DEBUG 19120 --- [ProductAPIs] [main] com.zaxxer.hikari.HikariConfig           : maximumPoolSize.................10
+2025-03-23T20:33:14.673+05:30 DEBUG 19120 --- [ProductAPIs] [main] com.zaxxer.hikari.HikariConfig           : metricRegistry..................none
+2025-03-23T20:33:14.673+05:30 DEBUG 19120 --- [ProductAPIs] [main] com.zaxxer.hikari.HikariConfig           : metricsTrackerFactory...........none
+2025-03-23T20:33:14.674+05:30 DEBUG 19120 --- [ProductAPIs] [main] com.zaxxer.hikari.HikariConfig           : minimumIdle.....................5
+2025-03-23T20:33:14.675+05:30 DEBUG 19120 --- [ProductAPIs] [main] com.zaxxer.hikari.HikariConfig           : password........................<masked>
+2025-03-23T20:33:14.675+05:30 DEBUG 19120 --- [ProductAPIs] [main] com.zaxxer.hikari.HikariConfig           : poolName........................"HikariPool-1"
+2025-03-23T20:33:14.676+05:30 DEBUG 19120 --- [ProductAPIs] [main] com.zaxxer.hikari.HikariConfig           : readOnly........................false
+2025-03-23T20:33:14.676+05:30 DEBUG 19120 --- [ProductAPIs] [main] com.zaxxer.hikari.HikariConfig           : registerMbeans..................false
+2025-03-23T20:33:14.677+05:30 DEBUG 19120 --- [ProductAPIs] [main] com.zaxxer.hikari.HikariConfig           : scheduledExecutor...............none
+2025-03-23T20:33:14.677+05:30 DEBUG 19120 --- [ProductAPIs] [main] com.zaxxer.hikari.HikariConfig           : schema..........................none
+2025-03-23T20:33:14.677+05:30 DEBUG 19120 --- [ProductAPIs] [main] com.zaxxer.hikari.HikariConfig           : threadFactory...................internal
+2025-03-23T20:33:14.678+05:30 DEBUG 19120 --- [ProductAPIs] [main] com.zaxxer.hikari.HikariConfig           : transactionIsolation............default
+2025-03-23T20:33:14.678+05:30 DEBUG 19120 --- [ProductAPIs] [main] com.zaxxer.hikari.HikariConfig           : username........................"postgres"
+2025-03-23T20:33:14.678+05:30 DEBUG 19120 --- [ProductAPIs] [main] com.zaxxer.hikari.HikariConfig           : validationTimeout...............5000
+2025-03-23T20:33:14.679+05:30  INFO 19120 --- [ProductAPIs] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-03-23T20:33:19.228+05:30  INFO 19120 --- [ProductAPIs] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@73aae7a
+2025-03-23T20:33:19.232+05:30  INFO 19120 --- [ProductAPIs] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-03-23T20:33:19.334+05:30 DEBUG 19120 --- [ProductAPIs] [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Before cleanup stats (total=1, active=1, idle=0, waiting=0)
+2025-03-23T20:33:19.336+05:30 DEBUG 19120 --- [ProductAPIs] [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - After cleanup  stats (total=1, active=1, idle=0, waiting=0)
+2025-03-23T20:33:19.428+05:30  INFO 19120 --- [ProductAPIs] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 17.3
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-03-23T20:33:19.740+05:30 DEBUG 19120 --- [ProductAPIs] [HikariPool-1 connection adder] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@684c7e39
+2025-03-23T20:33:19.785+05:30 DEBUG 19120 --- [ProductAPIs] [HikariPool-1 connection adder] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - After adding stats (total=2, active=0, idle=2, waiting=0)
+2025-03-23T20:33:20.147+05:30 DEBUG 19120 --- [ProductAPIs] [HikariPool-1 connection adder] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@668b8d40
+2025-03-23T20:33:20.188+05:30 DEBUG 19120 --- [ProductAPIs] [HikariPool-1 connection adder] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - After adding stats (total=3, active=0, idle=3, waiting=0)
+2025-03-23T20:33:20.465+05:30 DEBUG 19120 --- [ProductAPIs] [HikariPool-1 connection adder] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@62b41549
+2025-03-23T20:33:20.500+05:30 DEBUG 19120 --- [ProductAPIs] [HikariPool-1 connection adder] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - After adding stats (total=4, active=0, idle=4, waiting=0)
+2025-03-23T20:33:20.771+05:30 DEBUG 19120 --- [ProductAPIs] [HikariPool-1 connection adder] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@27b6877b
+2025-03-23T20:33:20.809+05:30 DEBUG 19120 --- [ProductAPIs] [HikariPool-1 connection adder] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - After adding stats (total=5, active=0, idle=5, waiting=0)
+2025-03-23T20:33:20.809+05:30 DEBUG 19120 --- [ProductAPIs] [HikariPool-1 connection adder] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Connection not added, stats (total=5, active=0, idle=5, waiting=0)
+2025-03-23T20:33:21.586+05:30  INFO 19120 --- [ProductAPIs] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-03-23T20:33:21.712+05:30  INFO 19120 --- [ProductAPIs] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-03-23T20:33:21.771+05:30  INFO 19120 --- [ProductAPIs] [main] c.n.P.Service.InMemoryProductService     : In Memory product services called here
+2025-03-23T20:33:21.777+05:30  INFO 19120 --- [ProductAPIs] [main] c.n.P.controller.ProductController       : Product Controller construtor is called with the service :com.newgen.ProductAPIs.Service.InMemoryProductService@52a605c3
+2025-03-23T20:33:22.686+05:30  INFO 19120 --- [ProductAPIs] [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-03-23T20:33:22.742+05:30  INFO 19120 --- [ProductAPIs] [main] c.n.P.Service.DatabaseProductService     : DataBase Product service=> org.springframework.data.jpa.repository.support.SimpleJpaRepository@1b949de4
+2025-03-23T20:33:23.129+05:30  WARN 19120 --- [ProductAPIs] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-03-23T20:33:23.296+05:30  INFO 19120 --- [ProductAPIs] [main] o.s.v.b.OptionalValidatorFactoryBean     : Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Bean Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
+2025-03-23T20:33:25.338+05:30  INFO 19120 --- [ProductAPIs] [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 15 endpoints beneath base path '/actuator'
+2025-03-23T20:33:25.548+05:30  INFO 19120 --- [ProductAPIs] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8081 (http) with context path '/'
+2025-03-23T20:33:25.585+05:30  INFO 19120 --- [ProductAPIs] [main] c.n.ProductAPIs.ProductApIsApplication   : Started ProductApIsApplication in 20.848 seconds (process running for 21.933)
+2025-03-23T20:33:36.164+05:30  INFO 19120 --- [ProductAPIs] [http-nio-8081-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-03-23T20:33:36.166+05:30  INFO 19120 --- [ProductAPIs] [http-nio-8081-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-03-23T20:33:36.187+05:30  INFO 19120 --- [ProductAPIs] [http-nio-8081-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 20 ms
+2025-03-23T20:33:39.116+05:30  INFO 19120 --- [ProductAPIs] [http-nio-8081-exec-2] c.n.P.controller.SampleController        : get post API CALLED :[
+  {
+    "userId": 1,
+    "id": 1,
+    "title": "sunt aut facere repellat provident occaecati excepturi optio reprehenderit",
+    "body": "quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto"
+  },
+  {
+    "userId": 1,
+    "id": 2,
+    "title": "qui est esse",
+    "body": "est rerum tempore vitae\nsequi sint nihil reprehenderit dolor beatae ea dolores neque\nfugiat blanditiis voluptate porro vel nihil molestiae ut reiciendis\nqui aperiam non debitis possimus qui neque nisi nulla"
+  },
+  {
+    "userId": 1,
+    "id": 3,
+    "title": "ea molestias quasi exercitationem repellat qui ipsa sit aut",
+    "body": "et iusto sed quo iure\nvoluptatem occaecati omnis eligendi aut ad\nvoluptatem doloribus vel accusantium quis pariatur\nmolestiae porro eius odio et labore et velit aut"
+  },
+  {
+    "userId": 1,
+    "id": 4,
+    "title": "eum et est occaecati",
+    "body": "ullam et saepe reiciendis voluptatem adipisci\nsit amet autem assumenda provident rerum culpa\nquis hic commodi nesciunt rem tenetur doloremque ipsam iure\nquis sunt voluptatem rerum illo velit"
+  },
+  {
+    "userId": 1,
+    "id": 5,
+    "title": "nesciunt quas odio",
+    "body": "repudiandae veniam quaerat sunt sed\nalias aut fugiat sit autem sed est\nvoluptatem omnis possimus esse voluptatibus quis\nest aut tenetur dolor neque"
+  },
+  {
+    "userId": 1,
+    "id": 6,
+    "title": "dolorem eum magni eos aperiam quia",
+    "body": "ut aspernatur corporis harum nihil quis provident sequi\nmollitia nobis aliquid molestiae\nperspiciatis et ea nemo ab reprehenderit accusantium quas\nvoluptate dolores velit et doloremque molestiae"
+  },
+  {
+    "userId": 1,
+    "id": 7,
+    "title": "magnam facilis autem",
+    "body": "dolore placeat quibusdam ea quo vitae\nmagni quis enim qui quis quo nemo aut saepe\nquidem repellat excepturi ut quia\nsunt ut sequi eos ea sed quas"
+  },
+  {
+    "userId": 1,
+    "id": 8,
+    "title": "dolorem dolore est ipsam",
+    "body": "dignissimos aperiam dolorem qui eum\nfacilis quibusdam animi sint suscipit qui sint possimus cum\nquaerat magni maiores excepturi\nipsam ut commodi dolor voluptatum modi aut vitae"
+  },
+  {
+    "userId": 1,
+    "id": 9,
+    "title": "nesciunt iure omnis dolorem tempora et accusantium",
+    "body": "consectetur animi nesciunt iure dolore\nenim quia ad\nveniam autem ut quam aut nobis\net est aut quod aut provident voluptas autem voluptas"
+  },
+  {
+    "userId": 1,
+    "id": 10,
+    "title": "optio molestias id quia eum",
+    "body": "quo et expedita modi cum officia vel magni\ndoloribus qui repudiandae\nvero nisi sit\nquos veniam quod sed accusamus veritatis error"
+  },
+  {
+    "userId": 2,
+    "id": 11,
+    "title": "et ea vero quia laudantium autem",
+    "body": "delectus reiciendis molestiae occaecati non minima eveniet qui voluptatibus\naccusamus in eum beatae sit\nvel qui neque voluptates ut commodi qui incidunt\nut animi commodi"
+  },
+  {
+    "userId": 2,
+    "id": 12,
+    "title": "in quibusdam tempore odit est dolorem",
+    "body": "itaque id aut magnam\npraesentium quia et ea odit et ea voluptas et\nsapiente quia nihil amet occaecati quia id voluptatem\nincidunt ea est distinctio odio"
+  },
+  {
+    "userId": 2,
+    "id": 13,
+    "title": "dolorum ut in voluptas mollitia et saepe quo animi",
+    "body": "aut dicta possimus sint mollitia voluptas commodi quo doloremque\niste corrupti reiciendis voluptatem eius rerum\nsit cumque quod eligendi laborum minima\nperferendis recusandae assumenda consectetur porro architecto ipsum ipsam"
+  },
+  {
+    "userId": 2,
+    "id": 14,
+    "title": "voluptatem eligendi optio",
+    "body": "fuga et accusamus dolorum perferendis illo voluptas\nnon doloremque neque facere\nad qui dolorum molestiae beatae\nsed aut voluptas totam sit illum"
+  },
+  {
+    "userId": 2,
+    "id": 15,
+    "title": "eveniet quod temporibus",
+    "body": "reprehenderit quos placeat\nvelit minima officia dolores impedit repudiandae molestiae nam\nvoluptas recusandae quis delectus\nofficiis harum fugiat vitae"
+  },
+  {
+    "userId": 2,
+    "id": 16,
+    "title": "sint suscipit perspiciatis velit dolorum rerum ipsa laboriosam odio",
+    "body": "suscipit nam nisi quo aperiam aut\nasperiores eos fugit maiores voluptatibus quia\nvoluptatem quis ullam qui in alias quia est\nconsequatur magni mollitia accusamus ea nisi voluptate dicta"
+  },
+  {
+    "userId": 2,
+    "id": 17,
+    "title": "fugit voluptas sed molestias voluptatem provident",
+    "body": "eos voluptas et aut odit natus earum\naspernatur fuga molestiae ullam\ndeserunt ratione qui eos\nqui nihil ratione nemo velit ut aut id quo"
+  },
+  {
+    "userId": 2,
+    "id": 18,
+    "title": "voluptate et itaque vero tempora molestiae",
+    "body": "eveniet quo quis\nlaborum totam consequatur non dolor\nut et est repudiandae\nest voluptatem vel debitis et magnam"
+  },
+  {
+    "userId": 2,
+    "id": 19,
+    "title": "adipisci placeat illum aut reiciendis qui",
+    "body": "illum quis cupiditate provident sit magnam\nea sed aut omnis\nveniam maiores ullam consequatur atque\nadipisci quo iste expedita sit quos voluptas"
+  },
+  {
+    "userId": 2,
+    "id": 20,
+    "title": "doloribus ad provident suscipit at",
+    "body": "qui consequuntur ducimus possimus quisquam amet similique\nsuscipit porro ipsam amet\neos veritatis officiis exercitationem vel fugit aut necessitatibus totam\nomnis rerum consequatur expedita quidem cumque explicabo"
+  },
+  {
+    "userId": 3,
+    "id": 21,
+    "title": "asperiores ea ipsam voluptatibus modi minima quia sint",
+    "body": "repellat aliquid praesentium dolorem quo\nsed totam minus non itaque\nnihil labore molestiae sunt dolor eveniet hic recusandae veniam\ntempora et tenetur expedita sunt"
+  },
+  {
+    "userId": 3,
+    "id": 22,
+    "title": "dolor sint quo a velit explicabo quia nam",
+    "body": "eos qui et ipsum ipsam suscipit aut\nsed omnis non odio\nexpedita earum mollitia molestiae aut atque rem suscipit\nnam impedit esse"
+  },
+  {
+    "userId": 3,
+    "id": 23,
+    "title": "maxime id vitae nihil numquam",
+    "body": "veritatis unde neque eligendi\nquae quod architecto quo neque vitae\nest illo sit tempora doloremque fugit quod\net et vel beatae sequi ullam sed tenetur perspiciatis"
+  },
+  {
+    "userId": 3,
+    "id": 24,
+    "title": "autem hic labore sunt dolores incidunt",
+    "body": "enim et ex nulla\nomnis voluptas quia qui\nvoluptatem consequatur numquam aliquam sunt\ntotam recusandae id dignissimos aut sed asperiores deserunt"
+  },
+  {
+    "userId": 3,
+    "id": 25,
+    "title": "rem alias distinctio quo quis",
+    "body": "ullam consequatur ut\nomnis quis sit vel consequuntur\nipsa eligendi ipsum molestiae et omnis error nostrum\nmolestiae illo tempore quia et distinctio"
+  },
+  {
+    "userId": 3,
+    "id": 26,
+    "title": "est et quae odit qui non",
+    "body": "similique esse doloribus nihil accusamus\nomnis dolorem fuga consequuntur reprehenderit fugit recusandae temporibus\nperspiciatis cum ut laudantium\nomnis aut molestiae vel vero"
+  },
+  {
+    "userId": 3,
+    "id": 27,
+    "title": "quasi id et eos tenetur aut quo autem",
+    "body": "eum sed dolores ipsam sint possimus debitis occaecati\ndebitis qui qui et\nut placeat enim earum aut odit facilis\nconsequatur suscipit necessitatibus rerum sed inventore temporibus consequatur"
+  },
+  {
+    "userId": 3,
+    "id": 28,
+    "title": "delectus ullam et corporis nulla voluptas sequi",
+    "body": "non et quaerat ex quae ad maiores\nmaiores recusandae totam aut blanditiis mollitia quas illo\nut voluptatibus voluptatem\nsimilique nostrum eum"
+  },
+  {
+    "userId": 3,
+    "id": 29,
+    "title": "iusto eius quod necessitatibus culpa ea",
+    "body": "odit magnam ut saepe sed non qui\ntempora atque nihil\naccusamus illum doloribus illo dolor\neligendi repudiandae odit magni similique sed cum maiores"
+  },
+  {
+    "userId": 3,
+    "id": 30,
+    "title": "a quo magni similique perferendis",
+    "body": "alias dolor cumque\nimpedit blanditiis non eveniet odio maxime\nblanditiis amet eius quis tempora quia autem rem\na provident perspiciatis quia"
+  },
+  {
+    "userId": 4,
+    "id": 31,
+    "title": "ullam ut quidem id aut vel consequuntur",
+    "body": "debitis eius sed quibusdam non quis consectetur vitae\nimpedit ut qui consequatur sed aut in\nquidem sit nostrum et maiores adipisci atque\nquaerat voluptatem adipisci repudiandae"
+  },
+  {
+    "userId": 4,
+    "id": 32,
+    "title": "doloremque illum aliquid sunt",
+    "body": "deserunt eos nobis asperiores et hic\nest debitis repellat molestiae optio\nnihil ratione ut eos beatae quibusdam distinctio maiores\nearum voluptates et aut adipisci ea maiores voluptas maxime"
+  },
+  {
+    "userId": 4,
+    "id": 33,
+    "title": "qui explicabo molestiae dolorem",
+    "body": "rerum ut et numquam laborum odit est sit\nid qui sint in\nquasi tenetur tempore aperiam et quaerat qui in\nrerum officiis sequi cumque quod"
+  },
+  {
+    "userId": 4,
+    "id": 34,
+    "title": "magnam ut rerum iure",
+    "body": "ea velit perferendis earum ut voluptatem voluptate itaque iusto\ntotam pariatur in\nnemo voluptatem voluptatem autem magni tempora minima in\nest distinctio qui assumenda accusamus dignissimos officia nesciunt nobis"
+  },
+  {
+    "userId": 4,
+    "id": 35,
+    "title": "id nihil consequatur molestias animi provident",
+    "body": "nisi error delectus possimus ut eligendi vitae\nplaceat eos harum cupiditate facilis reprehenderit voluptatem beatae\nmodi ducimus quo illum voluptas eligendi\net nobis quia fugit"
+  },
+  {
+    "userId": 4,
+    "id": 36,
+    "title": "fuga nam accusamus voluptas reiciendis itaque",
+    "body": "ad mollitia et omnis minus architecto odit\nvoluptas doloremque maxime aut non ipsa qui alias veniam\nblanditiis culpa aut quia nihil cumque facere et occaecati\nqui aspernatur quia eaque ut aperiam inventore"
+  },
+  {
+    "userId": 4,
+    "id": 37,
+    "title": "provident vel ut sit ratione est",
+    "body": "debitis et eaque non officia sed nesciunt pariatur vel\nvoluptatem iste vero et ea\nnumquam aut expedita ipsum nulla in\nvoluptates omnis consequatur aut enim officiis in quam qui"
+  },
+  {
+    "userId": 4,
+    "id": 38,
+    "title": "explicabo et eos deleniti nostrum ab id repellendus",
+    "body": "animi esse sit aut sit nesciunt assumenda eum voluptas\nquia voluptatibus provident quia necessitatibus ea\nrerum repudiandae quia voluptatem delectus fugit aut id quia\nratione optio eos iusto veniam iure"
+  },
+  {
+    "userId": 4,
+    "id": 39,
+    "title": "eos dolorem iste accusantium est eaque quam",
+    "body": "corporis rerum ducimus vel eum accusantium\nmaxime aspernatur a porro possimus iste omnis\nest in deleniti asperiores fuga aut\nvoluptas sapiente vel dolore minus voluptatem incidunt ex"
+  },
+  {
+    "userId": 4,
+    "id": 40,
+    "title": "enim quo cumque",
+    "body": "ut voluptatum aliquid illo tenetur nemo sequi quo facilis\nipsum rem optio mollitia quas\nvoluptatem eum voluptas qui\nunde omnis voluptatem iure quasi maxime voluptas nam"
+  },
+  {
+    "userId": 5,
+    "id": 41,
+    "title": "non est facere",
+    "body": "molestias id nostrum\nexcepturi molestiae dolore omnis repellendus quaerat saepe\nconsectetur iste quaerat tenetur asperiores accusamus ex ut\nnam quidem est ducimus sunt debitis saepe"
+  },
+  {
+    "userId": 5,
+    "id": 42,
+    "title": "commodi ullam sint et excepturi error explicabo praesentium voluptas",
+    "body": "odio fugit voluptatum ducimus earum autem est incidunt voluptatem\nodit reiciendis aliquam sunt sequi nulla dolorem\nnon facere repellendus voluptates quia\nratione harum vitae ut"
+  },
+  {
+    "userId": 5,
+    "id": 43,
+    "title": "eligendi iste nostrum consequuntur adipisci praesentium sit beatae perferendis",
+    "body": "similique fugit est\nillum et dolorum harum et voluptate eaque quidem\nexercitationem quos nam commodi possimus cum odio nihil nulla\ndolorum exercitationem magnam ex et a et distinctio debitis"
+  },
+  {
+    "userId": 5,
+    "id": 44,
+    "title": "optio dolor molestias sit",
+    "body": "temporibus est consectetur dolore\net libero debitis vel velit laboriosam quia\nipsum quibusdam qui itaque fuga rem aut\nea et iure quam sed maxime ut distinctio quae"
+  },
+  {
+    "userId": 5,
+    "id": 45,
+    "title": "ut numquam possimus omnis eius suscipit laudantium iure",
+    "body": "est natus reiciendis nihil possimus aut provident\nex et dolor\nrepellat pariatur est\nnobis rerum repellendus dolorem autem"
+  },
+  {
+    "userId": 5,
+    "id": 46,
+    "title": "aut quo modi neque nostrum ducimus",
+    "body": "voluptatem quisquam iste\nvoluptatibus natus officiis facilis dolorem\nquis quas ipsam\nvel et voluptatum in aliquid"
+  },
+  {
+    "userId": 5,
+    "id": 47,
+    "title": "quibusdam cumque rem aut deserunt",
+    "body": "voluptatem assumenda ut qui ut cupiditate aut impedit veniam\noccaecati nemo illum voluptatem laudantium\nmolestiae beatae rerum ea iure soluta nostrum\neligendi et voluptate"
+  },
+  {
+    "userId": 5,
+    "id": 48,
+    "title": "ut voluptatem illum ea doloribus itaque eos",
+    "body": "voluptates quo voluptatem facilis iure occaecati\nvel assumenda rerum officia et\nillum perspiciatis ab deleniti\nlaudantium repellat ad ut et autem reprehenderit"
+  },
+  {
+    "userId": 5,
+    "id": 49,
+    "title": "laborum non sunt aut ut assumenda perspiciatis voluptas",
+    "body": "inventore ab sint\nnatus fugit id nulla sequi architecto nihil quaerat\neos tenetur in in eum veritatis non\nquibusdam officiis aspernatur cumque aut commodi aut"
+  },
+  {
+    "userId": 5,
+    "id": 50,
+    "title": "repellendus qui recusandae incidunt voluptates tenetur qui omnis exercitationem",
+    "body": "error suscipit maxime adipisci consequuntur recusandae\nvoluptas eligendi et est et voluptates\nquia distinctio ab amet quaerat molestiae et vitae\nadipisci impedit sequi nesciunt quis consectetur"
+  },
+  {
+    "userId": 6,
+    "id": 51,
+    "title": "soluta aliquam aperiam consequatur illo quis voluptas",
+    "body": "sunt dolores aut doloribus\ndolore doloribus voluptates tempora et\ndoloremque et quo\ncum asperiores sit consectetur dolorem"
+  },
+  {
+    "userId": 6,
+    "id": 52,
+    "title": "qui enim et consequuntur quia animi quis voluptate quibusdam",
+    "body": "iusto est quibusdam fuga quas quaerat molestias\na enim ut sit accusamus enim\ntemporibus iusto accusantium provident architecto\nsoluta esse reprehenderit qui laborum"
+  },
+  {
+    "userId": 6,
+    "id": 53,
+    "title": "ut quo aut ducimus alias",
+    "body": "minima harum praesentium eum rerum illo dolore\nquasi exercitationem rerum nam\nporro quis neque quo\nconsequatur minus dolor quidem veritatis sunt non explicabo similique"
+  },
+  {
+    "userId": 6,
+    "id": 54,
+    "title": "sit asperiores ipsam eveniet odio non quia",
+    "body": "totam corporis dignissimos\nvitae dolorem ut occaecati accusamus\nex velit deserunt\net exercitationem vero incidunt corrupti mollitia"
+  },
+  {
+    "userId": 6,
+    "id": 55,
+    "title": "sit vel voluptatem et non libero",
+    "body": "debitis excepturi ea perferendis harum libero optio\neos accusamus cum fuga ut sapiente repudiandae\net ut incidunt omnis molestiae\nnihil ut eum odit"
+  },
+  {
+    "userId": 6,
+    "id": 56,
+    "title": "qui et at rerum necessitatibus",
+    "body": "aut est omnis dolores\nneque rerum quod ea rerum velit pariatur beatae excepturi\net provident voluptas corrupti\ncorporis harum reprehenderit dolores eligendi"
+  },
+  {
+    "userId": 6,
+    "id": 57,
+    "title": "sed ab est est",
+    "body": "at pariatur consequuntur earum quidem\nquo est laudantium soluta voluptatem\nqui ullam et est\net cum voluptas voluptatum repellat est"
+  },
+  {
+    "userId": 6,
+    "id": 58,
+    "title": "voluptatum itaque dolores nisi et quasi",
+    "body": "veniam voluptatum quae adipisci id\net id quia eos ad et dolorem\naliquam quo nisi sunt eos impedit error\nad similique veniam"
+  },
+  {
+    "userId": 6,
+    "id": 59,
+    "title": "qui commodi dolor at maiores et quis id accusantium",
+    "body": "perspiciatis et quam ea autem temporibus non voluptatibus qui\nbeatae a earum officia nesciunt dolores suscipit voluptas et\nanimi doloribus cum rerum quas et magni\net hic ut ut commodi expedita sunt"
+  },
+  {
+    "userId": 6,
+    "id": 60,
+    "title": "consequatur placeat omnis quisquam quia reprehenderit fugit veritatis facere",
+    "body": "asperiores sunt ab assumenda cumque modi velit\nqui esse omnis\nvoluptate et fuga perferendis voluptas\nillo ratione amet aut et omnis"
+  },
+  {
+    "userId": 7,
+    "id": 61,
+    "title": "voluptatem doloribus consectetur est ut ducimus",
+    "body": "ab nemo optio odio\ndelectus tenetur corporis similique nobis repellendus rerum omnis facilis\nvero blanditiis debitis in nesciunt doloribus dicta dolores\nmagnam minus velit"
+  },
+  {
+    "userId": 7,
+    "id": 62,
+    "title": "beatae enim quia vel",
+    "body": "enim aspernatur illo distinctio quae praesentium\nbeatae alias amet delectus qui voluptate distinctio\nodit sint accusantium autem omnis\nquo molestiae omnis ea eveniet optio"
+  },
+  {
+    "userId": 7,
+    "id": 63,
+    "title": "voluptas blanditiis repellendus animi ducimus error sapiente et suscipit",
+    "body": "enim adipisci aspernatur nemo\nnumquam omnis facere dolorem dolor ex quis temporibus incidunt\nab delectus culpa quo reprehenderit blanditiis asperiores\naccusantium ut quam in voluptatibus voluptas ipsam dicta"
+  },
+  {
+    "userId": 7,
+    "id": 64,
+    "title": "et fugit quas eum in in aperiam quod",
+    "body": "id velit blanditiis\neum ea voluptatem\nmolestiae sint occaecati est eos perspiciatis\nincidunt a error provident eaque aut aut qui"
+  },
+  {
+    "userId": 7,
+    "id": 65,
+    "title": "consequatur id enim sunt et et",
+    "body": "voluptatibus ex esse\nsint explicabo est aliquid cumque adipisci fuga repellat labore\nmolestiae corrupti ex saepe at asperiores et perferendis\nnatus id esse incidunt pariatur"
+  },
+  {
+    "userId": 7,
+    "id": 66,
+    "title": "repudiandae ea animi iusto",
+    "body": "officia veritatis tenetur vero qui itaque\nsint non ratione\nsed et ut asperiores iusto eos molestiae nostrum\nveritatis quibusdam et nemo iusto saepe"
+  },
+  {
+    "userId": 7,
+    "id": 67,
+    "title": "aliquid eos sed fuga est maxime repellendus",
+    "body": "reprehenderit id nostrum\nvoluptas doloremque pariatur sint et accusantium quia quod aspernatur\net fugiat amet\nnon sapiente et consequatur necessitatibus molestiae"
+  },
+  {
+    "userId": 7,
+    "id": 68,
+    "title": "odio quis facere architecto reiciendis optio",
+    "body": "magnam molestiae perferendis quisquam\nqui cum reiciendis\nquaerat animi amet hic inventore\nea quia deleniti quidem saepe porro velit"
+  },
+  {
+    "userId": 7,
+    "id": 69,
+    "title": "fugiat quod pariatur odit minima",
+    "body": "officiis error culpa consequatur modi asperiores et\ndolorum assumenda voluptas et vel qui aut vel rerum\nvoluptatum quisquam perspiciatis quia rerum consequatur totam quas\nsequi commodi repudiandae asperiores et saepe a"
+  },
+  {
+    "userId": 7,
+    "id": 70,
+    "title": "voluptatem laborum magni",
+    "body": "sunt repellendus quae\nest asperiores aut deleniti esse accusamus repellendus quia aut\nquia dolorem unde\neum tempora esse dolore"
+  },
+  {
+    "userId": 8,
+    "id": 71,
+    "title": "et iusto veniam et illum aut fuga",
+    "body": "occaecati a doloribus\niste saepe consectetur placeat eum voluptate dolorem et\nqui quo quia voluptas\nrerum ut id enim velit est perferendis"
+  },
+  {
+    "userId": 8,
+    "id": 72,
+    "title": "sint hic doloribus consequatur eos non id",
+    "body": "quam occaecati qui deleniti consectetur\nconsequatur aut facere quas exercitationem aliquam hic voluptas\nneque id sunt ut aut accusamus\nsunt consectetur expedita inventore velit"
+  },
+  {
+    "userId": 8,
+    "id": 73,
+    "title": "consequuntur deleniti eos quia temporibus ab aliquid at",
+    "body": "voluptatem cumque tenetur consequatur expedita ipsum nemo quia explicabo\naut eum minima consequatur\ntempore cumque quae est et\net in consequuntur voluptatem voluptates aut"
+  },
+  {
+    "userId": 8,
+    "id": 74,
+    "title": "enim unde ratione doloribus quas enim ut sit sapiente",
+    "body": "odit qui et et necessitatibus sint veniam\nmollitia amet doloremque molestiae commodi similique magnam et quam\nblanditiis est itaque\nquo et tenetur ratione occaecati molestiae tempora"
+  },
+  {
+    "userId": 8,
+    "id": 75,
+    "title": "dignissimos eum dolor ut enim et delectus in",
+    "body": "commodi non non omnis et voluptas sit\nautem aut nobis magnam et sapiente voluptatem\net laborum repellat qui delectus facilis temporibus\nrerum amet et nemo voluptate expedita adipisci error dolorem"
+  },
+  {
+    "userId": 8,
+    "id": 76,
+    "title": "doloremque officiis ad et non perferendis",
+    "body": "ut animi facere\ntotam iusto tempore\nmolestiae eum aut et dolorem aperiam\nquaerat recusandae totam odio"
+  },
+  {
+    "userId": 8,
+    "id": 77,
+    "title": "necessitatibus quasi exercitationem odio",
+    "body": "modi ut in nulla repudiandae dolorum nostrum eos\naut consequatur omnis\nut incidunt est omnis iste et quam\nvoluptates sapiente aliquam asperiores nobis amet corrupti repudiandae provident"
+  },
+  {
+    "userId": 8,
+    "id": 78,
+    "title": "quam voluptatibus rerum veritatis",
+    "body": "nobis facilis odit tempore cupiditate quia\nassumenda doloribus rerum qui ea\nillum et qui totam\naut veniam repellendus"
+  },
+  {
+    "userId": 8,
+    "id": 79,
+    "title": "pariatur consequatur quia magnam autem omnis non amet",
+    "body": "libero accusantium et et facere incidunt sit dolorem\nnon excepturi qui quia sed laudantium\nquisquam molestiae ducimus est\nofficiis esse molestiae iste et quos"
+  },
+  {
+    "userId": 8,
+    "id": 80,
+    "title": "labore in ex et explicabo corporis aut quas",
+    "body": "ex quod dolorem ea eum iure qui provident amet\nquia qui facere excepturi et repudiandae\nasperiores molestias provident\nminus incidunt vero fugit rerum sint sunt excepturi provident"
+  },
+  {
+    "userId": 9,
+    "id": 81,
+    "title": "tempora rem veritatis voluptas quo dolores vero",
+    "body": "facere qui nesciunt est voluptatum voluptatem nisi\nsequi eligendi necessitatibus ea at rerum itaque\nharum non ratione velit laboriosam quis consequuntur\nex officiis minima doloremque voluptas ut aut"
+  },
+  {
+    "userId": 9,
+    "id": 82,
+    "title": "laudantium voluptate suscipit sunt enim enim",
+    "body": "ut libero sit aut totam inventore sunt\nporro sint qui sunt molestiae\nconsequatur cupiditate qui iste ducimus adipisci\ndolor enim assumenda soluta laboriosam amet iste delectus hic"
+  },
+  {
+    "userId": 9,
+    "id": 83,
+    "title": "odit et voluptates doloribus alias odio et",
+    "body": "est molestiae facilis quis tempora numquam nihil qui\nvoluptate sapiente consequatur est qui\nnecessitatibus autem aut ipsa aperiam modi dolore numquam\nreprehenderit eius rem quibusdam"
+  },
+  {
+    "userId": 9,
+    "id": 84,
+    "title": "optio ipsam molestias necessitatibus occaecati facilis veritatis dolores aut",
+    "body": "sint molestiae magni a et quos\neaque et quasi\nut rerum debitis similique veniam\nrecusandae dignissimos dolor incidunt consequatur odio"
+  },
+  {
+    "userId": 9,
+    "id": 85,
+    "title": "dolore veritatis porro provident adipisci blanditiis et sunt",
+    "body": "similique sed nisi voluptas iusto omnis\nmollitia et quo\nassumenda suscipit officia magnam sint sed tempora\nenim provident pariatur praesentium atque animi amet ratione"
+  },
+  {
+    "userId": 9,
+    "id": 86,
+    "title": "placeat quia et porro iste",
+    "body": "quasi excepturi consequatur iste autem temporibus sed molestiae beatae\net quaerat et esse ut\nvoluptatem occaecati et vel explicabo autem\nasperiores pariatur deserunt optio"
+  },
+  {
+    "userId": 9,
+    "id": 87,
+    "title": "nostrum quis quasi placeat",
+    "body": "eos et molestiae\nnesciunt ut a\ndolores perspiciatis repellendus repellat aliquid\nmagnam sint rem ipsum est"
+  },
+  {
+    "userId": 9,
+    "id": 88,
+    "title": "sapiente omnis fugit eos",
+    "body": "consequatur omnis est praesentium\nducimus non iste\nneque hic deserunt\nvoluptatibus veniam cum et rerum sed"
+  },
+  {
+    "userId": 9,
+    "id": 89,
+    "title": "sint soluta et vel magnam aut ut sed qui",
+    "body": "repellat aut aperiam totam temporibus autem et\narchitecto magnam ut\nconsequatur qui cupiditate rerum quia soluta dignissimos nihil iure\ntempore quas est"
+  },
+  {
+    "userId": 9,
+    "id": 90,
+    "title": "ad iusto omnis odit dolor voluptatibus",
+    "body": "minus omnis soluta quia\nqui sed adipisci voluptates illum ipsam voluptatem\neligendi officia ut in\neos soluta similique molestias praesentium blanditiis"
+  },
+  {
+    "userId": 10,
+    "id": 91,
+    "title": "aut amet sed",
+    "body": "libero voluptate eveniet aperiam sed\nsunt placeat suscipit molestias\nsimilique fugit nam natus\nexpedita consequatur consequatur dolores quia eos et placeat"
+  },
+  {
+    "userId": 10,
+    "id": 92,
+    "title": "ratione ex tenetur perferendis",
+    "body": "aut et excepturi dicta laudantium sint rerum nihil\nlaudantium et at\na neque minima officia et similique libero et\ncommodi voluptate qui"
+  },
+  {
+    "userId": 10,
+    "id": 93,
+    "title": "beatae soluta recusandae",
+    "body": "dolorem quibusdam ducimus consequuntur dicta aut quo laboriosam\nvoluptatem quis enim recusandae ut sed sunt\nnostrum est odit totam\nsit error sed sunt eveniet provident qui nulla"
+  },
+  {
+    "userId": 10,
+    "id": 94,
+    "title": "qui qui voluptates illo iste minima",
+    "body": "aspernatur expedita soluta quo ab ut similique\nexpedita dolores amet\nsed temporibus distinctio magnam saepe deleniti\nomnis facilis nam ipsum natus sint similique omnis"
+  },
+  {
+    "userId": 10,
+    "id": 95,
+    "title": "id minus libero illum nam ad officiis",
+    "body": "earum voluptatem facere provident blanditiis velit laboriosam\npariatur accusamus odio saepe\ncumque dolor qui a dicta ab doloribus consequatur omnis\ncorporis cupiditate eaque assumenda ad nesciunt"
+  },
+  {
+    "userId": 10,
+    "id": 96,
+    "title": "quaerat velit veniam amet cupiditate aut numquam ut sequi",
+    "body": "in non odio excepturi sint eum\nlabore voluptates vitae quia qui et\ninventore itaque rerum\nveniam non exercitationem delectus aut"
+  },
+  {
+    "userId": 10,
+    "id": 97,
+    "title": "quas fugiat ut perspiciatis vero provident",
+    "body": "eum non blanditiis soluta porro quibusdam voluptas\nvel voluptatem qui placeat dolores qui velit aut\nvel inventore aut cumque culpa explicabo aliquid at\nperspiciatis est et voluptatem dignissimos dolor itaque sit nam"
+  },
+  {
+    "userId": 10,
+    "id": 98,
+    "title": "laboriosam dolor voluptates",
+    "body": "doloremque ex facilis sit sint culpa\nsoluta assumenda eligendi non ut eius\nsequi ducimus vel quasi\nveritatis est dolores"
+  },
+  {
+    "userId": 10,
+    "id": 99,
+    "title": "temporibus sit alias delectus eligendi possimus magni",
+    "body": "quo deleniti praesentium dicta non quod\naut est molestias\nmolestias et officia quis nihil\nitaque dolorem quia"
+  },
+  {
+    "userId": 10,
+    "id": 100,
+    "title": "at nam consequatur ea labore ea harum",
+    "body": "cupiditate quo est a modi nesciunt soluta\nipsa voluptas error itaque dicta in\nautem qui minus magnam et distinctio eum\naccusamus ratione error aut"
+  }
+]
+2025-03-23T20:33:39.193+05:30  INFO 19120 --- [ProductAPIs] [http-nio-8081-exec-2] c.n.P.controller.SampleController        : Response Post [{userId=1, id=1, title=sunt aut facere repellat provident occaecati excepturi optio reprehenderit, body=quia et suscipit
+suscipit recusandae consequuntur expedita et cum
+reprehenderit molestiae ut ut quas totam
+nostrum rerum est autem sunt rem eveniet architecto}, {userId=1, id=2, title=qui est esse, body=est rerum tempore vitae
+sequi sint nihil reprehenderit dolor beatae ea dolores neque
+fugiat blanditiis voluptate porro vel nihil molestiae ut reiciendis
+qui aperiam non debitis possimus qui neque nisi nulla}, {userId=1, id=3, title=ea molestias quasi exercitationem repellat qui ipsa sit aut, body=et iusto sed quo iure
+voluptatem occaecati omnis eligendi aut ad
+voluptatem doloribus vel accusantium quis pariatur
+molestiae porro eius odio et labore et velit aut}, {userId=1, id=4, title=eum et est occaecati, body=ullam et saepe reiciendis voluptatem adipisci
+sit amet autem assumenda provident rerum culpa
+quis hic commodi nesciunt rem tenetur doloremque ipsam iure
+quis sunt voluptatem rerum illo velit}, {userId=1, id=5, title=nesciunt quas odio, body=repudiandae veniam quaerat sunt sed
+alias aut fugiat sit autem sed est
+voluptatem omnis possimus esse voluptatibus quis
+est aut tenetur dolor neque}, {userId=1, id=6, title=dolorem eum magni eos aperiam quia, body=ut aspernatur corporis harum nihil quis provident sequi
+mollitia nobis aliquid molestiae
+perspiciatis et ea nemo ab reprehenderit accusantium quas
+voluptate dolores velit et doloremque molestiae}, {userId=1, id=7, title=magnam facilis autem, body=dolore placeat quibusdam ea quo vitae
+magni quis enim qui quis quo nemo aut saepe
+quidem repellat excepturi ut quia
+sunt ut sequi eos ea sed quas}, {userId=1, id=8, title=dolorem dolore est ipsam, body=dignissimos aperiam dolorem qui eum
+facilis quibusdam animi sint suscipit qui sint possimus cum
+quaerat magni maiores excepturi
+ipsam ut commodi dolor voluptatum modi aut vitae}, {userId=1, id=9, title=nesciunt iure omnis dolorem tempora et accusantium, body=consectetur animi nesciunt iure dolore
+enim quia ad
+veniam autem ut quam aut nobis
+et est aut quod aut provident voluptas autem voluptas}, {userId=1, id=10, title=optio molestias id quia eum, body=quo et expedita modi cum officia vel magni
+doloribus qui repudiandae
+vero nisi sit
+quos veniam quod sed accusamus veritatis error}, {userId=2, id=11, title=et ea vero quia laudantium autem, body=delectus reiciendis molestiae occaecati non minima eveniet qui voluptatibus
+accusamus in eum beatae sit
+vel qui neque voluptates ut commodi qui incidunt
+ut animi commodi}, {userId=2, id=12, title=in quibusdam tempore odit est dolorem, body=itaque id aut magnam
+praesentium quia et ea odit et ea voluptas et
+sapiente quia nihil amet occaecati quia id voluptatem
+incidunt ea est distinctio odio}, {userId=2, id=13, title=dolorum ut in voluptas mollitia et saepe quo animi, body=aut dicta possimus sint mollitia voluptas commodi quo doloremque
+iste corrupti reiciendis voluptatem eius rerum
+sit cumque quod eligendi laborum minima
+perferendis recusandae assumenda consectetur porro architecto ipsum ipsam}, {userId=2, id=14, title=voluptatem eligendi optio, body=fuga et accusamus dolorum perferendis illo voluptas
+non doloremque neque facere
+ad qui dolorum molestiae beatae
+sed aut voluptas totam sit illum}, {userId=2, id=15, title=eveniet quod temporibus, body=reprehenderit quos placeat
+velit minima officia dolores impedit repudiandae molestiae nam
+voluptas recusandae quis delectus
+officiis harum fugiat vitae}, {userId=2, id=16, title=sint suscipit perspiciatis velit dolorum rerum ipsa laboriosam odio, body=suscipit nam nisi quo aperiam aut
+asperiores eos fugit maiores voluptatibus quia
+voluptatem quis ullam qui in alias quia est
+consequatur magni mollitia accusamus ea nisi voluptate dicta}, {userId=2, id=17, title=fugit voluptas sed molestias voluptatem provident, body=eos voluptas et aut odit natus earum
+aspernatur fuga molestiae ullam
+deserunt ratione qui eos
+qui nihil ratione nemo velit ut aut id quo}, {userId=2, id=18, title=voluptate et itaque vero tempora molestiae, body=eveniet quo quis
+laborum totam consequatur non dolor
+ut et est repudiandae
+est voluptatem vel debitis et magnam}, {userId=2, id=19, title=adipisci placeat illum aut reiciendis qui, body=illum quis cupiditate provident sit magnam
+ea sed aut omnis
+veniam maiores ullam consequatur atque
+adipisci quo iste expedita sit quos voluptas}, {userId=2, id=20, title=doloribus ad provident suscipit at, body=qui consequuntur ducimus possimus quisquam amet similique
+suscipit porro ipsam amet
+eos veritatis officiis exercitationem vel fugit aut necessitatibus totam
+omnis rerum consequatur expedita quidem cumque explicabo}, {userId=3, id=21, title=asperiores ea ipsam voluptatibus modi minima quia sint, body=repellat aliquid praesentium dolorem quo
+sed totam minus non itaque
+nihil labore molestiae sunt dolor eveniet hic recusandae veniam
+tempora et tenetur expedita sunt}, {userId=3, id=22, title=dolor sint quo a velit explicabo quia nam, body=eos qui et ipsum ipsam suscipit aut
+sed omnis non odio
+expedita earum mollitia molestiae aut atque rem suscipit
+nam impedit esse}, {userId=3, id=23, title=maxime id vitae nihil numquam, body=veritatis unde neque eligendi
+quae quod architecto quo neque vitae
+est illo sit tempora doloremque fugit quod
+et et vel beatae sequi ullam sed tenetur perspiciatis}, {userId=3, id=24, title=autem hic labore sunt dolores incidunt, body=enim et ex nulla
+omnis voluptas quia qui
+voluptatem consequatur numquam aliquam sunt
+totam recusandae id dignissimos aut sed asperiores deserunt}, {userId=3, id=25, title=rem alias distinctio quo quis, body=ullam consequatur ut
+omnis quis sit vel consequuntur
+ipsa eligendi ipsum molestiae et omnis error nostrum
+molestiae illo tempore quia et distinctio}, {userId=3, id=26, title=est et quae odit qui non, body=similique esse doloribus nihil accusamus
+omnis dolorem fuga consequuntur reprehenderit fugit recusandae temporibus
+perspiciatis cum ut laudantium
+omnis aut molestiae vel vero}, {userId=3, id=27, title=quasi id et eos tenetur aut quo autem, body=eum sed dolores ipsam sint possimus debitis occaecati
+debitis qui qui et
+ut placeat enim earum aut odit facilis
+consequatur suscipit necessitatibus rerum sed inventore temporibus consequatur}, {userId=3, id=28, title=delectus ullam et corporis nulla voluptas sequi, body=non et quaerat ex quae ad maiores
+maiores recusandae totam aut blanditiis mollitia quas illo
+ut voluptatibus voluptatem
+similique nostrum eum}, {userId=3, id=29, title=iusto eius quod necessitatibus culpa ea, body=odit magnam ut saepe sed non qui
+tempora atque nihil
+accusamus illum doloribus illo dolor
+eligendi repudiandae odit magni similique sed cum maiores}, {userId=3, id=30, title=a quo magni similique perferendis, body=alias dolor cumque
+impedit blanditiis non eveniet odio maxime
+blanditiis amet eius quis tempora quia autem rem
+a provident perspiciatis quia}, {userId=4, id=31, title=ullam ut quidem id aut vel consequuntur, body=debitis eius sed quibusdam non quis consectetur vitae
+impedit ut qui consequatur sed aut in
+quidem sit nostrum et maiores adipisci atque
+quaerat voluptatem adipisci repudiandae}, {userId=4, id=32, title=doloremque illum aliquid sunt, body=deserunt eos nobis asperiores et hic
+est debitis repellat molestiae optio
+nihil ratione ut eos beatae quibusdam distinctio maiores
+earum voluptates et aut adipisci ea maiores voluptas maxime}, {userId=4, id=33, title=qui explicabo molestiae dolorem, body=rerum ut et numquam laborum odit est sit
+id qui sint in
+quasi tenetur tempore aperiam et quaerat qui in
+rerum officiis sequi cumque quod}, {userId=4, id=34, title=magnam ut rerum iure, body=ea velit perferendis earum ut voluptatem voluptate itaque iusto
+totam pariatur in
+nemo voluptatem voluptatem autem magni tempora minima in
+est distinctio qui assumenda accusamus dignissimos officia nesciunt nobis}, {userId=4, id=35, title=id nihil consequatur molestias animi provident, body=nisi error delectus possimus ut eligendi vitae
+placeat eos harum cupiditate facilis reprehenderit voluptatem beatae
+modi ducimus quo illum voluptas eligendi
+et nobis quia fugit}, {userId=4, id=36, title=fuga nam accusamus voluptas reiciendis itaque, body=ad mollitia et omnis minus architecto odit
+voluptas doloremque maxime aut non ipsa qui alias veniam
+blanditiis culpa aut quia nihil cumque facere et occaecati
+qui aspernatur quia eaque ut aperiam inventore}, {userId=4, id=37, title=provident vel ut sit ratione est, body=debitis et eaque non officia sed nesciunt pariatur vel
+voluptatem iste vero et ea
+numquam aut expedita ipsum nulla in
+voluptates omnis consequatur aut enim officiis in quam qui}, {userId=4, id=38, title=explicabo et eos deleniti nostrum ab id repellendus, body=animi esse sit aut sit nesciunt assumenda eum voluptas
+quia voluptatibus provident quia necessitatibus ea
+rerum repudiandae quia voluptatem delectus fugit aut id quia
+ratione optio eos iusto veniam iure}, {userId=4, id=39, title=eos dolorem iste accusantium est eaque quam, body=corporis rerum ducimus vel eum accusantium
+maxime aspernatur a porro possimus iste omnis
+est in deleniti asperiores fuga aut
+voluptas sapiente vel dolore minus voluptatem incidunt ex}, {userId=4, id=40, title=enim quo cumque, body=ut voluptatum aliquid illo tenetur nemo sequi quo facilis
+ipsum rem optio mollitia quas
+voluptatem eum voluptas qui
+unde omnis voluptatem iure quasi maxime voluptas nam}, {userId=5, id=41, title=non est facere, body=molestias id nostrum
+excepturi molestiae dolore omnis repellendus quaerat saepe
+consectetur iste quaerat tenetur asperiores accusamus ex ut
+nam quidem est ducimus sunt debitis saepe}, {userId=5, id=42, title=commodi ullam sint et excepturi error explicabo praesentium voluptas, body=odio fugit voluptatum ducimus earum autem est incidunt voluptatem
+odit reiciendis aliquam sunt sequi nulla dolorem
+non facere repellendus voluptates quia
+ratione harum vitae ut}, {userId=5, id=43, title=eligendi iste nostrum consequuntur adipisci praesentium sit beatae perferendis, body=similique fugit est
+illum et dolorum harum et voluptate eaque quidem
+exercitationem quos nam commodi possimus cum odio nihil nulla
+dolorum exercitationem magnam ex et a et distinctio debitis}, {userId=5, id=44, title=optio dolor molestias sit, body=temporibus est consectetur dolore
+et libero debitis vel velit laboriosam quia
+ipsum quibusdam qui itaque fuga rem aut
+ea et iure quam sed maxime ut distinctio quae}, {userId=5, id=45, title=ut numquam possimus omnis eius suscipit laudantium iure, body=est natus reiciendis nihil possimus aut provident
+ex et dolor
+repellat pariatur est
+nobis rerum repellendus dolorem autem}, {userId=5, id=46, title=aut quo modi neque nostrum ducimus, body=voluptatem quisquam iste
+voluptatibus natus officiis facilis dolorem
+quis quas ipsam
+vel et voluptatum in aliquid}, {userId=5, id=47, title=quibusdam cumque rem aut deserunt, body=voluptatem assumenda ut qui ut cupiditate aut impedit veniam
+occaecati nemo illum voluptatem laudantium
+molestiae beatae rerum ea iure soluta nostrum
+eligendi et voluptate}, {userId=5, id=48, title=ut voluptatem illum ea doloribus itaque eos, body=voluptates quo voluptatem facilis iure occaecati
+vel assumenda rerum officia et
+illum perspiciatis ab deleniti
+laudantium repellat ad ut et autem reprehenderit}, {userId=5, id=49, title=laborum non sunt aut ut assumenda perspiciatis voluptas, body=inventore ab sint
+natus fugit id nulla sequi architecto nihil quaerat
+eos tenetur in in eum veritatis non
+quibusdam officiis aspernatur cumque aut commodi aut}, {userId=5, id=50, title=repellendus qui recusandae incidunt voluptates tenetur qui omnis exercitationem, body=error suscipit maxime adipisci consequuntur recusandae
+voluptas eligendi et est et voluptates
+quia distinctio ab amet quaerat molestiae et vitae
+adipisci impedit sequi nesciunt quis consectetur}, {userId=6, id=51, title=soluta aliquam aperiam consequatur illo quis voluptas, body=sunt dolores aut doloribus
+dolore doloribus voluptates tempora et
+doloremque et quo
+cum asperiores sit consectetur dolorem}, {userId=6, id=52, title=qui enim et consequuntur quia animi quis voluptate quibusdam, body=iusto est quibusdam fuga quas quaerat molestias
+a enim ut sit accusamus enim
+temporibus iusto accusantium provident architecto
+soluta esse reprehenderit qui laborum}, {userId=6, id=53, title=ut quo aut ducimus alias, body=minima harum praesentium eum rerum illo dolore
+quasi exercitationem rerum nam
+porro quis neque quo
+consequatur minus dolor quidem veritatis sunt non explicabo similique}, {userId=6, id=54, title=sit asperiores ipsam eveniet odio non quia, body=totam corporis dignissimos
+vitae dolorem ut occaecati accusamus
+ex velit deserunt
+et exercitationem vero incidunt corrupti mollitia}, {userId=6, id=55, title=sit vel voluptatem et non libero, body=debitis excepturi ea perferendis harum libero optio
+eos accusamus cum fuga ut sapiente repudiandae
+et ut incidunt omnis molestiae
+nihil ut eum odit}, {userId=6, id=56, title=qui et at rerum necessitatibus, body=aut est omnis dolores
+neque rerum quod ea rerum velit pariatur beatae excepturi
+et provident voluptas corrupti
+corporis harum reprehenderit dolores eligendi}, {userId=6, id=57, title=sed ab est est, body=at pariatur consequuntur earum quidem
+quo est laudantium soluta voluptatem
+qui ullam et est
+et cum voluptas voluptatum repellat est}, {userId=6, id=58, title=voluptatum itaque dolores nisi et quasi, body=veniam voluptatum quae adipisci id
+et id quia eos ad et dolorem
+aliquam quo nisi sunt eos impedit error
+ad similique veniam}, {userId=6, id=59, title=qui commodi dolor at maiores et quis id accusantium, body=perspiciatis et quam ea autem temporibus non voluptatibus qui
+beatae a earum officia nesciunt dolores suscipit voluptas et
+animi doloribus cum rerum quas et magni
+et hic ut ut commodi expedita sunt}, {userId=6, id=60, title=consequatur placeat omnis quisquam quia reprehenderit fugit veritatis facere, body=asperiores sunt ab assumenda cumque modi velit
+qui esse omnis
+voluptate et fuga perferendis voluptas
+illo ratione amet aut et omnis}, {userId=7, id=61, title=voluptatem doloribus consectetur est ut ducimus, body=ab nemo optio odio
+delectus tenetur corporis similique nobis repellendus rerum omnis facilis
+vero blanditiis debitis in nesciunt doloribus dicta dolores
+magnam minus velit}, {userId=7, id=62, title=beatae enim quia vel, body=enim aspernatur illo distinctio quae praesentium
+beatae alias amet delectus qui voluptate distinctio
+odit sint accusantium autem omnis
+quo molestiae omnis ea eveniet optio}, {userId=7, id=63, title=voluptas blanditiis repellendus animi ducimus error sapiente et suscipit, body=enim adipisci aspernatur nemo
+numquam omnis facere dolorem dolor ex quis temporibus incidunt
+ab delectus culpa quo reprehenderit blanditiis asperiores
+accusantium ut quam in voluptatibus voluptas ipsam dicta}, {userId=7, id=64, title=et fugit quas eum in in aperiam quod, body=id velit blanditiis
+eum ea voluptatem
+molestiae sint occaecati est eos perspiciatis
+incidunt a error provident eaque aut aut qui}, {userId=7, id=65, title=consequatur id enim sunt et et, body=voluptatibus ex esse
+sint explicabo est aliquid cumque adipisci fuga repellat labore
+molestiae corrupti ex saepe at asperiores et perferendis
+natus id esse incidunt pariatur}, {userId=7, id=66, title=repudiandae ea animi iusto, body=officia veritatis tenetur vero qui itaque
+sint non ratione
+sed et ut asperiores iusto eos molestiae nostrum
+veritatis quibusdam et nemo iusto saepe}, {userId=7, id=67, title=aliquid eos sed fuga est maxime repellendus, body=reprehenderit id nostrum
+voluptas doloremque pariatur sint et accusantium quia quod aspernatur
+et fugiat amet
+non sapiente et consequatur necessitatibus molestiae}, {userId=7, id=68, title=odio quis facere architecto reiciendis optio, body=magnam molestiae perferendis quisquam
+qui cum reiciendis
+quaerat animi amet hic inventore
+ea quia deleniti quidem saepe porro velit}, {userId=7, id=69, title=fugiat quod pariatur odit minima, body=officiis error culpa consequatur modi asperiores et
+dolorum assumenda voluptas et vel qui aut vel rerum
+voluptatum quisquam perspiciatis quia rerum consequatur totam quas
+sequi commodi repudiandae asperiores et saepe a}, {userId=7, id=70, title=voluptatem laborum magni, body=sunt repellendus quae
+est asperiores aut deleniti esse accusamus repellendus quia aut
+quia dolorem unde
+eum tempora esse dolore}, {userId=8, id=71, title=et iusto veniam et illum aut fuga, body=occaecati a doloribus
+iste saepe consectetur placeat eum voluptate dolorem et
+qui quo quia voluptas
+rerum ut id enim velit est perferendis}, {userId=8, id=72, title=sint hic doloribus consequatur eos non id, body=quam occaecati qui deleniti consectetur
+consequatur aut facere quas exercitationem aliquam hic voluptas
+neque id sunt ut aut accusamus
+sunt consectetur expedita inventore velit}, {userId=8, id=73, title=consequuntur deleniti eos quia temporibus ab aliquid at, body=voluptatem cumque tenetur consequatur expedita ipsum nemo quia explicabo
+aut eum minima consequatur
+tempore cumque quae est et
+et in consequuntur voluptatem voluptates aut}, {userId=8, id=74, title=enim unde ratione doloribus quas enim ut sit sapiente, body=odit qui et et necessitatibus sint veniam
+mollitia amet doloremque molestiae commodi similique magnam et quam
+blanditiis est itaque
+quo et tenetur ratione occaecati molestiae tempora}, {userId=8, id=75, title=dignissimos eum dolor ut enim et delectus in, body=commodi non non omnis et voluptas sit
+autem aut nobis magnam et sapiente voluptatem
+et laborum repellat qui delectus facilis temporibus
+rerum amet et nemo voluptate expedita adipisci error dolorem}, {userId=8, id=76, title=doloremque officiis ad et non perferendis, body=ut animi facere
+totam iusto tempore
+molestiae eum aut et dolorem aperiam
+quaerat recusandae totam odio}, {userId=8, id=77, title=necessitatibus quasi exercitationem odio, body=modi ut in nulla repudiandae dolorum nostrum eos
+aut consequatur omnis
+ut incidunt est omnis iste et quam
+voluptates sapiente aliquam asperiores nobis amet corrupti repudiandae provident}, {userId=8, id=78, title=quam voluptatibus rerum veritatis, body=nobis facilis odit tempore cupiditate quia
+assumenda doloribus rerum qui ea
+illum et qui totam
+aut veniam repellendus}, {userId=8, id=79, title=pariatur consequatur quia magnam autem omnis non amet, body=libero accusantium et et facere incidunt sit dolorem
+non excepturi qui quia sed laudantium
+quisquam molestiae ducimus est
+officiis esse molestiae iste et quos}, {userId=8, id=80, title=labore in ex et explicabo corporis aut quas, body=ex quod dolorem ea eum iure qui provident amet
+quia qui facere excepturi et repudiandae
+asperiores molestias provident
+minus incidunt vero fugit rerum sint sunt excepturi provident}, {userId=9, id=81, title=tempora rem veritatis voluptas quo dolores vero, body=facere qui nesciunt est voluptatum voluptatem nisi
+sequi eligendi necessitatibus ea at rerum itaque
+harum non ratione velit laboriosam quis consequuntur
+ex officiis minima doloremque voluptas ut aut}, {userId=9, id=82, title=laudantium voluptate suscipit sunt enim enim, body=ut libero sit aut totam inventore sunt
+porro sint qui sunt molestiae
+consequatur cupiditate qui iste ducimus adipisci
+dolor enim assumenda soluta laboriosam amet iste delectus hic}, {userId=9, id=83, title=odit et voluptates doloribus alias odio et, body=est molestiae facilis quis tempora numquam nihil qui
+voluptate sapiente consequatur est qui
+necessitatibus autem aut ipsa aperiam modi dolore numquam
+reprehenderit eius rem quibusdam}, {userId=9, id=84, title=optio ipsam molestias necessitatibus occaecati facilis veritatis dolores aut, body=sint molestiae magni a et quos
+eaque et quasi
+ut rerum debitis similique veniam
+recusandae dignissimos dolor incidunt consequatur odio}, {userId=9, id=85, title=dolore veritatis porro provident adipisci blanditiis et sunt, body=similique sed nisi voluptas iusto omnis
+mollitia et quo
+assumenda suscipit officia magnam sint sed tempora
+enim provident pariatur praesentium atque animi amet ratione}, {userId=9, id=86, title=placeat quia et porro iste, body=quasi excepturi consequatur iste autem temporibus sed molestiae beatae
+et quaerat et esse ut
+voluptatem occaecati et vel explicabo autem
+asperiores pariatur deserunt optio}, {userId=9, id=87, title=nostrum quis quasi placeat, body=eos et molestiae
+nesciunt ut a
+dolores perspiciatis repellendus repellat aliquid
+magnam sint rem ipsum est}, {userId=9, id=88, title=sapiente omnis fugit eos, body=consequatur omnis est praesentium
+ducimus non iste
+neque hic deserunt
+voluptatibus veniam cum et rerum sed}, {userId=9, id=89, title=sint soluta et vel magnam aut ut sed qui, body=repellat aut aperiam totam temporibus autem et
+architecto magnam ut
+consequatur qui cupiditate rerum quia soluta dignissimos nihil iure
+tempore quas est}, {userId=9, id=90, title=ad iusto omnis odit dolor voluptatibus, body=minus omnis soluta quia
+qui sed adipisci voluptates illum ipsam voluptatem
+eligendi officia ut in
+eos soluta similique molestias praesentium blanditiis}, {userId=10, id=91, title=aut amet sed, body=libero voluptate eveniet aperiam sed
+sunt placeat suscipit molestias
+similique fugit nam natus
+expedita consequatur consequatur dolores quia eos et placeat}, {userId=10, id=92, title=ratione ex tenetur perferendis, body=aut et excepturi dicta laudantium sint rerum nihil
+laudantium et at
+a neque minima officia et similique libero et
+commodi voluptate qui}, {userId=10, id=93, title=beatae soluta recusandae, body=dolorem quibusdam ducimus consequuntur dicta aut quo laboriosam
+voluptatem quis enim recusandae ut sed sunt
+nostrum est odit totam
+sit error sed sunt eveniet provident qui nulla}, {userId=10, id=94, title=qui qui voluptates illo iste minima, body=aspernatur expedita soluta quo ab ut similique
+expedita dolores amet
+sed temporibus distinctio magnam saepe deleniti
+omnis facilis nam ipsum natus sint similique omnis}, {userId=10, id=95, title=id minus libero illum nam ad officiis, body=earum voluptatem facere provident blanditiis velit laboriosam
+pariatur accusamus odio saepe
+cumque dolor qui a dicta ab doloribus consequatur omnis
+corporis cupiditate eaque assumenda ad nesciunt}, {userId=10, id=96, title=quaerat velit veniam amet cupiditate aut numquam ut sequi, body=in non odio excepturi sint eum
+labore voluptates vitae quia qui et
+inventore itaque rerum
+veniam non exercitationem delectus aut}, {userId=10, id=97, title=quas fugiat ut perspiciatis vero provident, body=eum non blanditiis soluta porro quibusdam voluptas
+vel voluptatem qui placeat dolores qui velit aut
+vel inventore aut cumque culpa explicabo aliquid at
+perspiciatis est et voluptatem dignissimos dolor itaque sit nam}, {userId=10, id=98, title=laboriosam dolor voluptates, body=doloremque ex facilis sit sint culpa
+soluta assumenda eligendi non ut eius
+sequi ducimus vel quasi
+veritatis est dolores}, {userId=10, id=99, title=temporibus sit alias delectus eligendi possimus magni, body=quo deleniti praesentium dicta non quod
+aut est molestias
+molestias et officia quis nihil
+itaque dolorem quia}, {userId=10, id=100, title=at nam consequatur ea labore ea harum, body=cupiditate quo est a modi nesciunt soluta
+ipsa voluptas error itaque dicta in
+autem qui minus magnam et distinctio eum
+accusamus ratione error aut}]:
+2025-03-23T20:33:49.352+05:30 DEBUG 19120 --- [ProductAPIs] [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Before cleanup stats (total=5, active=0, idle=5, waiting=0)
+2025-03-23T20:33:49.353+05:30 DEBUG 19120 --- [ProductAPIs] [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - After cleanup  stats (total=5, active=0, idle=5, waiting=0)
+2025-03-23T20:33:49.353+05:30 DEBUG 19120 --- [ProductAPIs] [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
+2025-03-23T20:34:19.361+05:30 DEBUG 19120 --- [ProductAPIs] [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Before cleanup stats (total=5, active=0, idle=5, waiting=0)
+2025-03-23T20:34:19.362+05:30 DEBUG 19120 --- [ProductAPIs] [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - After cleanup  stats (total=5, active=0, idle=5, waiting=0)
+2025-03-23T20:34:19.363+05:30 DEBUG 19120 --- [ProductAPIs] [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
+2025-03-23T20:34:49.364+05:30 DEBUG 19120 --- [ProductAPIs] [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Before cleanup stats (total=5, active=0, idle=5, waiting=0)
+2025-03-23T20:34:49.365+05:30 DEBUG 19120 --- [ProductAPIs] [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - After cleanup  stats (total=5, active=0, idle=5, waiting=0)
+2025-03-23T20:34:49.365+05:30 DEBUG 19120 --- [ProductAPIs] [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
+2025-03-23T20:35:19.374+05:30 DEBUG 19120 --- [ProductAPIs] [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Before cleanup stats (total=5, active=0, idle=5, waiting=0)
+2025-03-23T20:35:19.375+05:30 DEBUG 19120 --- [ProductAPIs] [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - After cleanup  stats (total=5, active=0, idle=5, waiting=0)
+2025-03-23T20:35:19.375+05:30 DEBUG 19120 --- [ProductAPIs] [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
+2025-03-23T20:35:49.390+05:30 DEBUG 19120 --- [ProductAPIs] [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Before cleanup stats (total=5, active=0, idle=5, waiting=0)
+2025-03-23T20:35:49.391+05:30 DEBUG 19120 --- [ProductAPIs] [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - After cleanup  stats (total=5, active=0, idle=5, waiting=0)
+2025-03-23T20:35:49.391+05:30 DEBUG 19120 --- [ProductAPIs] [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
+2025-03-23T20:36:19.395+05:30 DEBUG 19120 --- [ProductAPIs] [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Before cleanup stats (total=5, active=0, idle=5, waiting=0)
+2025-03-23T20:36:19.396+05:30 DEBUG 19120 --- [ProductAPIs] [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - After cleanup  stats (total=5, active=0, idle=5, waiting=0)
+2025-03-23T20:36:19.397+05:30 DEBUG 19120 --- [ProductAPIs] [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
+2025-03-23T20:36:49.404+05:30 DEBUG 19120 --- [ProductAPIs] [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Before cleanup stats (total=5, active=0, idle=5, waiting=0)
+2025-03-23T20:36:49.405+05:30 DEBUG 19120 --- [ProductAPIs] [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - After cleanup  stats (total=5, active=0, idle=5, waiting=0)
+2025-03-23T20:36:49.405+05:30 DEBUG 19120 --- [ProductAPIs] [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
+2025-03-23T20:37:19.406+05:30 DEBUG 19120 --- [ProductAPIs] [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Before cleanup stats (total=5, active=0, idle=5, waiting=0)
+2025-03-23T20:37:19.406+05:30 DEBUG 19120 --- [ProductAPIs] [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - After cleanup  stats (total=5, active=0, idle=5, waiting=0)
+2025-03-23T20:37:19.407+05:30 DEBUG 19120 --- [ProductAPIs] [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
+2025-03-23T20:37:49.420+05:30 DEBUG 19120 --- [ProductAPIs] [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Before cleanup stats (total=5, active=0, idle=5, waiting=0)
+2025-03-23T20:37:49.421+05:30 DEBUG 19120 --- [ProductAPIs] [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - After cleanup  stats (total=5, active=0, idle=5, waiting=0)
+2025-03-23T20:37:49.422+05:30 DEBUG 19120 --- [ProductAPIs] [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
+2025-03-23T20:38:19.427+05:30 DEBUG 19120 --- [ProductAPIs] [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Before cleanup stats (total=5, active=0, idle=5, waiting=0)
+2025-03-23T20:38:19.428+05:30 DEBUG 19120 --- [ProductAPIs] [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - After cleanup  stats (total=5, active=0, idle=5, waiting=0)
+2025-03-23T20:38:19.428+05:30 DEBUG 19120 --- [ProductAPIs] [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
+2025-03-23T20:38:49.443+05:30 DEBUG 19120 --- [ProductAPIs] [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Before cleanup stats (total=5, active=0, idle=5, waiting=0)
+2025-03-23T20:38:49.444+05:30 DEBUG 19120 --- [ProductAPIs] [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - After cleanup  stats (total=5, active=0, idle=5, waiting=0)
+2025-03-23T20:38:49.444+05:30 DEBUG 19120 --- [ProductAPIs] [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
+2025-03-23T20:39:19.452+05:30 DEBUG 19120 --- [ProductAPIs] [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Before cleanup stats (total=5, active=0, idle=5, waiting=0)
+2025-03-23T20:39:19.453+05:30 DEBUG 19120 --- [ProductAPIs] [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - After cleanup  stats (total=5, active=0, idle=5, waiting=0)
+2025-03-23T20:39:19.453+05:30 DEBUG 19120 --- [ProductAPIs] [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
+2025-03-23T20:39:49.462+05:30 DEBUG 19120 --- [ProductAPIs] [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Before cleanup stats (total=5, active=0, idle=5, waiting=0)
+2025-03-23T20:39:49.463+05:30 DEBUG 19120 --- [ProductAPIs] [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - After cleanup  stats (total=5, active=0, idle=5, waiting=0)
+2025-03-23T20:39:49.464+05:30 DEBUG 19120 --- [ProductAPIs] [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
+2025-03-23T20:40:19.473+05:30 DEBUG 19120 --- [ProductAPIs] [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Before cleanup stats (total=5, active=0, idle=5, waiting=0)
+2025-03-23T20:40:19.474+05:30 DEBUG 19120 --- [ProductAPIs] [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - After cleanup  stats (total=5, active=0, idle=5, waiting=0)
+2025-03-23T20:40:19.476+05:30 DEBUG 19120 --- [ProductAPIs] [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
+2025-03-23T20:40:49.480+05:30 DEBUG 19120 --- [ProductAPIs] [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Before cleanup stats (total=5, active=0, idle=5, waiting=0)
+2025-03-23T20:40:49.480+05:30 DEBUG 19120 --- [ProductAPIs] [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - After cleanup  stats (total=5, active=0, idle=5, waiting=0)
+2025-03-23T20:40:49.480+05:30 DEBUG 19120 --- [ProductAPIs] [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
+2025-03-23T20:41:19.495+05:30 DEBUG 19120 --- [ProductAPIs] [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Before cleanup stats (total=5, active=0, idle=5, waiting=0)
+2025-03-23T20:41:19.496+05:30 DEBUG 19120 --- [ProductAPIs] [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - After cleanup  stats (total=5, active=0, idle=5, waiting=0)
+2025-03-23T20:41:19.496+05:30 DEBUG 19120 --- [ProductAPIs] [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
+2025-03-23T20:41:49.504+05:30 DEBUG 19120 --- [ProductAPIs] [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Before cleanup stats (total=5, active=0, idle=5, waiting=0)
+2025-03-23T20:41:49.506+05:30 DEBUG 19120 --- [ProductAPIs] [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - After cleanup  stats (total=5, active=0, idle=5, waiting=0)
+2025-03-23T20:41:49.506+05:30 DEBUG 19120 --- [ProductAPIs] [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
+2025-03-23T20:42:19.520+05:30 DEBUG 19120 --- [ProductAPIs] [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Before cleanup stats (total=5, active=0, idle=5, waiting=0)
+2025-03-23T20:42:19.520+05:30 DEBUG 19120 --- [ProductAPIs] [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - After cleanup  stats (total=5, active=0, idle=5, waiting=0)
+2025-03-23T20:42:19.520+05:30 DEBUG 19120 --- [ProductAPIs] [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
+2025-03-23T20:42:49.527+05:30 DEBUG 19120 --- [ProductAPIs] [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Before cleanup stats (total=5, active=0, idle=5, waiting=0)
+2025-03-23T20:42:49.527+05:30 DEBUG 19120 --- [ProductAPIs] [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - After cleanup  stats (total=5, active=0, idle=5, waiting=0)
+2025-03-23T20:42:49.528+05:30 DEBUG 19120 --- [ProductAPIs] [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
+2025-03-23T20:43:19.543+05:30 DEBUG 19120 --- [ProductAPIs] [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Before cleanup stats (total=5, active=0, idle=5, waiting=0)
+2025-03-23T20:43:19.544+05:30 DEBUG 19120 --- [ProductAPIs] [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - After cleanup  stats (total=5, active=0, idle=5, waiting=0)
+2025-03-23T20:43:19.544+05:30 DEBUG 19120 --- [ProductAPIs] [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
+2025-03-23T20:43:49.545+05:30 DEBUG 19120 --- [ProductAPIs] [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Before cleanup stats (total=5, active=0, idle=5, waiting=0)
+2025-03-23T20:43:49.546+05:30 DEBUG 19120 --- [ProductAPIs] [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - After cleanup  stats (total=5, active=0, idle=5, waiting=0)
+2025-03-23T20:43:49.546+05:30 DEBUG 19120 --- [ProductAPIs] [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
+2025-03-23T20:44:19.547+05:30 DEBUG 19120 --- [ProductAPIs] [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Before cleanup stats (total=5, active=0, idle=5, waiting=0)
+2025-03-23T20:44:19.547+05:30 DEBUG 19120 --- [ProductAPIs] [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - After cleanup  stats (total=5, active=0, idle=5, waiting=0)
+2025-03-23T20:44:19.547+05:30 DEBUG 19120 --- [ProductAPIs] [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
+2025-03-23T20:44:49.557+05:30 DEBUG 19120 --- [ProductAPIs] [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Before cleanup stats (total=5, active=0, idle=5, waiting=0)
+2025-03-23T20:44:49.557+05:30 DEBUG 19120 --- [ProductAPIs] [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - After cleanup  stats (total=5, active=0, idle=5, waiting=0)
+2025-03-23T20:44:49.557+05:30 DEBUG 19120 --- [ProductAPIs] [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
+2025-03-23T20:45:19.563+05:30 DEBUG 19120 --- [ProductAPIs] [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Before cleanup stats (total=5, active=0, idle=5, waiting=0)
+2025-03-23T20:45:19.563+05:30 DEBUG 19120 --- [ProductAPIs] [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - After cleanup  stats (total=5, active=0, idle=5, waiting=0)
+2025-03-23T20:45:19.563+05:30 DEBUG 19120 --- [ProductAPIs] [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
+2025-03-23T20:45:49.577+05:30 DEBUG 19120 --- [ProductAPIs] [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Before cleanup stats (total=5, active=0, idle=5, waiting=0)
+2025-03-23T20:45:49.577+05:30 DEBUG 19120 --- [ProductAPIs] [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - After cleanup  stats (total=5, active=0, idle=5, waiting=0)
+2025-03-23T20:45:49.577+05:30 DEBUG 19120 --- [ProductAPIs] [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
+2025-03-23T20:46:19.594+05:30 DEBUG 19120 --- [ProductAPIs] [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Before cleanup stats (total=5, active=0, idle=5, waiting=0)
+2025-03-23T20:46:19.594+05:30 DEBUG 19120 --- [ProductAPIs] [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - After cleanup  stats (total=5, active=0, idle=5, waiting=0)
+2025-03-23T20:46:19.594+05:30 DEBUG 19120 --- [ProductAPIs] [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
+2025-03-23T20:46:49.604+05:30 DEBUG 19120 --- [ProductAPIs] [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Before cleanup stats (total=5, active=0, idle=5, waiting=0)
+2025-03-23T20:46:49.604+05:30 DEBUG 19120 --- [ProductAPIs] [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - After cleanup  stats (total=5, active=0, idle=5, waiting=0)
+2025-03-23T20:46:49.606+05:30 DEBUG 19120 --- [ProductAPIs] [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
+2025-03-23T20:47:19.609+05:30 DEBUG 19120 --- [ProductAPIs] [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Before cleanup stats (total=5, active=0, idle=5, waiting=0)
+2025-03-23T20:47:19.609+05:30 DEBUG 19120 --- [ProductAPIs] [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - After cleanup  stats (total=5, active=0, idle=5, waiting=0)
+2025-03-23T20:47:19.609+05:30 DEBUG 19120 --- [ProductAPIs] [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
+2025-03-23T20:47:49.612+05:30 DEBUG 19120 --- [ProductAPIs] [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Before cleanup stats (total=5, active=0, idle=5, waiting=0)
+2025-03-23T20:47:49.617+05:30 DEBUG 19120 --- [ProductAPIs] [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - After cleanup  stats (total=5, active=0, idle=5, waiting=0)
+2025-03-23T20:47:49.617+05:30 DEBUG 19120 --- [ProductAPIs] [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
+2025-03-23T20:48:19.628+05:30 DEBUG 19120 --- [ProductAPIs] [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Before cleanup stats (total=5, active=0, idle=5, waiting=0)
+2025-03-23T20:48:19.628+05:30 DEBUG 19120 --- [ProductAPIs] [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - After cleanup  stats (total=5, active=0, idle=5, waiting=0)
+2025-03-23T20:48:19.628+05:30 DEBUG 19120 --- [ProductAPIs] [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
+2025-03-23T20:48:49.643+05:30 DEBUG 19120 --- [ProductAPIs] [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Before cleanup stats (total=5, active=0, idle=5, waiting=0)
+2025-03-23T20:48:49.644+05:30 DEBUG 19120 --- [ProductAPIs] [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - After cleanup  stats (total=5, active=0, idle=5, waiting=0)
+2025-03-23T20:48:49.644+05:30 DEBUG 19120 --- [ProductAPIs] [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
+2025-03-23T20:49:19.647+05:30 DEBUG 19120 --- [ProductAPIs] [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Before cleanup stats (total=5, active=0, idle=5, waiting=0)
+2025-03-23T20:49:19.648+05:30 DEBUG 19120 --- [ProductAPIs] [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - After cleanup  stats (total=5, active=0, idle=5, waiting=0)
+2025-03-23T20:49:19.648+05:30 DEBUG 19120 --- [ProductAPIs] [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
+2025-03-23T20:49:49.649+05:30 DEBUG 19120 --- [ProductAPIs] [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Before cleanup stats (total=5, active=0, idle=5, waiting=0)
+2025-03-23T20:49:49.649+05:30 DEBUG 19120 --- [ProductAPIs] [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - After cleanup  stats (total=5, active=0, idle=5, waiting=0)
+2025-03-23T20:49:49.649+05:30 DEBUG 19120 --- [ProductAPIs] [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
+2025-03-23T20:50:19.656+05:30 DEBUG 19120 --- [ProductAPIs] [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Before cleanup stats (total=5, active=0, idle=5, waiting=0)
+2025-03-23T20:50:19.657+05:30 DEBUG 19120 --- [ProductAPIs] [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - After cleanup  stats (total=5, active=0, idle=5, waiting=0)
+2025-03-23T20:50:19.657+05:30 DEBUG 19120 --- [ProductAPIs] [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
+2025-03-23T20:50:49.665+05:30 DEBUG 19120 --- [ProductAPIs] [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Before cleanup stats (total=5, active=0, idle=5, waiting=0)
+2025-03-23T20:50:49.665+05:30 DEBUG 19120 --- [ProductAPIs] [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - After cleanup  stats (total=5, active=0, idle=5, waiting=0)
+2025-03-23T20:50:49.666+05:30 DEBUG 19120 --- [ProductAPIs] [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
+2025-03-23T20:51:19.675+05:30 DEBUG 19120 --- [ProductAPIs] [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Before cleanup stats (total=5, active=0, idle=5, waiting=0)
+2025-03-23T20:51:19.675+05:30 DEBUG 19120 --- [ProductAPIs] [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - After cleanup  stats (total=5, active=0, idle=5, waiting=0)
+2025-03-23T20:51:19.677+05:30 DEBUG 19120 --- [ProductAPIs] [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
+2025-03-23T20:51:49.688+05:30 DEBUG 19120 --- [ProductAPIs] [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Before cleanup stats (total=5, active=0, idle=5, waiting=0)
+2025-03-23T20:51:49.688+05:30 DEBUG 19120 --- [ProductAPIs] [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - After cleanup  stats (total=5, active=0, idle=5, waiting=0)
+2025-03-23T20:51:49.689+05:30 DEBUG 19120 --- [ProductAPIs] [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
+2025-03-23T20:51:56.235+05:30  INFO 19120 --- [ProductAPIs] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-03-23T20:51:56.286+05:30  INFO 19120 --- [ProductAPIs] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-03-23T20:51:56.351+05:30  INFO 19120 --- [ProductAPIs] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-03-23T20:51:56.433+05:30  INFO 19120 --- [ProductAPIs] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-03-23T20:51:56.433+05:30 DEBUG 19120 --- [ProductAPIs] [SpringApplicationShutdownHook] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Before shutdown stats (total=5, active=0, idle=5, waiting=0)
+2025-03-23T20:51:56.449+05:30 DEBUG 19120 --- [ProductAPIs] [HikariPool-1 connection closer] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Closing connection org.postgresql.jdbc.PgConnection@73aae7a: (connection evicted)
+2025-03-23T20:51:56.464+05:30 DEBUG 19120 --- [ProductAPIs] [HikariPool-1 connection closer] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Closing connection org.postgresql.jdbc.PgConnection@684c7e39: (connection evicted)
+2025-03-23T20:51:56.465+05:30 DEBUG 19120 --- [ProductAPIs] [HikariPool-1 connection closer] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Closing connection org.postgresql.jdbc.PgConnection@668b8d40: (connection evicted)
+2025-03-23T20:51:56.466+05:30 DEBUG 19120 --- [ProductAPIs] [HikariPool-1 connection closer] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Closing connection org.postgresql.jdbc.PgConnection@62b41549: (connection evicted)
+2025-03-23T20:51:56.469+05:30 DEBUG 19120 --- [ProductAPIs] [HikariPool-1 connection closer] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Closing connection org.postgresql.jdbc.PgConnection@27b6877b: (connection evicted)
+2025-03-23T20:51:56.472+05:30 DEBUG 19120 --- [ProductAPIs] [SpringApplicationShutdownHook] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - After shutdown stats (total=0, active=0, idle=0, waiting=0)
+2025-03-23T20:51:56.482+05:30  INFO 19120 --- [ProductAPIs] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.

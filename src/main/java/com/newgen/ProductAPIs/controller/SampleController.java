@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.client.RestTemplate;
 
 import java.util.List;
+import java.util.stream.Collectors;
 
 @RestController
 @Slf4j
@@ -34,15 +35,18 @@ public class SampleController {
         try
         {
             List<Post> posts= objectMapper.readValue(response,List.class);
-            log.info("Response Post {}:",posts);
-            return posts;
+
+           return  posts.stream().filter(post -> post.getTitle().contains("deleniti")).collect(Collectors.toList());
+
+      
+
 
         }
         catch (Exception e)
         {
             log.error("Exception occur while parsing the response{}:", e);
         }
-        List<Post> posts;
+
         return null;
     }
 
