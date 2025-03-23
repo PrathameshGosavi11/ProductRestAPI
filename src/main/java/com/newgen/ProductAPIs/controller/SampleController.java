@@ -15,13 +15,13 @@ public class SampleController {
         return "Hello developers";
     }
 
-    @GetMapping("/post")
+    @GetMapping("/posts")
     public String getPost()
     {
         RestTemplate restTemplate=new RestTemplate();
-       String response= restTemplate.getForObject("https://jsonplaceholder.typicode.com/post",String.class);
+       String response= restTemplate.getForObject("https://jsonplaceholder.typicode.com/posts",String.class);
         log.info("get post API CALLED :{}" ,response);
-        return "POST";
+        return response;
     }
 
 }
