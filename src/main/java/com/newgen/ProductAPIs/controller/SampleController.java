@@ -22,7 +22,7 @@ public class SampleController {
         String response= restTemplate.getForObject("https://jsonplaceholder.typicode.com/posts",String.class);
 
         //System.out.println("API response is :"+response);
-        log.info(response);
+        log.info("api response is {}  ",response);
         return "Hello your POST";
     }
 }
