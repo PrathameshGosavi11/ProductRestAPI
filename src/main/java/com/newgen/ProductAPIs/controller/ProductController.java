@@ -149,6 +149,7 @@ public class ProductController {
         log.info("here request is coming =>" + productId);
 
             Product product = productService.getProductById(productId);
+            //call to review service to get the review's for the given product and send it to client.
             return new ResponseEntity(product, HttpStatus.OK);
     }
 
