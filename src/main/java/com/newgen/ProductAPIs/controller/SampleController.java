@@ -38,14 +38,14 @@ public class SampleController {
             List<Post> posts = objectMapper.readValue(response, new TypeReference<List<Post>>() {
             });
 
-            for (Post post: posts)
-            {
-                log.info("Post are {}",post);
-            }
+//            for (Post post: posts)
+//            {
+//                log.info("Post are {}",post);
+//            }
 
-        //   return  posts.stream().filter(post -> post.getTitle().contains("deleniti")).collect(Collectors.toList());
+           return  posts.stream().filter(post -> post.getTitle().contains("deleniti")).collect(Collectors.toList());
 
-            return posts;
+        //    return posts;
 
 
         }
