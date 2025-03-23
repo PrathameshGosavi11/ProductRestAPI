@@ -22,6 +22,9 @@ public class SampleController {
        String response= restTemplate.getForObject("https://jsonplaceholder.typicode.com/posts",String.class);
         log.info("get post API CALLED :{}" ,response);
         return response;
+        // search the  deleniti word
+
+        response.contains("deleniti");
     }
 
 }

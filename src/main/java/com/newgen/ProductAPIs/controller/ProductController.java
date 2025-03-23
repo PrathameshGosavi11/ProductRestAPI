@@ -33,7 +33,7 @@ import java.util.logging.Logger;
 public class ProductController {
 
 
-    //lloger
+    //loger
     //private static final Logger log =  Logger.getLogger(ProductController.class.getName());
 
     private  IProductService productService;
@@ -144,7 +144,8 @@ public class ProductController {
             operationId = "get Product By Id"
     )
     @GetMapping("/{id}")
-    public ResponseEntity<?> getProductById(@PathVariable(name = "id") Long productId) {
+    public ResponseEntity<?> getProductById(@Parameter(name="id",description = "Product Id",required = true)@PathVariable(name = "id") Long productId)
+    {
 
         log.info("here request is coming =>" + productId);
 
