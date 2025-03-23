@@ -150,6 +150,7 @@ public class ProductController {
 
             Product product = productService.getProductById(productId);
             //call to review service to get the review's for the given product and send it to client.
+            //yaha se API ko call karna hain.
             return new ResponseEntity(product, HttpStatus.OK);
     }
 

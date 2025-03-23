@@ -11,4 +11,10 @@ public class SampleController {
     {
         return "Hello developers";
     }
+
+    @GetMapping("/post")
+    public String getPost()
+    {
+        return "Hello your POST";
+    }
 }
