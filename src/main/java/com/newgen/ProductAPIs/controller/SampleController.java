@@ -18,7 +18,9 @@ public class SampleController {
     @GetMapping("/post")
     public String getPost()
     {
-        System.out.println("get post API CALLED ");
+        RestTemplate restTemplate=new RestTemplate();
+       String response= restTemplate.getForObject("https://jsonplaceholder.typicode.com/post",String.class);
+        log.info("get post API CALLED :{}" ,response);
         return "POST";
     }
 
