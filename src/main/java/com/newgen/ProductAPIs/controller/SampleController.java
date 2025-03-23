@@ -1,5 +1,6 @@
 package com.newgen.ProductAPIs.controller;
 
+import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.newgen.ProductAPIs.model.Post;
 import lombok.extern.slf4j.Slf4j;
@@ -34,11 +35,17 @@ public class SampleController {
 
         try
         {
-            List<Post> posts= objectMapper.readValue(response,List.class);
+            List<Post> posts = objectMapper.readValue(response, new TypeReference<List<Post>>() {
+            });
 
-           return  posts.stream().filter(post -> post.getTitle().contains("deleniti")).collect(Collectors.toList());
+            for (Post post: posts)
+            {
+                log.info("Post are {}",post);
+            }
 
-      
+        //   return  posts.stream().filter(post -> post.getTitle().contains("deleniti")).collect(Collectors.toList());
+
+            return posts;
 
 
         }
