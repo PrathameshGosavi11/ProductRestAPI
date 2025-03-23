@@ -45,6 +45,7 @@ public class ProductController {
         this.productService = productService;
 
     }
+
     //2025-03-21T16:14:35.607+05:30  INFO 15340 ---
     // [ProductAPIs] [           main] c.n.P.controller.ProductController
     // : Product Controller construtor is called with the service :com.newgen.ProductAPIs.Service.InMemoryProductService@3314f179
@@ -90,6 +91,7 @@ public class ProductController {
                                        @RequestParam(name = "lower-price", required = false) Double lowerPrice,
                                        @RequestParam(name = "higher-price", required = false) Double higherPrice
     ) {
+
         log.info("Get All Prodcut controller called");
         log.info("product API controller called -> {} and name {}" , category,name);
         log.info("Lower price is :" + lowerPrice);
