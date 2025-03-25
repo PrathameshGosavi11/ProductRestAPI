@@ -19,7 +19,7 @@ import static com.newgen.ProductAPIs.util.Constant.INVALID_PRODUCT_IDENTIFIER_ER
 
 
 @Service
-@Primary
+//@Primary
 @Slf4j
 public class InMemoryProductService implements  IProductService {
     
