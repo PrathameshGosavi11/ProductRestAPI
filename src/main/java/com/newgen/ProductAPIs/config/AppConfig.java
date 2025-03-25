@@ -2,13 +2,14 @@ package com.newgen.ProductAPIs.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.web.client.RestTemplate;
 
 @Configuration
 public class AppConfig {
 
     @Bean
-    public RestTemplateProvider restTemplateProvider()
+    public RestTemplate restTemplate()
     {
-        return  new RestTemplateProvider();
+        return  new RestTemplate();
     }
 }

@@ -19,6 +19,7 @@ import java.util.logging.Logger;
 
 @Service("databaseSerice")
 @Slf4j
+@Primary
 public class DatabaseProductService implements IProductService
 {
     //logger object

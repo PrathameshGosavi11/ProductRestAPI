@@ -23,7 +23,7 @@ public class SampleController {
     //   private RestTemplate  restTemplate=new RestTemplate();
     
     @Autowired
-//    private RestTemplateProvider restTemplateProvider;
+   // private RestTemplateProvider restTemplateProvider;
     private RestTemplate restTemplate; //singleton bean
 
     @GetMapping()
@@ -75,7 +75,7 @@ public class SampleController {
        // RestTemplate restTemplate=new RestTemplate();
    //     RestTemplate restTemplate=restTemplateProvider.getRestTemplate();
         String url="https://jsonplaceholder.typicode.com/posts";
-        return  restTemplate.postForEntity(url,new Post(),Post.class);
+        return  restTemplate.postForEntity(url, new Post(), Post.class);
 
     }
 
