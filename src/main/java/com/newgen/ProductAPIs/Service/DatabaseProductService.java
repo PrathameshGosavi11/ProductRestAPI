@@ -50,8 +50,8 @@ public class DatabaseProductService implements IProductService
     }
 
     @Override
-    public Product getProductById(Long id) {
-        Optional<Product> product= productRepository.findById(id);
+    public Product getProductById(Long productId) {
+        Optional<Product> product= productRepository.findById(productId);
         if(product.isPresent())
         {
             return product.get();
@@ -69,12 +69,12 @@ public class DatabaseProductService implements IProductService
     }
 
     @Override
-    public void deleteProduct(Long id) {
+    public void deleteProduct(Long productId) {
 
-       Optional<Product> product= productRepository.findById(id);
+       Optional<Product> product= productRepository.findById(productId);
        if(product.isPresent())
        {
-           productRepository.deleteById(id);
+           productRepository.deleteById(productId);
        }
        else
        {

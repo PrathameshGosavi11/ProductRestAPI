@@ -10,6 +10,7 @@ import lombok.*;
 @Getter
 @ToString
 @NoArgsConstructor
+@AllArgsConstructor
 @Entity
 @Table(name = "Products")
 public class Product {
@@ -17,7 +18,7 @@ public class Product {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Schema(description = "Product ID",example = "1",requiredMode = Schema.RequiredMode.NOT_REQUIRED)
-    private Long id;
+    private Long productId;
 
     @Column(name = "Product_Name",updatable = false,nullable = false)
     @Schema(description = "Product Name",maxLength = 20) // only for documentation

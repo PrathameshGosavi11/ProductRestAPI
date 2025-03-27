@@ -27,7 +27,7 @@ public class InMemoryProductService implements  IProductService {
   //  private static final Logger logger=Logger.getLogger(InMemoryProductService.class.getName());
 
     private final Map<Long, Product> products;
-    private Long id; //declare the ID automartic increment we we add the product
+    private Long productId; //declare the ID automartic increment we we add the product
 
    // final String  INVALID_PRODUCT_IDENTIFIER_ERROR_MESSAGE ="Invalid product Identifire is provided , so product not found.";
 
@@ -37,7 +37,7 @@ public class InMemoryProductService implements  IProductService {
 
        log.info("In Memory product services called here");
         this.products = new HashMap<>();
-        this.id = 1L; //here initlize refer the current object
+        this.productId = 1L; //here initlize refer the current object
         initilizeProducts();
     }
 
@@ -69,14 +69,14 @@ public class InMemoryProductService implements  IProductService {
 //        {
 //            throw new InvalidArgumentException("You pass product name more than 20 character");
 //        }
-        product.setId(id);
-        products.put(id, product);
-        id++;
+        product.setProductId(productId);
+        products.put(productId, product);
+        productId++;
     }
 
-    public Product getProductById(Long id) {
+    public Product getProductById(Long productId) {
         System.out.println("get service method called ");
-        Product product= products.get(id);
+        Product product= products.get(productId);
         if (product==null)
         {
             throw  new ProductNotFound(INVALID_PRODUCT_IDENTIFIER_ERROR_MESSAGE);
@@ -89,9 +89,9 @@ public class InMemoryProductService implements  IProductService {
         return new ArrayList<>(products.values());
     }
 
-    public void  deleteProduct(Long id)  {
+    public void  deleteProduct(Long productId)  {
         System.out.println("call the deletet method on service call");
-        Product product= products.remove(id);
+        Product product= products.remove(productId);
         if (product==null)
         {
             throw  new ProductNotFound(INVALID_PRODUCT_IDENTIFIER_ERROR_MESSAGE);
@@ -128,7 +128,7 @@ public class InMemoryProductService implements  IProductService {
 
     public void updateProduct(Product newProduct)  {
 
-        Product exitstanceProduct = products.get(newProduct.getId());
+        Product exitstanceProduct = products.get(newProduct.getProductId());
         if (exitstanceProduct == null) {
             throw  new ProductNotFound(INVALID_PRODUCT_IDENTIFIER_ERROR_MESSAGE);
         }

@@ -252,11 +252,11 @@ public class ProductController {
             operationId = "updateProduct"
     )
     @PutMapping("/{id}")
-    public ResponseEntity<String> updateProduct(@RequestBody Product product, @PathVariable(name = "id")
+    public ResponseEntity<String> updateProduct(@RequestBody Product product, @PathVariable(name = "productId")
     Long productId) {
 
        log.info("Product Controller update method called ");
-        product.setId(productId);
+        product.setProductId(productId);
 
         productService.updateProduct(product);
         return new ResponseEntity<>("Product update successfully ", HttpStatus.OK);
